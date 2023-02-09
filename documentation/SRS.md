@@ -16,7 +16,7 @@ The application should provide:
 ## 1. Doctors
 ### 1.1. Display list of doctors
 
-![Doctors List](./documentation/mockupDoctorsList.svg)
+![Doctors List](/documentation/mockupDoctorsList.svg)
 
 
 ## 2. Patients
