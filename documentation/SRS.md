@@ -88,7 +88,7 @@ User either push "ADD" button on the page with list of doctors
 or "EDIT" button on the particular doctor's page, the application jump to the doctor creation/edit form.
 
 ---
-![Doctors_List](/documentation/mockups/Add-Edit-Doctor.svg)
+![Doctors_List](/documentation/mockups/Add-Edit-Docto.svg)
 ---
 
 **The page contains:**
