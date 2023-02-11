@@ -18,7 +18,11 @@ The application should provide:
 *Main scenario:*
 
 As User select "Doctors" menu tab, the application display list of doctors.
+
+---
 ![Doctors_List](/documentation/mockups/Doctors-list.svg)
+---
+
 **The page contains:**
 #### 1) Menu with tabs
 - Doctors (accented, inactive)
@@ -41,7 +45,10 @@ As User select "Doctors" menu tab, the application display list of doctors.
 *Main scenario:*
 
 User click on the doctor's name in the list of doctors the application jump to the doctor's detail view page.
+
+---
 ![Doctors_List](/documentation/mockups/Doctor.svg)
+---
 
 **The page contains:**
 #### 1) Menu with tabs
@@ -79,7 +86,10 @@ User click on the doctor's name in the list of doctors the application jump to t
 
 User either push "ADD" button on the page with list of doctors
 or "EDIT" button on the particular doctor's page, the application jump to the doctor creation/edit form.
+
+---
 ![Doctors_List](/documentation/mockups/Add-Edit-Doctor.svg)
+---
 
 **The page contains:**
 #### 1) Menu with tabs
@@ -107,7 +117,10 @@ or "EDIT" button on the particular doctor's page, the application jump to the do
 *Main scenario:*
 
 As User select "Patients" menu tab, the application display list of patients.
+
+---
 ![Doctors_List](/documentation/mockups/Patient-list.svg)
+---
 
 **The page contains:**
 #### 1) Menu with tabs
@@ -137,7 +150,9 @@ As User select "Patients" menu tab, the application display list of patients.
 
 User click on the patients's name in the list of patients the application jump to the patients's detail view page.
 
+---
 ![Doctors_List](/documentation/mockups/Patient.svg)
+---
 
 **The page contains:**
 #### 1) Menu with tabs
@@ -169,7 +184,9 @@ User click on the patients's name in the list of patients the application jump t
 User either push "ADD" button on the doctor's page with list of patient
 or "EDIT" button on the particular patients's page, the application jump to the patient creation/edit page.
 
+---
 ![Doctors_List](/documentation/mockups/Add-Edit-Patient.svg)
+---
 
 **The page contains:**
 #### 1) Menu with tabs

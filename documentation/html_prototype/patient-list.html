@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <link rel="stylesheet" href="reset.css"/>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="menu">
+            <div class="menu_item">
+                <a href="doctor-list.html">
+                    Doctors
+                </a>
+            </div>
+            <div class="menu_item current">
+                <a href="patient-list.html">
+                    Patients
+                </a>
+            </div>
+        </div>
+
+        <div class="search_block">
+            <form>
+                <div class="age_block">
+                    <input type="number" name="age_min" min="0" max="150" placeholder="min Age">
+                    <input type="number" name="age_max" min="0" max="150" placeholder="max Age">
+                </div>
+                
+                <div class="checkbox_block">
+                    <input type="checkbox" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="checkbox" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+
+                <select name="doctor_id" >
+                    <option value="0">Any doctor</option>
+                    <option value="1">John Watson</option>
+                    <option value="2">Stephen Strange</option>
+                    <option value="3">Greg House</option>
+                </select>
+                <input type="submit" value="SEARCH">
+            </form>
+        </div>
+
+
+
+        <div class="patient_list">
+            <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>State</th>
+                <th>Doctor</th>
+            </tr>
+            <tr>
+                <td>Laura Capway</td>
+                <td>33</td>
+                <td>Female</td>
+                <td>healty</td>
+                <td>John Watson</td>
+            </tr>
+            <tr>
+                <td>Johan Arh</td>
+                <td>25</td>
+                <td>Male</td>
+                <td>Brain injury</td>
+                <td>Stephen Strange</td>
+            </tr>
+            </table>
+        </div> 
+        
+
+    </body>
+</html>
