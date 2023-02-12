@@ -20,9 +20,8 @@ The application should provide:
 As User select "Doctors" menu tab, the application display list of doctors.
 
 ---
-![Doctors_List](/documentation/mockups/Doctor-list.svg)
----
-![Doctors_List](/documentation/mockups/Doctor-list.svg)
+![Doctors_List](/documentation/mockups/Doctor-list1.svg)
+
 ---
 
 **The page contains:**
@@ -50,9 +49,8 @@ As User select "Doctors" menu tab, the application display list of doctors.
 User click on the doctor's name in the list of doctors the application jump to the doctor's detail view page.
 
 ---
-![Doctor](/documentation/mockups/Doctor.svg)
----
-![Doctor](/documentation/mockups/Doctor.svg)
+![Doctor](/documentation/mockups/Doctor1.svg)
+
 ---
 
 **The page contains:**
@@ -92,9 +90,8 @@ User either push "ADD" button on the page with list of doctors
 or "EDIT" button on the particular doctor's page, the application jump to the doctor creation/edit form.
 
 ---
-![Doctor_edit](/documentation/mockups/Add-Edit-Doctor.svg)
----
-![Doctor_edit](/documentation/mockups/Add-Edit-Doctor.svg)
+![Doctor_edit](/documentation/mockups/Add-Edit-Doctor1.svg)
+
 ---
 
 **The page contains:**
@@ -124,9 +121,8 @@ or "EDIT" button on the particular doctor's page, the application jump to the do
 As User select "Patients" menu tab, the application display list of patients.
 
 ---
-![Patient_List](/documentation/mockups/Patient-list.svg)
----
-![Patient_List](/documentation/mockups/Patient-list.svg)
+![Patient_List](/documentation/mockups/Patient-list1.svg)
+
 ---
 
 **The page contains:**
@@ -156,9 +152,8 @@ As User select "Patients" menu tab, the application display list of patients.
 User click on the patients's name in the list of patients the application jump to the patients's detail view page.
 
 ---
-![Patient](/documentation/mockups/Patient.svg)
----
-![Patient](/documentation/mockups/Patient.svg)
+![Patient](/documentation/mockups/Patient1.svg)
+
 ---
 
 **The page contains:**
@@ -192,9 +187,8 @@ User either push "ADD" button on the doctor's page with list of patient
 or "EDIT" button on the particular patients's page, the application jump to the patient creation/edit page.
 
 ---
-![Patient_Edit](/documentation/mockups/Add-Edit-Patient.svg)
----
-![Patient_Edit](/documentation/mockups/Add-Edit-Patient.svg)
+![Patient_Edit](/documentation/mockups/Add-Edit-Patient1.svg)
+
 ---
 
 **The page contains:**
