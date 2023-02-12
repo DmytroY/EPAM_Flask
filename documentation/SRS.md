@@ -22,6 +22,8 @@ As User select "Doctors" menu tab, the application display list of doctors.
 ---
 ![Doctors_List](/documentation/mockups/Doctor-list.svg)
 ---
+![Doctors_List](/documentation/mockups/Doctor-list.svg)
+---
 
 **The page contains:**
 #### 1) Menu with tabs
@@ -47,6 +49,8 @@ As User select "Doctors" menu tab, the application display list of doctors.
 
 User click on the doctor's name in the list of doctors the application jump to the doctor's detail view page.
 
+---
+![Doctor](/documentation/mockups/Doctor.svg)
 ---
 ![Doctor](/documentation/mockups/Doctor.svg)
 ---
@@ -90,6 +94,8 @@ or "EDIT" button on the particular doctor's page, the application jump to the do
 ---
 ![Doctor_edit](/documentation/mockups/Add-Edit-Doctor.svg)
 ---
+![Doctor_edit](/documentation/mockups/Add-Edit-Doctor.svg)
+---
 
 **The page contains:**
 #### 1) Menu with tabs
@@ -120,6 +126,8 @@ As User select "Patients" menu tab, the application display list of patients.
 ---
 ![Patient_List](/documentation/mockups/Patient-list.svg)
 ---
+![Patient_List](/documentation/mockups/Patient-list.svg)
+---
 
 **The page contains:**
 #### 1) Menu with tabs
@@ -147,6 +155,8 @@ As User select "Patients" menu tab, the application display list of patients.
 
 User click on the patients's name in the list of patients the application jump to the patients's detail view page.
 
+---
+![Patient](/documentation/mockups/Patient.svg)
 ---
 ![Patient](/documentation/mockups/Patient.svg)
 ---
@@ -181,6 +191,8 @@ User click on the patients's name in the list of patients the application jump t
 User either push "ADD" button on the doctor's page with list of patient
 or "EDIT" button on the particular patients's page, the application jump to the patient creation/edit page.
 
+---
+![Patient_Edit](/documentation/mockups/Add-Edit-Patient.svg)
 ---
 ![Patient_Edit](/documentation/mockups/Add-Edit-Patient.svg)
 ---
