@@ -5,7 +5,7 @@ body {
 a {
   color: inherit;
   background-color: transparent;
-  text-decoration: none;
+  
 }
 
 .menu {
@@ -52,6 +52,9 @@ a {
     width: 95%;
     display: flex;
     justify-content: space-between;
+    font-size: 20px;
+    align-items: center;
+
 }
 
 .buttons_block{
@@ -67,5 +70,54 @@ a {
     padding: 10px 50px;
     font-size: 20px;
     border-radius: 10px;
+    margin: 20px;
 
+}
+
+#button{
+    background-color: #888;
+    border: none;
+    color: white;
+    padding: 10px 50px;
+    font-size: 20px;
+    border-radius: 10px;
+
+}
+
+#button_save{
+    background-color: #888;
+    border: none;
+    color: white;
+    padding: 10px 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    position: absolute;
+    left: 40%;
+
+
+}
+
+.person_block{
+    display: flex;
+    flex-direction: row;
+}
+
+.name_title{
+    font-size: 40px;
+    font-weight: bold;
+    margin: 50px;
+}
+
+.table_title{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+input{
+    font-size: 24px;
+}
+
+select{
+    font-size: inherit;
 }

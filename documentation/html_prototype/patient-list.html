@@ -22,29 +22,29 @@
 
         <div class="search_block">
             <form>
-                <div class="age_block">
-                    <input type="number" name="age_min" min="0" max="150" placeholder="min Age">
-                    <input type="number" name="age_max" min="0" max="150" placeholder="max Age">
+                <div class="birthday_from_blok">
+                    <label for="birthday_from">Birthday from:</label>
+                    <input type="date" name="birthday_from" placeholder="dd.mm.yyyy">
+                </div>
+
+                <div class="birthday_to_blok">
+                    <label for="birthday_to">Birthday to:</label>
+                    <input type="date" name="birthday_to" placeholder="dd.mm.yyyy">
+                </div>
+
+                <div class="by_doctor_search">
+                    <label for="doctor_id">Doctor:</label>
+                    <select name="doctor_id" >
+                        <option value="0">Any doctor</option>
+                        <option value="1">John Watson</option>
+                        <option value="2">Stephen Strange</option>
+                        <option value="3">Greg House</option>
+                    </select>
                 </div>
                 
-                <div class="checkbox_block">
-                    <input type="checkbox" id="male" name="gender" value="male">
-                    <label for="male">Male</label>
-                    <input type="checkbox" id="female" name="gender" value="female">
-                    <label for="female">Female</label>
-                </div>
-
-                <select name="doctor_id" >
-                    <option value="0">Any doctor</option>
-                    <option value="1">John Watson</option>
-                    <option value="2">Stephen Strange</option>
-                    <option value="3">Greg House</option>
-                </select>
-                <input type="submit" value="SEARCH">
+                <input type="submit" id="button" value="SEARCH">
             </form>
         </div>
-
-
 
         <div class="patient_list">
             <table class="table">
@@ -56,11 +56,17 @@
                 <th>Doctor</th>
             </tr>
             <tr>
-                <td>Laura Capway</td>
+                <td>
+                    <a href="patient.html">
+                        Andy Bay
+                    </a>
+                </td>
                 <td>33</td>
                 <td>Female</td>
                 <td>healty</td>
-                <td>John Watson</td>
+                <td>
+                    <a href="doctor.html">John Watson</a>
+                </td>
             </tr>
             <tr>
                 <td>Johan Arh</td>

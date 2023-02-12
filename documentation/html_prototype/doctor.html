@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <link rel="stylesheet" href="reset.css"/>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="menu">
+            <div class="menu_item">
+                <a href="doctor-list.html">
+                    Doctors
+                </a>
+            </div>
+            <div class="menu_item">
+                <a href="patient-list.html">
+                    Patients
+                </a>
+            </div>
+        </div>
+
+        <div class="person_block">
+            <div class="photo">
+                <img src="face.jpg" width="150" height="150" alt="photo of person">
+            </div>
+            <div class="name_title">John Watson</div>
+        </div>
+        
+        <div class="doctor_data">
+            <table class="table">
+            <tr>
+                <td>First Name</td>
+                <td>John</td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td>Watson</td>
+            </tr>
+            <tr>
+                <td>Grade</td>
+                <td>BM</td>
+            </tr>
+            <tr>
+                <td>Specialization</td>
+                <td>Combat medic</td>
+            </tr>
+            <tr>
+                <td>email</td>
+                <td>jh_watson@micropeutist.com</td>
+            </tr>
+            </table>
+        </div> 
+
+        
+        <div class="buttons_block">
+            <button class="button">
+                <a href="edit-doctor.html">EDIT</a>
+            </button>
+            <button class="button" onclick="confirmation()">
+                <script>
+                    function confirmation(){
+                        confirm("Do you confirm deletion?");
+                    }
+                </script>
+                <a href="doctor-list.html">DELETE</a>
+            </button>
+        </div>
+
+        <div class="table_title">
+            List of patients
+        </div>
+
+        <div class="patient_list">
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>State</th>
+                </tr>
+                <tr>
+                    <td>Laura Capway</td>
+                    <td>33</td>
+                    <td>Female</td>
+                    <td>healty</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="patient.html">Andy Bay</a>
+                    </td>
+                    <td>67</td>
+                    <td>Male</td>
+                    <td>Gunshot wound</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="buttons_block">
+            <button class="button">
+                <a href="new-patient.html">
+                    ADD
+                </a>
+            </button>
+        </div>
+   
+    </body>
+</html>
