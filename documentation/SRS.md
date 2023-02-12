@@ -204,4 +204,4 @@ or "EDIT" button on the particular patients's page, the application jump to the 
 **Possible actions:**
 - click on "Doctor" or "Patients" tab in menu to see full list of doctors or patients respectively;
 - edit fields for imput;
-- push "SAVE" button to save the patients's info;
+- push "SAVE" button to save the patients's info.
