@@ -1,12 +1,14 @@
 language: python
 python:
- - 3.9
+ - "3.9"
 install:
  - pip install -r requirements.txt
+ - pip install pytest
+ - pip install pytest-cov 
  - pip install coveralls
-coveralls: true
+
 script:
  - pytest tests/temp_pytest.py
- - coverage run -m pytest tests/temp_pytest.py
- after_success:
- - coveralls
+# - coverage run -m pytest tests/temp_pytest.py
+after_success: coveralls
+
