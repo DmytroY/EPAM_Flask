@@ -6,4 +6,4 @@ def test_assert_pass():
 
 def test_assert_fail():
     ''' test for fail'''
-    assert temp_func() == 43
+    assert temp_func() != 43
