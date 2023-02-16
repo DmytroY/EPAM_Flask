@@ -1,5 +1,5 @@
-# '''testing of unittest '''
-# import unittest
+'''testing of unittest '''
+import unittest
 
 from micropeutist_app.service.service_temp import temp_func
 
