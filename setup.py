@@ -6,7 +6,7 @@ setuptools.setup(
     description='Flask project for EPAM',
     url='https://github.com/DmytroY/EPAM-Flask',
     author='Dmytro Yakovenko',
-    author_email='dmitry.yakovenko@gmail.com'
+    #author_email='dmitry.yakovenko@gmail.com'
     packages=setuptools.find_packages(),
     install_requirements=[],
     long_description='Flask project for EPAM',
