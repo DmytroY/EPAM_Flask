@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block header %}
+<div class="menu_item">
+    <a href="doctors">
+        Doctors
+    </a>
+</div>
+<div class="menu_item">
+    <a href="patients">
+        Patients
+    </a>
+</div>
+{% endblock %}
+
+{% block title %}
+Creating new doctor record
+{% endblock %}
+
+{% block body %}
+
+
+<div class="person_data_edit">
+    <form action="doctor-list.html">
+        <table class="table">
+            <tr>
+                <td>First name</td>
+                <td><input type="text" id="first_name" name="first_name" value="" size="30"></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" id="last_name" name="last_name" value="" size="30"></td>
+            </tr>
+            <tr>
+                <td>Grade</td>
+                <td><input type="text" id="grade" name="grade" value="" size="30"></td>
+            </tr>
+            <tr>
+                <td>Specialization</td>
+                <td><input type="text" id="specialization" name="specialization" value="" size="30"></td>
+            </tr>
+            <tr>
+                <td>email</td>
+                <td><input type="email" id="email" name="email" value="" size="30"></td>
+            </tr>
+        </table>
+
+        <input type="submit" id="button_save" value="SAVE">
+    </form>
+    
+</div>    
+{% endblock %}

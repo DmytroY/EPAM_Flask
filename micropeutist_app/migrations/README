@@ -1,0 +1,4 @@
+pip install flask-migrate
+flask db init - will init and create migration folder
+flask db migrate - will prepare migrations
+flask db upgrade - apply migrations to the sql database

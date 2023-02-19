@@ -1,3 +1,3 @@
 FLASK_ENV=development
 FLASK_DEBUG=True
-FLASK_APP=micropeutist-app/app.py
+FLASK_APP=main.py

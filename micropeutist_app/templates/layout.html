@@ -3,8 +3,18 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="initial-scale=1, width=device-width">
+        <link rel="stylesheet" href="/static/reset.css"/>
+        <link rel="stylesheet" href="/static/styles.css">
     </head>
     <body>
+        <div class="menu">
+            {% block header %}{% endblock %}
+        </div>
+        
+        <div class="title">
+            {% block title %}{% endblock %}
+        </div>
+
         {% block body %}{% endblock %}
     </body>
 </html>

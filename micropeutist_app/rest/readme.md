@@ -1,1 +1,0 @@
-modules with RESTful service implementation
