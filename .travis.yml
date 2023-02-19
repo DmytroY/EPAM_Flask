@@ -8,7 +8,8 @@ install:
  - pip install coveralls
 
 script:
- - pytest --cov=micropeutist_app tests/
+ - python -m pytest --cov=. tests/
+#- pytest --cov=micropeutist_app tests/
 # - coverage run -m pytest tests/test_by_pytest.py
 after_success: coveralls
 
