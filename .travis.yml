@@ -1,20 +1,24 @@
 language: python
+
 services:
  - mysql
+
 python:
  - "3.9"
+
 before_install:
- - mysql -e 'CREATE DATABASE micropeutist;' 
+ - mysql -e 'CREATE DATABASE micropeutist;'
+
 install:
  - pip install -r requirements.txt
  - pip install pytest
  - pip install pytest-cov 
  - pip install coveralls
 
-
-
 script:
+ - flask db init
+ - flask db migrate
+ - flask db upgrade
  - python -m pytest --cov=. tests/
 
 after_success: coveralls
-
