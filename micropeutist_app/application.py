@@ -1,23 +1,11 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
-# import configuration class with address of connection to DB and secret key
-from .config import Config 
+from .config import app
+from .models.model import *
 
-app = Flask(__name__)
 
-# take configuration options from Config class and initialize DB engines
-app.config.from_object(Config) 
-db = SQLAlchemy(app)
+import EPAM_Flask.micropeutist_app.views.web_view
 
-# should be here to avoid cirsular import
-from .models.models import Doctor, Patient
+import EPAM_Flask.micropeutist_app.rest.api_view
+import EPAM_Flask.micropeutist_app.views.web_view
 
-migrate = Migrate(app, db)
-
-# routes and Web controllers
-
-from .views import web_view
-
-#routes and RESTful service implementation
-from .rest import api_view
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0')

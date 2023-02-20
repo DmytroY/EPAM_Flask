@@ -1,8 +1,7 @@
 from sqlalchemy import inspect
 
-from ..application import db
-from ..models.models import Doctor, Patient
-
+from ..config import db
+from ..models.model import *
 
 
 def to_dict(obj):

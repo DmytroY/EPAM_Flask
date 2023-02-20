@@ -1,7 +1,7 @@
 from flask import jsonify
 
-from ..service.service import get_doctor_list
-from ..application import app
+from ..service.services import get_doctor_list
+from ..config import app
 
 @app.route("/api")
 @app.route("/api/doctors")

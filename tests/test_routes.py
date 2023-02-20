@@ -1,6 +1,12 @@
-from micropeutist_app.application import app
+from EPAM_Flask.micropeutist_app.views.web_view import app
+
+
 def test_home_route():
     responce = app.test_client().get('/')
-    print(responce)
+    assert responce.status_code == 200
+    assert b'<p>List of Doctors</p>' in responce.data
 
-test_home_route()
+#     print("=== test_home_route responce === :", responce)
+#     print("=== responce.data ==== ", responce.data)
+
+# test_home_route()
