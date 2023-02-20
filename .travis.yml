@@ -6,8 +6,8 @@ install:
  - pip install pytest
  - pip install pytest-cov 
  - pip install coveralls
- services:
-  - mysql
+services:
+ - mysql
 
 script:
  - python -m pytest --cov=. tests/
