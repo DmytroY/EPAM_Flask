@@ -16,7 +16,6 @@ install:
  - pip install coveralls
 
 script:
- - flask db migrate
  - flask db upgrade
  - python -m pytest --cov=. tests/
 
