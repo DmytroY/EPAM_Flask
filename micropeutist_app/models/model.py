@@ -1,9 +1,11 @@
-from ..config import db
-
+''' ORM Models '''
 from sqlalchemy import ForeignKey, String, Date, Column, Integer
 from sqlalchemy.orm import relationship
 
-class Doctor(db.Model):
+from ..config import db
+
+
+class Doctor(db.Model): #pylint: disable=too-few-public-methods
     '''Declare Model Doctor'''
     __tablename__ = 'doctors'
 
@@ -16,7 +18,7 @@ class Doctor(db.Model):
 
     patient = relationship("Patient", back_populates="doctor")
 
-    def __init__(self, first_name, last_name, grade, specialization, email):
+    def __init__(self, first_name, last_name, grade, specialization, email): #pylint: disable=too-many-arguments
         self.first_name = first_name
         self.last_name = last_name
         self.grade = grade
@@ -24,7 +26,7 @@ class Doctor(db.Model):
         self.email = email
 
 
-class Patient(db.Model):
+class Patient(db.Model): #pylint: disable=too-few-public-methods
     '''Declare Model Patient'''
     __tablename__ = 'patients'
 
@@ -39,7 +41,7 @@ class Patient(db.Model):
 
     doctor = relationship("Doctor", back_populates="patient")
 
-    def __init__(self, first_name, last_name, gender, birthday, health_state, email):
+    def __init__(self, first_name, last_name, gender, birthday, health_state, email): #pylint: disable=too-many-arguments
         self.first_name = first_name
         self.last_name = last_name
         self.gender = gender

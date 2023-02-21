@@ -1,12 +1,12 @@
+''' CRUD operations '''
 from sqlalchemy import inspect
 
 from ..config import db
-from ..models.model import *
+from ..models.model import Doctor, Patient
 
 
 def to_dict(obj):
-    '''this procedure reseived an object selected from DB
-    and return object atributes as dictionary'''
+    '''this procedure returns object atributes as dictionary'''
     result = {}
     for item in inspect(obj).mapper.column_attrs:
         result[item.key] = getattr(obj, item.key)
@@ -14,6 +14,7 @@ def to_dict(obj):
 
 
 def get_doctor_list():
+    ''' select all records from doctors and add patient count to each record'''
     session = db.session()
     doctors = session.query(Doctor).all()
 
