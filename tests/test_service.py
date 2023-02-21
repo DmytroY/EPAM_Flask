@@ -1,3 +1,4 @@
+'''test cases for services '''
 from sqlalchemy import String, Column, Integer
 
 from micropeutist_app.service.services import to_dict, db
@@ -7,7 +8,7 @@ from micropeutist_app.service.services import to_dict, db
 def test_to_dict():
     ''' testing procedure to_dict() in service module'''
 
-    class Test_model(db.Model):
+    class TestModel(db.Model):
         '''Declare test Model'''
         __tablename__ = 'test_model'
         id      = Column(Integer, primary_key=True)
@@ -18,7 +19,7 @@ def test_to_dict():
             self.name = name
             self.age = age
 
-    test_obj = Test_model("Albert", 42)
+    test_obj = TestModel("Albert", 42)
 
     # procedure to test
     test_dict = to_dict(test_obj)
