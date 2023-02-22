@@ -19,33 +19,33 @@ Creating new doctor record
 
 {% block body %}
 
-
 <div class="person_data_edit">
-    <form action="doctor-list.html">
+    <form action="/new_doctor" method="post">
         <table class="table">
             <tr>
                 <td>First name</td>
-                <td><input type="text" id="first_name" name="first_name" value="" size="30"></td>
+                <td><input type="text" name="first_name" placeholder="John" size="30" required autofocus></td>
             </tr>
             <tr>
                 <td>Last Name</td>
-                <td><input type="text" id="last_name" name="last_name" value="" size="30"></td>
+                <td><input type="text"name="last_name" placeholder="Doe" size="30" required></td>
             </tr>
             <tr>
                 <td>Grade</td>
-                <td><input type="text" id="grade" name="grade" value="" size="30"></td>
+                <td><input type="text" name="grade" placeholder="MD" size="30" required></td>
             </tr>
             <tr>
                 <td>Specialization</td>
-                <td><input type="text" id="specialization" name="specialization" value="" size="30"></td>
+                <td><input type="text" name="specialization" placeholder="Therapeutist"size="30" required></td>
             </tr>
             <tr>
                 <td>email</td>
-                <td><input type="email" id="email" name="email" value="" size="30"></td>
+                <td><input type="email" name="email" placeholder="john@email.com" size="30" required></td>
             </tr>
         </table>
 
-        <input type="submit" id="button_save" value="SAVE">
+        
+        <button id="button_save" type="submit">SAVE</button>
     </form>
     
 </div>    

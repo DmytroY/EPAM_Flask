@@ -127,3 +127,19 @@ select{
     font-weight: bold;
     margin: 50px;
 }
+
+.flash{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 50px;
+    margin: 50px, 5px;
+}
+
+.error {
+    color: red;
+}
+
+.message {
+    color: green;
+}
+
