@@ -2,7 +2,7 @@
 from sqlalchemy import ForeignKey, String, Date, Column, Integer
 from sqlalchemy.orm import relationship
 
-from ..config import db
+from ..config import db, ma
 
 
 class Doctor(db.Model): #pylint: disable=too-few-public-methods
@@ -58,3 +58,18 @@ class Patient(db.Model): #pylint: disable=too-few-public-methods
         self.birthday = birthday
         self.health_state = health_state
         self.email = email
+
+class DoctorSchema(ma.Schema):
+    class Meta:
+
+        fields = ('id', 'first_name', 'last_name', 'grade', 'specialization', 'email', )
+
+class PatientSchema(ma.Schema):
+    class Meta:
+        fields = ('id', 'first_name', 'last_name', 'gender', 'birthday', 'health_state', 'email', 'doctor_id')
+
+doctor_schema = DoctorSchema()
+doctors_schema = DoctorSchema(many=True)
+
+patient_schema = PatientSchema()
+patients_schema = PatientSchema(many=True)

@@ -1,53 +1,54 @@
-<!DOCTYPE html>
+{% extends "layout.html" %}
 
-<html lang="en">
-    <head>
-        <meta name="viewport" content="initial-scale=1, width=device-width">
-        <link rel="stylesheet" href="reset.css"/>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div class="menu">
-            <div class="menu_item">
-                <a href="doctor-list.html">
-                    Doctors
-                </a>
-            </div>
-            <div class="menu_item">
-                <a href="patient-list.html">
-                    Patients
-                </a>
-            </div>
-        </div>
+{% block header %}
+<div class="menu_item">
+    <a href="doctors">
+        Doctors
+    </a>
+</div>
+<div class="menu_item">
+    <a href="patients">
+        Patients
+    </a>
+</div>
+{% endblock %}
 
-        <div class="person_block">
-            <div class="photo">
-                <img src="face.jpg" width="150" height="150" alt="photo of person">
-            </div>
-            <div class="name_title">John Watson</div>
-        </div>
-        
+{% block title %}
+Doctor record
+{% endblock %}
+
+{% block body %}
+<div class="person_block">
+    <div class="photo">
+        <img src="face.jpg" width="150" height="150" alt="photo of person">
+    </div>
+    <div class="name_title">
+        {{ data["first_name"] }} {{ data["last_name"] }}
+    </div>
+</div>
+
+
         <div class="doctor_data">
             <table class="table">
             <tr>
                 <td>First Name</td>
-                <td>John</td>
+                <td>{{ data["first_name"] }}</td>
             </tr>
             <tr>
                 <td>Last Name</td>
-                <td>Watson</td>
+                <td>{{ data["last_name"] }}</td>
             </tr>
             <tr>
                 <td>Grade</td>
-                <td>BM</td>
+                <td>{{ data["grade"]}}</td>
             </tr>
             <tr>
                 <td>Specialization</td>
-                <td>Combat medic</td>
+                <td>{{ data["specialization"]}}</td>
             </tr>
             <tr>
                 <td>email</td>
-                <td>jh_watson@micropeutist.com</td>
+                <td>{{ data["email"]}}</td>
             </tr>
             </table>
         </div> 
@@ -79,20 +80,14 @@
                     <th>Gender</th>
                     <th>State</th>
                 </tr>
-                <tr>
-                    <td>Laura Capway</td>
-                    <td>33</td>
-                    <td>Female</td>
-                    <td>healty</td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="patient.html">Andy Bay</a>
-                    </td>
-                    <td>67</td>
-                    <td>Male</td>
-                    <td>Gunshot wound</td>
-                </tr>
+                {% for patient in data["patients"] %}
+                    <tr>
+                        <td>{{ patient['first_name'] }} {{ patient['last_name'] }}</td>
+                        <td>{{ patient['age'] }}</td>
+                        <td>{{ patient['gender'] }}</td>
+                        <td>{{ patient['health_state'] }}</td>
+                    </tr>
+                {% endfor %}
             </table>
         </div>
 
@@ -103,6 +98,8 @@
                 </a>
             </button>
         </div>
-   
-    </body>
-</html>
+{% endblock %}
+
+
+        
+

@@ -1,7 +1,7 @@
 ''' WEB controller '''
 from flask import render_template, redirect, request, flash
 
-from ..service.services import get_doctor_list, set_doctor
+from ..service.services import get_doctor_list, set_doctor, get_doctor
 from ..config import app
 
 
@@ -28,4 +28,12 @@ def new_doctor():
         else: flash(feedback, category='error')
         return redirect("/")
     return render_template("new_doctor.html")
-    
+
+@app.route('/doctor', methods=['GET'])
+def doctor():
+    '''Show a doctor data be id or by email
+    usage: /doctor/?id=<unic id number or unic email>'''
+    id = request.args.get('id')
+    print("=== I AM HERE, id =", id)
+    doctor_list = get_doctor(id)
+    return render_template("doctor.html", data=doctor_list)
