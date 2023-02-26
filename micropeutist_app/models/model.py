@@ -49,15 +49,16 @@ class Patient(db.Model): #pylint: disable=too-few-public-methods
 
     doctor = relationship("Doctor", back_populates="patient")
 
-    def __init__(self, first_name, last_name, gender, birthday, health_state, email): #pylint: disable=too-many-arguments
+    def __init__(self, first_name, last_name, gender, birthday, health_state, email, doctor_id): #pylint: disable=too-many-arguments
         ''' Patient object constructor
-        usage: new_patient = Patient(<first_name>, <last_name>, <gender>, <birthday>, <health_state>, <email>)'''
+        usage: new_patient = Patient(<first_name>, <last_name>, <gender>, <birthday>, <health_state>, <email>, <doctor_id>)'''
         self.first_name = first_name
         self.last_name = last_name
         self.gender = gender
         self.birthday = birthday
         self.health_state = health_state
         self.email = email
+        self.doctor_id = doctor_id
 
 class DoctorSchema(ma.Schema):
     class Meta:

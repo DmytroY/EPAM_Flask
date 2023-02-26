@@ -1,24 +1,10 @@
-<!DOCTYPE html>
+{% extends "layout.html" %}
 
-<html lang="en">
-    <head>
-        <meta name="viewport" content="initial-scale=1, width=device-width">
-        <link rel="stylesheet" href="reset.css"/>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div class="menu">
-            <div class="menu_item">
-                <a href="doctor-list.html">
-                    Doctors
-                </a>
-            </div>
-            <div class="menu_item">
-                <a href="patient-list.html">
-                    Patients
-                </a>
-            </div>
-        </div>
+{% block title %}
+    <p>Creating new patient record</p>
+{% endblock %}
+
+{% block body %}
 
         <div class="person_block">
             <div class="photo">
@@ -29,7 +15,7 @@
 
 
         <div class="person_data_edit">
-            <form action="patient-list.html">
+            <form action="/new_patient" method="post"}}>
                 <table class="table">
                     <tr>
                         <td>First name</td>
@@ -54,8 +40,8 @@
                     </tr>
 
                     <tr>
-                        <td>State</td>
-                        <td><input type="text" id="state" name="state" value="" size="30"></td>
+                        <td>Health state</td>
+                        <td><input type="text" id="health_state" name="health_state" value="" size="30"></td>
                     </tr>
                     <tr>
                         <td>email</td>
@@ -63,8 +49,9 @@
                     </tr>
                     <tr>
                         <td>Doctor</td>
-                        <td><input type="text" id="doctor" name="doctor" value="John Watson" size="30"></td>
+                        <td>{{ doctor['first_name'] }} {{ doctor['last_name'] }}</td>
                     </tr>
+                    <input type="hidden" name="doctor_id" value = {{ doctor['id'] }}>
 
 
                 </table>
@@ -73,6 +60,4 @@
             </form>
             
         </div>    
-
-    </body>
-</html>
+{% endblock %}

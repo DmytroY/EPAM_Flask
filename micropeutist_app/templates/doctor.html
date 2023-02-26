@@ -1,20 +1,7 @@
 {% extends "layout.html" %}
 
-{% block header %}
-<div class="menu_item">
-    <a href="doctors">
-        Doctors
-    </a>
-</div>
-<div class="menu_item">
-    <a href="patients">
-        Patients
-    </a>
-</div>
-{% endblock %}
-
 {% block title %}
-Doctor record
+    <p>Doctor record</p>
 {% endblock %}
 
 {% block body %}
@@ -28,76 +15,87 @@ Doctor record
 </div>
 
 
-        <div class="doctor_data">
-            <table class="table">
-            <tr>
-                <td>First Name</td>
-                <td>{{ data["first_name"] }}</td>
-            </tr>
-            <tr>
-                <td>Last Name</td>
-                <td>{{ data["last_name"] }}</td>
-            </tr>
-            <tr>
-                <td>Grade</td>
-                <td>{{ data["grade"]}}</td>
-            </tr>
-            <tr>
-                <td>Specialization</td>
-                <td>{{ data["specialization"]}}</td>
-            </tr>
-            <tr>
-                <td>email</td>
-                <td>{{ data["email"]}}</td>
-            </tr>
-            </table>
-        </div> 
+<div class="doctor_data">
+    <table class="table">
+    <tr>
+        <td>First Name</td>
+        <td>{{ data["first_name"] }}</td>
+    </tr>
+    <tr>
+        <td>Last Name</td>
+        <td>{{ data["last_name"] }}</td>
+    </tr>
+    <tr>
+        <td>Grade</td>
+        <td>{{ data["grade"]}}</td>
+    </tr>
+    <tr>
+        <td>Specialization</td>
+        <td>{{ data["specialization"]}}</td>
+    </tr>
+    <tr>
+        <td>email</td>
+        <td>{{ data["email"]}}</td>
+    </tr>
+    </table>
+</div> 
 
-        
+<div class="buttons_block">
+    <form action="/edit_doctor" method="get">
+        <button class="button" type="submit" name="id" value={{ data["id"] }}>EDIT</button>
+    </form>
+
+
+    <button class="button" onclick=confirmation() type="submit">DELETE</button>
+    <script>
+        function confirmation(){
+            if (confirm("Do you confirm deletion?") == true) {
+                alert("Deleted !");
+                const del_url = {{ url_for("remove_doctor", id=data['id'])|tojson }}
+                fetch(del_url).then(
+                    response => {
+                        if (response.redirected) {window.location = response.url;}
+                    });
+            };
+        };
+    </script>
+</div>
+
+
+<div class="table_title">
+    List of patients
+</div>
+
+<div class="patient_list">
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>State</th>
+        </tr>
+        {% for patient in data["patients"] %}
+            <tr>
+                <td>
+                    <a href="{{url_for('patient', id=patient['id'])}}">
+                        {{ patient['first_name'] }} {{ patient['last_name'] }}
+                    </a>
+                </td>
+                <td>{{ patient['age'] }}</td>
+                <td>{{ patient['gender'] }}</td>
+                <td>{{ patient['health_state'] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<div class="buttons_block">
+    <form action="/new_patient" method="get">
         <div class="buttons_block">
-            <button class="button">
-                <a href="edit-doctor.html">EDIT</a>
-            </button>
-            <button class="button" onclick="confirmation()">
-                <script>
-                    function confirmation(){
-                        confirm("Do you confirm deletion?");
-                    }
-                </script>
-                <a href="doctor-list.html">DELETE</a>
-            </button>
+            <button class="button" type="submit" name="doctor_id" value={{ data["id"] }}>ADD</button>
         </div>
-
-        <div class="table_title">
-            List of patients
-        </div>
-
-        <div class="patient_list">
-            <table class="table">
-                <tr>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>Gender</th>
-                    <th>State</th>
-                </tr>
-                {% for patient in data["patients"] %}
-                    <tr>
-                        <td>{{ patient['first_name'] }} {{ patient['last_name'] }}</td>
-                        <td>{{ patient['age'] }}</td>
-                        <td>{{ patient['gender'] }}</td>
-                        <td>{{ patient['health_state'] }}</td>
-                    </tr>
-                {% endfor %}
-            </table>
-        </div>
-
-        <div class="buttons_block">
-            <button class="button">
-                <a href="new-patient.html">
-                    ADD
-                </a>
-            </button>
-        </div>
+    </form>  
+</div>
 {% endblock %}
 
 
