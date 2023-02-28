@@ -8,7 +8,8 @@
 
 <div class="person_block">
     <div class="photo">
-        <img src="face.jpg" width="150" height="150" alt="photo of person">
+        <img src="{{ data['image_url'] }}" onerror="this.src='/static/photo/face.jpg'"
+        width="150" height="150" alt="photo of person">
     </div>
     <div class="name_title">
         {{ data["first_name"] }} {{ data["last_name"] }}
@@ -44,7 +45,7 @@
     <tr>
         <td>Doctor</td>
         <td>
-            <a href="{{url_for('doctor', id=data.doctor['id'])}}">
+            <a href="{{url_for('get_doctor', id=data.doctor['id'])}}">
                 {{ data.doctor["first_name"]}} {{ data.doctor["last_name"]}}
             </a>
         </td>

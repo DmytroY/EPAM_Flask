@@ -1,9 +1,12 @@
 ''' RESTfull service implementation '''
-from flask import jsonify, redirect, request
+from flask import jsonify, request
 
-from ..service.services import *
+from ..service.crud import get_doctors, create_doctor
+from ..service.crud import update_doctor, receive_doctor, delete_doctor
+from ..service.crud import get_patients, create_patient
+from ..service.crud import update_patient, receive_patient, delete_patient
 from ..config import app
-#from ..models.model import Doctor, Patient, doctor_schema, patient_schema
+
 
 # ========= DOCTORS ========
 @app.route('/api/')
@@ -30,8 +33,8 @@ def api_create_doctor():
 def api_receive_doctor():
     '''API to get a doctor data be id or by email
     usage: /api/doctor/?id=<unic id number or unic email>'''
-    id = request.args.get('id')
-    feedback = receive_doctor(id)
+    key = request.args.get('id')
+    feedback = receive_doctor(key)
     if feedback:
         return jsonify(feedback), 200
     return jsonify(message='There is no such doctor in database'), 204
@@ -55,10 +58,10 @@ def api_update_doctor():
 def api_delete_doctor():
     '''API to delete a doctor data be id or by email
     parameter in body is id=<unic id number or unic email>'''
-    id = request.form.get('id')
-    feedback = delete_doctor(id)
+    key = request.form.get('id')
+    feedback = delete_doctor(key)
     if feedback == 'success':
-        return jsonify(message='Doctor with id/email = ' +id + ' have been deleted'), 200
+        return jsonify(message='Doctor with id/email = ' + key + ' have been deleted'), 200
     return jsonify(message=feedback), 409
 
 # ======== PATIENTS ==============
@@ -87,8 +90,8 @@ def api_create_patient():
 def api_receive_patient():
     '''API to get a patient data be id or by email
     usage: /api/doctor/?id=<unic id number or unic email>'''
-    id = request.args.get('id')
-    feedback = receive_patient(id)
+    key = request.args.get('id')
+    feedback = receive_patient(key)
     if feedback:
         return jsonify(feedback), 200
     return jsonify(message='There is no such patient in database'), 204
@@ -113,8 +116,8 @@ def api_update_patient():
 @app.route('/api/delete_patient/', methods=["DELETE"])
 def api_delete_patient():
     '''API for delete patient'''
-    id = request.form.get('id')
-    feedback = delete_patient(id)
+    key = request.form.get('id')
+    feedback = delete_patient(key)
     if feedback == 'success':
-        return jsonify(message='PAtient with id/email = ' +id + ' have been deleted'), 200
+        return jsonify(message='PAtient with id/email = ' + key + ' have been deleted'), 200
     return jsonify(message=feedback), 409

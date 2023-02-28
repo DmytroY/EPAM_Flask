@@ -2,6 +2,8 @@ body {
     background-color: white;
   }
 
+
+
 a {
   color: inherit;
   background-color: transparent;
@@ -26,6 +28,10 @@ a {
 
 .current {
     color: black;
+}
+
+.person_block{
+    margin: 20px;
 }
 
 .table{

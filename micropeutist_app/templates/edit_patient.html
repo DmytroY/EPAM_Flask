@@ -8,7 +8,8 @@
 
 <div class="person_block">
     <div class="photo">
-        <img src="face.jpg" width="150" height="150" alt="photo of person">
+        <img src="{{ data['image_url'] }}" onerror="this.src='/static/photo/face.jpg'"
+        width="150" height="150" alt="photo of person">
     </div>
     <div class="name_title">
         {{ data['first_name'] }} {{ data['last_name'] }} 
@@ -17,15 +18,15 @@
 
 
 <div class="person_data_edit">
-    <form action="/edit_patient" method="post">
+    <form action="/edit_patient" method="post" enctype="multipart/form-data">
         <table class="table">
             <tr>
                 <td>First name</td>
-                <td><input type="text" name="first_name" value={{ data['first_name'] }} size="30"></td>
+                <td><input type="text" name="first_name" value="{{ data['first_name'] }}" required></td>
             </tr>
             <tr>
                 <td>Last Name</td>
-                <td><input type="text" id="last_name" name="last_name" value={{ data['last_name'] }} size="30"></td>
+                <td><input type="text" id="last_name" name="last_name" value="{{ data['last_name'] }}" required></td>
             </tr>
             <tr>
                 <td>Gender</td>
@@ -41,15 +42,15 @@
             </tr>
             <tr>
                 <td>Birthday</td>
-                <td><input type="date" name="birthday" value={{ data['birthday'] }} size="30"></td>
+                <td><input type="date" name="birthday" value="{{ data['birthday'] }}" required></td>
             </tr>
             <tr>
                 <td>Health state</td>
-                <td><input type="text" name="helth_state" value={{ data['health_state'] }} size="30"></td>
+                <td><input type="text" name="health_state" value="{{ data['health_state'] }}"></td>
             </tr>
             <tr>
                 <td>email</td>
-                <td><input type="email" name="email" value={{ data['email'] }} size="30"></td>
+                <td><input type="email" name="email" value="{{ data['email'] }}" required></td>
             </tr>
             <tr>
                 <td>Doctor</td>
@@ -67,6 +68,12 @@
                             </option>
                             {% endfor %}
                     </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Photo<br>(150x150 pixels. bmp, png, jpg, jfif)</td>
+                <td>
+                    <input type="file" name="file" placeholder="photo 150x150">
                 </td>
             </tr>
 

@@ -5,59 +5,54 @@
 {% endblock %}
 
 {% block body %}
+<div class="person_data_edit">
+    <form action="/new_patient" method="post" enctype="multipart/form-data">
+        <table class="table">
+            <tr>
+                <td>First name</td>
+                <td><input type="text" id="first_name" name="first_name" value="" required></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" id="last_name" name="last_name" value="" required></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <select name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Birthday</td>
+                <td><input type="date" id="birthday" name="birthday" value="" required></td>
+            </tr>
 
-        <div class="person_block">
-            <div class="photo">
-                <img src="face.jpg" width="150" height="150" alt="photo of person">
-            </div>
-            <div class="name_title">New Patient</div>
-        </div>
+            <tr>
+                <td>Health state</td>
+                <td><input type="text" id="health_state" name="health_state" value=""></td>
+            </tr>
+            <tr>
+                <td>email</td>
+                <td><input type="email" id="email" name="email" value="" required></td>
+            </tr>
+            <tr>
+                <td>Doctor</td>
+                <td>{{ doctor['first_name'] }} {{ doctor['last_name'] }}</td>
+            </tr>
+            <tr>
+                <td>Photo<br>(150x150 pixels. bmp, png, jpg, jfif)</td>
+                <td>
+                    <input type="file" name="file" placeholder="photo 150x150">
+                </td>
+            </tr>
+            <input type="hidden" name="doctor_id" value = {{ doctor['id'] }}>
+        </table>
 
-
-        <div class="person_data_edit">
-            <form action="/new_patient" method="post"}}>
-                <table class="table">
-                    <tr>
-                        <td>First name</td>
-                        <td><input type="text" id="first_name" name="first_name" value="" size="30"></td>
-                    </tr>
-                    <tr>
-                        <td>Last Name</td>
-                        <td><input type="text" id="last_name" name="last_name" value="" size="30"></td>
-                    </tr>
-                    <tr>
-                        <td>Gender</td>
-                        <td>
-                            <select name="gender">
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Birthday</td>
-                        <td><input type="date" id="birthday" name="birthday" value="" size="30"></td>
-                    </tr>
-
-                    <tr>
-                        <td>Health state</td>
-                        <td><input type="text" id="health_state" name="health_state" value="" size="30"></td>
-                    </tr>
-                    <tr>
-                        <td>email</td>
-                        <td><input type="email" id="email" name="email" value="" size="30"></td>
-                    </tr>
-                    <tr>
-                        <td>Doctor</td>
-                        <td>{{ doctor['first_name'] }} {{ doctor['last_name'] }}</td>
-                    </tr>
-                    <input type="hidden" name="doctor_id" value = {{ doctor['id'] }}>
-
-
-                </table>
-
-                <input type="submit" id="button_save" value="SAVE">
-            </form>
-            
-        </div>    
+        <input type="submit" id="button_save" value="SAVE">
+    </form>
+    
+</div>    
 {% endblock %}

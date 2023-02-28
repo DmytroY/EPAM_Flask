@@ -57,7 +57,7 @@
         <td>
             {% set doctor = patient['doctor'] %}
             {% if doctor %}
-            <a href="{{url_for('doctor', id=patient['doctor_id'])}}">
+            <a href="{{url_for('get_doctor', id=patient['doctor_id'])}}">
                 {{ doctor['first_name'] }} {{ doctor['last_name'] }}
             </a>
             {% endif %}

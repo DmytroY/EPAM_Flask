@@ -1,17 +1,11 @@
 ''' CRUD operations '''
-from datetime import datetime, timedelta
+import numpy
+import cv2
 
 from ..config import db
-from ..models.model import *
-
-YEAR = timedelta(days=365, hours=6)
-
-def get_age(patient_id) -> int:
-    ''' calculate age by id of patient'''
-    patient = Patient.query.filter_by(id=patient_id).first()
-    patient_dict = patient_schema.dump(patient)
-    birthday = datetime.strptime(patient_dict['birthday'], '%Y-%m-%d')
-    return int((datetime.today() - birthday)/YEAR)
+from ..models.model import Doctor, doctor_schema, doctors_schema
+from ..models.model import Patient, patient_schema, patients_schema
+from .helper import url_for_save, where_is_photo, get_age, delete_photo, save_photo
 
 # ======= DOCTORS ======
 def get_doctors() -> list:
@@ -21,8 +15,8 @@ def get_doctors() -> list:
     doctor_list = doctors_schema.dump(doctors)
     # add to each doctor number of related patients
     for doctor in doctor_list:
-        id = doctor["id"]
-        doctor["patient_count"] = Patient.query.filter_by(doctor_id = id).count()
+        key = doctor["id"]
+        doctor["patient_count"] = Patient.query.filter_by(doctor_id = key).count()
     return doctor_list
 
 def create_doctor(data: dict) -> str:
@@ -31,6 +25,9 @@ def create_doctor(data: dict) -> str:
     is_exist = Doctor.query.filter_by(email=data.get('email')).first()
     if is_exist:
         return "Error. This email already exist in Doctor records"
+
+    if data.get('file'):
+        save_photo(data)
 
     # creating record
     with db.session() as session:
@@ -49,6 +46,7 @@ def receive_doctor(tag: str) -> list:
 
     if doctor:
         doctor_dict = doctor_schema.dump(doctor)
+        doctor_dict['image_url'] = where_is_photo(doctor_dict.get('email'))
 
         # add list of related patients
         patients = Patient.query.filter_by(doctor_id=doctor_dict['id']).all()
@@ -64,17 +62,21 @@ def receive_doctor(tag: str) -> list:
 def update_doctor(data: dict) -> str:
     '''updating existing doctor record
     return either "success" or error description '''
-    if data['id']:
+    if data.get('id'):
         doctor = Doctor.query.filter_by(id=data.get('id')).first()
     else:
         doctor = Doctor.query.filter_by(email=data.get('email')).first()
 
     if doctor:
+        if data.get('file'):
+            save_photo(data)
+
         doctor.first_name = data.get('first_name')
         doctor.last_name = data.get('last_name')
         doctor.grade = data.get('grade')
         doctor.specialization = data.get('specialization')
         doctor.email = data['email']
+
         db.session.commit()
         return 'success'
     return 'Error. No record with such key'
@@ -88,9 +90,11 @@ def delete_doctor(tag: str) -> str:
         doctor = Doctor.query.filter_by(email=tag).first()
 
     if doctor:
+        email = doctor_schema.dump(doctor).get('email')
+        delete_photo(email)
         with db.session() as session:
             session.delete(doctor)
-            session.commit() 
+            session.commit()
         return "success"
     return "No such doctor record in the database"
 
@@ -99,14 +103,16 @@ def get_patients(**criterias: dict) -> list:
     ''' filter records from patients '''
     if not criterias:
         patients = Patient.query.all()
-    elif criterias['doctor_id']:
+    elif criterias.get('doctor_id'):
         patients = Patient.query.\
-            filter(Patient.birthday.between(criterias['birthday_since'], criterias['birthday_till'])).\
+            filter(Patient.birthday.between(criterias['birthday_since'],
+                                            criterias['birthday_till'])).\
             filter(Patient.doctor_id == criterias['doctor_id']).\
             all()
     else:
         patients = Patient.query.\
-            filter(Patient.birthday.between(criterias['birthday_since'], criterias['birthday_till'])).\
+            filter(Patient.birthday.between(criterias['birthday_since'],
+                                            criterias['birthday_till'])).\
             all()
 
     patient_list = patients_schema.dump(patients)
@@ -129,6 +135,9 @@ def create_patient(data: dict) ->str:
     if is_exist:
         return "Error. This email already exist in Patient records"
 
+    if data.get('file'):
+        save_photo(data)
+
     # creating record
     with db.session() as session:
         new_patient = Patient(**data)
@@ -146,6 +155,8 @@ def receive_patient(tag: str) -> list:
 
     if patient:
         patient_dict = patient_schema.dump(patient)
+        patient_dict['image_url'] = where_is_photo(patient_dict.get('email'))
+
 
         # add relative doctor
         doctor = Doctor.query.filter_by(id=patient_dict['doctor_id']).first()
@@ -155,12 +166,15 @@ def receive_patient(tag: str) -> list:
 
 def update_patient(data: dict) -> str:
     '''updating existing patient record'''
-    if data['id']:
+    if data.get('id'):
         patient = Patient.query.filter_by(id=data.get('id')).first()
     else:
         patient = Patient.query.filter_by(email=data.get('email')).first()
 
     if patient:
+        if data.get('file'):
+            save_photo(data)
+
         patient.first_name = data.get('first_name')
         patient.last_name = data.get('last_name')
         patient.gender = data.get('gender')
@@ -183,6 +197,6 @@ def delete_patient(tag: str) -> str:
     if patient:
         with db.session() as session:
             session.delete(patient)
-            session.commit() 
+            session.commit()
         return "success"
     return "No such patient record in the database"
