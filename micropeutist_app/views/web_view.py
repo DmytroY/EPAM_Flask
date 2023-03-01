@@ -4,7 +4,7 @@ from flask import render_template, redirect, request, flash
 from ..service.crud import get_doctors, get_patients, create_doctor, create_patient
 from ..service.crud import receive_doctor, receive_patient, update_doctor, update_patient
 from ..service.crud import delete_doctor, delete_patient
-
+from ..service.helper import parse_request_doctor, parse_request_patient
 from ..config import app
 
 # ========= DOCTORS ==========
@@ -19,14 +19,7 @@ def doctors():
 def new_doctor():
     '''add new doctor'''
     if request.method == "POST":
-        data = {}
-        data['first_name'] = request.form.get("first_name")
-        data['last_name'] = request.form.get("last_name")
-        data['grade'] = request.form.get("grade")
-        data['specialization'] = request.form.get("specialization")
-        data['email'] = request.form.get("email")
-        data['file'] = request.files['file']
-
+        data = parse_request_doctor(request)
         feedback = create_doctor(data)
         if feedback == 'success':
             flash('New doctor record created!',  category='message')
@@ -51,14 +44,7 @@ def edit_doctor():
         doctor = receive_doctor(key)
         return render_template("edit_doctor.html", data=doctor)
     # POST
-    data = {}
-    data['id'] = request.form.get("id")
-    data['first_name'] = request.form.get("first_name")
-    data['last_name'] = request.form.get("last_name")
-    data['grade'] = request.form.get("grade")
-    data['specialization'] = request.form.get("specialization")
-    data['email'] = request.form.get("email")
-    data['file'] = request.files['file']
+    data = parse_request_doctor(request)
     feedback = update_doctor(data)
     if feedback == 'success':
         flash('Doctor record updated!',  category='message')
@@ -101,16 +87,8 @@ def new_patient():
             doctor = receive_doctor(doctor_id)
             return render_template('new_patient.html', doctor=doctor)
         return redirect('/')
-
-    data = {}
-    data['first_name'] = request.form.get("first_name")
-    data['last_name'] = request.form.get("last_name")
-    data['gender'] = request.form.get("gender")
-    data['birthday'] = request.form.get("birthday")
-    data['health_state'] = request.form.get("health_state")
-    data['email'] = request.form.get("email")
-    data['doctor_id'] = int(request.form.get("doctor_id"))
-    data['file'] = request.files['file']
+    # POST
+    data = parse_request_patient(request)
     feedback = create_patient(data)
     if feedback == 'success':
         flash('New patient created!',  category='message')
@@ -134,16 +112,7 @@ def edit_patient():
                                data=receive_patient(key),
                                doctors=get_doctors())
     # POST
-    data = {}
-    data['id'] = request.form.get("id")
-    data['first_name'] = request.form.get("first_name")
-    data['last_name'] = request.form.get("last_name")
-    data['gender'] = request.form.get("gender")
-    data['birthday'] = request.form.get("birthday")
-    data['health_state'] = request.form.get("health_state")
-    data['email'] = request.form.get("email")
-    data['doctor_id'] = request.form.get("doctor_id")
-    data['file'] = request.files['file']
+    data = parse_request_patient(request)
     feedback = update_patient(data)
     if feedback == 'success':
         flash('Patient record updated!',  category='message')

@@ -33,7 +33,6 @@ def where_is_photo(email: str) -> str:
     where_is_photo('john@face.photo') will return '/static/photo/john_face_photo.jpg" '''
     return '/' + 'static' + '/' + 'photo' + '/' + filename(email)
 
-
 def save_photo(data):
     ''' read bmp, png, jpg, jfif files from data transfered by html form and save it as jpg'''
     npimg = numpy.fromfile(data.get('file'), numpy.uint8)
@@ -46,3 +45,29 @@ def delete_photo(email: str) -> None:
     url = url_for_save(email)
     if os.path.exists(url):
         os.remove(url)
+
+def parse_request_doctor(request) -> dict:
+    ''' parse POST request to doctor data dict '''
+    data = {}
+    data['id'] = request.form.get("id")
+    data['first_name'] = request.form.get("first_name")
+    data['last_name'] = request.form.get("last_name")
+    data['grade'] = request.form.get("grade")
+    data['specialization'] = request.form.get("specialization")
+    data['email'] = request.form.get("email")
+    data['file'] = request.files.get('file')
+    return data
+
+def parse_request_patient(request) -> dict:
+    ''' parse POST request to patient data dict '''
+    data = {}
+    data['id'] = request.form.get("id")
+    data['first_name'] = request.form.get("first_name")
+    data['last_name'] = request.form.get("last_name")
+    data['gender'] = request.form.get("gender")
+    data['birthday'] = request.form.get("birthday")
+    data['health_state'] = request.form.get("health_state")
+    data['email'] = request.form.get("email")
+    data['doctor_id'] = request.form.get("doctor_id")
+    data['file'] = request.files.get('file')
+    return data

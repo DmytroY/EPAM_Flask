@@ -5,6 +5,7 @@ from ..service.crud import get_doctors, create_doctor
 from ..service.crud import update_doctor, receive_doctor, delete_doctor
 from ..service.crud import get_patients, create_patient
 from ..service.crud import update_patient, receive_patient, delete_patient
+from ..service.helper import parse_request_doctor, parse_request_patient
 from ..config import app
 
 
@@ -18,12 +19,7 @@ def api_doctors():
 @app.route("/api/create_doctor/", methods=["POST"])
 def api_create_doctor():
     '''api for add new doctor'''
-    data = {}
-    data['first_name'] = request.form.get("first_name")
-    data['last_name'] = request.form.get("last_name")
-    data['grade'] = request.form.get("grade")
-    data['specialization'] = request.form.get("specialization")
-    data['email'] = request.form.get("email")
+    data = parse_request_doctor(request)
     feedback = create_doctor(data)
     if feedback == 'success':
         return jsonify(message='Doctor ' + data['last_name'] + ' have been added'), 201
@@ -42,13 +38,7 @@ def api_receive_doctor():
 @app.route("/api/update_doctor/", methods=['PUT'])
 def api_update_doctor():
     '''API to update a doctor data if email exist in records'''
-    data = {}
-    data['id'] = request.form.get("id")
-    data['first_name'] = request.form.get("first_name")
-    data['last_name'] = request.form.get("last_name")
-    data['grade'] = request.form.get("grade")
-    data['specialization'] = request.form.get("specialization")
-    data['email'] = request.form.get("email")
+    data = parse_request_doctor(request)
     feedback = update_doctor(data)
     if feedback == 'success':
         return jsonify(message='Doctor ' + data['last_name'] + ' have been updated'), 201
@@ -73,14 +63,7 @@ def api_patients():
 @app.route('/api/create_patient/', methods=["POST"])
 def api_create_patient():
     '''API for creating new patient'''
-    data = {}
-    data['first_name'] = request.form.get("first_name")
-    data['last_name'] = request.form.get("last_name")
-    data['gender'] = request.form.get("gender")
-    data['birthday'] = request.form.get("birthday")
-    data['health_state'] = request.form.get("health_state")
-    data['email'] = request.form.get("email")
-    data['doctor_id'] = request.form.get("doctor_id")
+    data = parse_request_patient(request)
     feedback = create_patient(data)
     if feedback == 'success':
         return jsonify(message='Patient ' + data['last_name'] + ' have been added'), 201
@@ -99,15 +82,8 @@ def api_receive_patient():
 @app.route('/api/update_patient/', methods=['PUT'])
 def api_update_patient():
     '''API for updating existing patient record'''
-    data = {}
-    data['id'] = request.form.get("id")
-    data['first_name'] = request.form.get("first_name")
-    data['last_name'] = request.form.get("last_name")
-    data['gender'] = request.form.get("gender")
-    data['birthday'] = request.form.get("birthday")
-    data['health_state'] = request.form.get("health_state")
-    data['email'] = request.form.get("email")
-    data['doctor_id'] = request.form.get("doctor_id")
+    data = parse_request_patient(request)
+
     feedback = update_patient(data)
     if feedback == 'success':
         return jsonify(message='Patient ' + data['last_name'] + ' have been updated'), 201

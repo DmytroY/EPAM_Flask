@@ -1,11 +1,8 @@
 ''' CRUD operations '''
-import numpy
-import cv2
-
 from ..config import db
 from ..models.model import Doctor, doctor_schema, doctors_schema
 from ..models.model import Patient, patient_schema, patients_schema
-from .helper import url_for_save, where_is_photo, get_age, delete_photo, save_photo
+from .helper import where_is_photo, get_age, delete_photo, save_photo
 
 # ======= DOCTORS ======
 def get_doctors() -> list:
