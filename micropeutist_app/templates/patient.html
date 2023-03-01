@@ -1,83 +1,77 @@
-<!DOCTYPE html>
+{% extends "layout.html" %}
 
-<html lang="en">
-    <head>
-        <meta name="viewport" content="initial-scale=1, width=device-width">
-        <link rel="stylesheet" href="reset.css"/>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div class="menu">
-            <div class="menu_item">
-                <a href="doctor-list.html">
-                    Doctors
-                </a>
-            </div>
-            <div class="menu_item">
-                <a href="patient-list.html">
-                    Patients
-                </a>
-            </div>
-        </div>
+{% block title %}
+    <p>Patient record</p>
+{% endblock %}
 
-        <div class="person_block">
-            <div class="photo">
-                <img src="face.jpg" width="150" height="150" alt="photo of person">
-            </div>
-            <div class="name_title">Andy Bay</div>
-        </div>
-        
-        <div class="doctor_data">
-            <table class="table">
-            <tr>
-                <td>First Name</td>
-                <td>Andy</td>
-            </tr>
-            <tr>
-                <td>Last Name</td>
-                <td>Bay</td>
-            </tr>
-            <tr>
-                <td>Gender</td>
-                <td>Male</td>
-            </tr>
-            <tr>
-                <td>Birthday</td>
-                <td>05.05.1956</td>
-            </tr>
-            <tr>
-                <td>State</td>
-                <td>Gunshot wound</td>
-            </tr>
-            <tr>
-                <td>email</td>
-                <td>andy@email.com</td>
-            </tr>
-            <tr>
-                <td>Doctor</td>
-                <td>
-                    <a href="doctor.html">
-                        John Watson
-                    </a>
-                </td>
-            </tr>
-            </table>
-        </div> 
+{% block body %}
 
-        
-        <div class="buttons_block">
-            <button class="button">
-                <a href="edit-patient.html">EDIT</a>
-            </button>
-            <button class="button" onclick="confirmation()">
-                <script>
-                    function confirmation(){
-                        confirm("Do you confirm deletion?");
-                    }
-                </script>
-                <a href="patient-list.html">DELETE</a>
-            </button>
-        </div>
+<div class="person_block">
+    <div class="photo">
+        <img src="{{ data['image_url'] }}" onerror="this.src='/static/photo/face.jpg'"
+        width="150" height="150" alt="photo of person">
+    </div>
+    <div class="name_title">
+        {{ data["first_name"] }} {{ data["last_name"] }}
+    </div>
+</div>
 
-    </body>
-</html>
+<div class="patient_data">
+    <table class="table">
+    <tr>
+        <td>First Name</td>
+        <td>{{ data["first_name"] }}</td>
+    </tr>
+    <tr>
+        <td>Last Name</td>
+        <td>{{ data["last_name"] }}</td>
+    </tr>
+    <tr>
+        <td>Gender</td>
+        <td>{{ data["gender"] }}</td>
+    </tr>
+    <tr>
+        <td>Birthday</td>
+        <td>{{ data["birthday"] }}</td>
+    </tr>
+    <tr>
+        <td>Health State</td>
+        <td>{{ data["health_state"] }}</td>
+    </tr>
+    <tr>
+        <td>email</td>
+        <td>{{ data["email"]}}</td>
+    </tr>
+    <tr>
+        <td>Doctor</td>
+        <td>
+            <a href="{{url_for('get_doctor', id=data.doctor['id'])}}">
+                {{ data.doctor["first_name"]}} {{ data.doctor["last_name"]}}
+            </a>
+        </td>
+    </tr>
+    </table>
+</div> 
+
+
+<div class="buttons_block">
+    <form action="/edit_patient" method="get">
+        <button class="button" type="submit" name="id" value={{ data["id"] }}>EDIT</button>
+    </form>
+
+    <button class="button" onclick="confirmation()">DELETE</button>
+    <script>
+        function confirmation(){
+            if (confirm("Do you confirm deletion?") == true) {
+                alert("Deleted !");
+                const del_url = {{ url_for("remove_patient", id=data['id'])|tojson }}
+                fetch(del_url).then(
+                    response => {
+                        if (response.redirected) {window.location = response.url;}
+                    });
+            };
+        };
+    </script>
+
+</div>
+{% endblock %}

@@ -8,8 +8,27 @@
     </head>
     <body>
         <div class="menu">
-            {% block header %}{% endblock %}
+            <div class="menu_item">
+                <a href={{ url_for('doctors') }}>
+                    Doctors
+                </a>
+            </div>
+            <div class="menu_item">
+                <a href={{ url_for('patients') }}>
+                    Patients
+                </a>
+            </div>
         </div>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class=flash>
+                    {% for category, message in messages %}
+                        <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
         
         <div class="title">
             {% block title %}{% endblock %}

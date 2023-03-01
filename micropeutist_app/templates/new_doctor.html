@@ -1,51 +1,44 @@
 {% extends "layout.html" %}
 
-{% block header %}
-<div class="menu_item">
-    <a href="doctors">
-        Doctors
-    </a>
-</div>
-<div class="menu_item">
-    <a href="patients">
-        Patients
-    </a>
-</div>
-{% endblock %}
-
 {% block title %}
-Creating new doctor record
+    <p>Creating new doctor record</p>
 {% endblock %}
 
 {% block body %}
 
-
 <div class="person_data_edit">
-    <form action="doctor-list.html">
+    <form action="/new_doctor" method="post" enctype="multipart/form-data">
         <table class="table">
             <tr>
                 <td>First name</td>
-                <td><input type="text" id="first_name" name="first_name" value="" size="30"></td>
+                <td><input type="text" name="first_name" placeholder="John" required autofocus></td>
             </tr>
             <tr>
                 <td>Last Name</td>
-                <td><input type="text" id="last_name" name="last_name" value="" size="30"></td>
+                <td><input type="text"name="last_name" placeholder="Doe" required></td>
             </tr>
             <tr>
                 <td>Grade</td>
-                <td><input type="text" id="grade" name="grade" value="" size="30"></td>
+                <td><input type="text" name="grade" placeholder="MD"></td>
             </tr>
             <tr>
                 <td>Specialization</td>
-                <td><input type="text" id="specialization" name="specialization" value="" size="30"></td>
+                <td><input type="text" name="specialization" placeholder="Therapeutist"></td>
             </tr>
             <tr>
                 <td>email</td>
-                <td><input type="email" id="email" name="email" value="" size="30"></td>
+                <td><input type="email" name="email" placeholder="john@email.com" required></td>
+            </tr>
+            <tr>
+                <td>Photo (up to 200kb. 1:1 ratio. bmp, png, jpg, jfif allowed)</td>
+                <td>
+                    <input type="file" name="file" placeholder="photo 150x150">
+                </td>
             </tr>
         </table>
 
-        <input type="submit" id="button_save" value="SAVE">
+        
+        <button id="button_save" type="submit">SAVE</button>
     </form>
     
 </div>    
