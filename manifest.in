@@ -1,7 +1,0 @@
-recursive-include micropeutist_app/models *
-recursive-include micropeutist_app/rest *
-recursive-include micropeutist_app/service *
-recursive-include micropeutist_app/statics *
-recursive-include micropeutist_app/templates *
-recursive-include micropeutist_app/views *
-
