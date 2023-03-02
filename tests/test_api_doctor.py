@@ -1,4 +1,4 @@
-from EPAM_Flask.micropeutist_app.rest.api_view import app
+from micropeutist_app.rest.api_view import app
 
 class TestApiHome():
     ''' Testing home routes'''
