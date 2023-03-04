@@ -1,11 +1,34 @@
 ''' Configuration and instansiate Flask and Database'''
 import os
-
+from logging.config import dictConfig
 from flask import Flask
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 
+# config logging
+dictConfig({
+    "version": 1,
+    "formatters": {
+        "default":{
+            "format": "[%(asctime)s] %(levelname)s. modul %(module)s, function %(funcName)s: %(message)s",
+        }
+        
+    },
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "stream": "ext://sys.stdout",
+            "formatter": "default",
+        },
+        "file": {
+            "class": "logging.FileHandler",
+            "filename": "micropeutist.log",
+            "formatter": "default",
+        }
+    },
+    "root": {"level": "DEBUG", "handlers": ["console", "file"]}
+})
 
 app = Flask(__name__)
 ma = Marshmallow(app)

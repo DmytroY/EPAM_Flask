@@ -13,6 +13,7 @@ from ..config import app
 def doctors():
     '''list of doctors'''
     data = get_doctors()
+    app.logger.debug("received list of doctors, call rendering doctor_list.html")
     return render_template("doctor_list.html", data=data)
 
 @app.route('/new_doctor/', methods=['GET', 'POST'])
@@ -21,17 +22,20 @@ def new_doctor():
     if request.method == "POST":
         data = parse_request_doctor(request)
         feedback = create_doctor(data)
+        app.logger.debug(f"method POST. Creating doctor record: {feedback}")
         if feedback == 'success':
             flash('New doctor record created!',  category='message')
         else:
             flash(feedback, category='error')
         return redirect("/")
+    app.logger.debug("method GET. rendering new_doctor.html")
     return render_template("new_doctor.html")
 
 @app.route('/doctor/', methods=['GET'])
 def get_doctor():
     '''Show a doctor data by id or by email '''
     doctor_id = request.args.get('id')
+    app.logger.debug(f"doctor_id = {doctor_id}")
     doctor_list = receive_doctor(doctor_id)
     return render_template("doctor.html", data=doctor_list)
 
@@ -41,25 +45,31 @@ def edit_doctor():
     # GET
     if request.method == "GET":
         key = request.args.get('id')
+        app.logger.debug(f"editing doctor with key = {key}")
         doctor = receive_doctor(key)
         return render_template("edit_doctor.html", data=doctor)
     # POST
     data = parse_request_doctor(request)
     feedback = update_doctor(data)
+    app.logger.debug(f"editing doctor {data.get('email')} : {feedback}")
     if feedback == 'success':
         flash('Doctor record updated!',  category='message')
     else:
         flash(feedback, category='error')
     return redirect("/")
 
-@app.route('/remove_doctor/', methods=['GET'])
+@app.route('/remove_doctor/', methods=['POST'])
 def remove_doctor():
     ''' deleting doctor record '''
-    key = request.args.get('id')
+    # key = request.args.get('id') # for GET
+    key = request.form.get("id")
     feedback = delete_doctor(key)
+    app.logger.debug(f"deleting doctor with key = {key} : {feedback}")
     if feedback == 'success':
+        app.logger.debug(f"deleting doctor. flash SUCSESS MESSAGE ")
         flash('Doctor record deleted!',  category='message')
     else:
+        app.logger.debug(f"deleting doctor. flash ERROR MESSAGE ")
         flash(feedback, category='error')
     return redirect("/")
 

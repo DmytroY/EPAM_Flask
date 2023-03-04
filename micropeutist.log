@@ -1,0 +1,220 @@
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 112-170-760
+debug message from list of doctor
+127.0.0.1 - - [04/Mar/2023 13:32:00] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2023 13:32:00] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [04/Mar/2023 13:32:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [04/Mar/2023 13:32:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2023-03-04 13:40:56,191] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2023-03-04 13:40:56,192] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2023-03-04 13:40:56,193] INFO in _internal:  * Restarting with stat
+[2023-03-04 13:40:56,676] WARNING in _internal:  * Debugger is active!
+[2023-03-04 13:40:56,677] INFO in _internal:  * Debugger PIN: 112-170-760
+[2023-03-04 13:41:02,665] DEBUG in web_view: debug message from list of doctor
+[2023-03-04 13:41:02,719] INFO in _internal: 127.0.0.1 - - [04/Mar/2023 13:41:02] "GET /doctors/ HTTP/1.1" 200 -
+[2023-03-04 13:41:02,837] INFO in _internal: 127.0.0.1 - - [04/Mar/2023 13:41:02] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-04 13:41:02,841] INFO in _internal: 127.0.0.1 - - [04/Mar/2023 13:41:02] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-04 13:41:06,499] DEBUG in web_view: debug message from list of doctor
+[2023-03-04 13:41:06,504] INFO in _internal: 127.0.0.1 - - [04/Mar/2023 13:41:06] "GET / HTTP/1.1" 200 -
+[2023-03-04 13:41:06,604] INFO in _internal: 127.0.0.1 - - [04/Mar/2023 13:41:06] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-04 13:41:06,604] INFO in _internal: 127.0.0.1 - - [04/Mar/2023 13:41:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-04 13:41:40,117] INFO in _internal:  * Detected change in '/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/config.py', reloading
+[2023-03-04 13:41:40,298] INFO in _internal:  * Restarting with stat
+[2023-03-04 13:41:40,862] === WARNING in _internal:  * Debugger is active!
+[2023-03-04 13:41:40,864] === INFO in _internal:  * Debugger PIN: 112-170-760
+[2023-03-04 13:41:43,586] === INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2023-03-04 13:41:43,587] === INFO in _internal: [33mPress CTRL+C to quit[0m
+[2023-03-04 13:41:43,587] === INFO in _internal:  * Restarting with stat
+[2023-03-04 13:41:44,085] === WARNING in _internal:  * Debugger is active!
+[2023-03-04 13:41:44,086] === INFO in _internal:  * Debugger PIN: 112-170-760
+[2023-03-04 13:41:56,759] === DEBUG in web_view: debug message from list of doctor
+[2023-03-04 13:41:56,793] === INFO in _internal: 127.0.0.1 - - [04/Mar/2023 13:41:56] "GET / HTTP/1.1" 200 -
+[2023-03-04 13:41:56,922] === INFO in _internal: 127.0.0.1 - - [04/Mar/2023 13:41:56] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-04 13:41:56,923] === INFO in _internal: 127.0.0.1 - - [04/Mar/2023 13:41:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-04 13:42:17,403] === INFO in _internal:  * Detected change in '/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/config.py', reloading
+[2023-03-04 13:42:17,561] === INFO in _internal:  * Restarting with stat
+[2023-03-04 13:42:18,020] WARNING in _internal:  * Debugger is active!
+[2023-03-04 13:42:18,021] INFO in _internal:  * Debugger PIN: 112-170-760
+[2023-03-04 13:44:04,082] INFO in _internal:  * Detected change in '/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/config.py', reloading
+[2023-03-04 13:44:04,238] === INFO in _internal:  * Restarting with stat
+[2023-03-04 13:44:04,743] WARNING in _internal function _log:  * Debugger is active!
+[2023-03-04 13:44:04,749] INFO in _internal function _log:  * Debugger PIN: 112-170-760
+[2023-03-04 13:44:51,134] INFO in _internal function _log:  * Detected change in '/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/config.py', reloading
+[2023-03-04 13:44:51,306] === INFO in _internal:  * Restarting with stat
+[2023-03-04 13:44:51,765] WARNING:modul _internal, function _log:  * Debugger is active!
+[2023-03-04 13:44:51,766] INFO:modul _internal, function _log:  * Debugger PIN: 112-170-760
+[2023-03-04 13:45:37,282] DEBUG:modul web_view, function doctors: debug message from list of doctor
+[2023-03-04 13:45:37,317] INFO:modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 13:45:37] "GET / HTTP/1.1" 200 -
+[2023-03-04 13:45:37,384] INFO:modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 13:45:37] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-04 13:45:37,398] INFO:modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 13:45:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-04 13:46:22,600] INFO:modul _internal, function _log:  * Detected change in '/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/config.py', reloading
+[2023-03-04 13:46:22,767] === INFO in _internal:  * Restarting with stat
+[2023-03-04 13:46:23,302] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-04 13:46:23,303] INFO. modul _internal, function _log:  * Debugger PIN: 112-170-760
+[2023-03-04 13:59:52,928] INFO. modul _internal, function _log: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2023-03-04 13:59:52,928] INFO. modul _internal, function _log: [33mPress CTRL+C to quit[0m
+[2023-03-04 13:59:52,929] INFO. modul _internal, function _log:  * Restarting with stat
+[2023-03-04 13:59:53,566] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-04 13:59:53,567] INFO. modul _internal, function _log:  * Debugger PIN: 112-170-760
+[2023-03-04 14:00:19,147] DEBUG. modul web_view, function new_doctor: method GET. rendering new_doctor.html
+[2023-03-04 14:00:19,158] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 14:00:19] "GET /new_doctor/ HTTP/1.1" 200 -
+[2023-03-04 14:00:19,223] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 14:00:19] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-04 14:00:19,239] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 14:00:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-04 14:01:17,790] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 14:01:17] "[32mPOST /new_doctor HTTP/1.1[0m" 308 -
+[2023-03-04 14:01:17,838] DEBUG. modul web_view, function new_doctor: method POST. Creating doctor record: success
+[2023-03-04 14:01:17,840] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 14:01:17] "[32mPOST /new_doctor/ HTTP/1.1[0m" 302 -
+[2023-03-04 14:01:17,848] DEBUG. modul web_view, function doctors: requesting list of doctors
+[2023-03-04 14:01:17,868] DEBUG. modul web_view, function doctors: received list of doctors, call rendering doctor_list.html
+[2023-03-04 14:01:17,874] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 14:01:17] "GET / HTTP/1.1" 200 -
+[2023-03-04 14:01:18,015] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 14:01:18] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-04 14:01:18,018] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 14:01:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-04 14:02:18,004] DEBUG. modul web_view, function get_doctor: doctor_id = 8
+[2023-03-04 14:02:18,022] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 14:02:18] "GET /doctor/?id=8 HTTP/1.1" 200 -
+[2023-03-04 14:02:18,129] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 14:02:18] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-04 14:02:18,149] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 14:02:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-04 14:02:18,153] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 14:02:18] "[33mGET /static/photo/q_a_a.jpg HTTP/1.1[0m" 404 -
+[2023-03-04 14:02:18,181] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 14:02:18] "[36mGET /static/photo/face.jpg HTTP/1.1[0m" 304 -
+[2023-03-04 14:02:36,744] DEBUG. modul web_view, function remove_doctor: deleting doctor with key = 8 : success
+[2023-03-04 14:02:36,745] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash SUCSESS MESSAGE 
+[2023-03-04 14:02:36,745] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 14:02:36] "[32mGET /remove_doctor/?id=8 HTTP/1.1[0m" 302 -
+[2023-03-04 14:02:36,767] DEBUG. modul web_view, function doctors: requesting list of doctors
+[2023-03-04 14:02:36,772] DEBUG. modul web_view, function doctors: received list of doctors, call rendering doctor_list.html
+[2023-03-04 14:02:36,773] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 14:02:36] "GET / HTTP/1.1" 200 -
+[2023-03-04 14:02:36,811] DEBUG. modul web_view, function doctors: requesting list of doctors
+[2023-03-04 14:02:36,817] DEBUG. modul web_view, function doctors: received list of doctors, call rendering doctor_list.html
+[2023-03-04 14:02:36,818] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 14:02:36] "GET / HTTP/1.1" 200 -
+[2023-03-04 14:02:36,924] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 14:02:36] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-04 14:02:36,928] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 14:02:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-04 14:03:30,620] DEBUG. modul web_view, function doctors: requesting list of doctors
+[2023-03-04 14:03:30,625] DEBUG. modul web_view, function doctors: received list of doctors, call rendering doctor_list.html
+[2023-03-04 14:03:30,626] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 14:03:30] "GET /doctors/ HTTP/1.1" 200 -
+[2023-03-04 14:03:30,721] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 14:03:30] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-04 14:03:30,736] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 14:03:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-04 14:04:26,309] INFO. modul _internal, function _log:  * Detected change in '/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/views/web_view.py', reloading
+[2023-03-04 14:04:26,481] INFO. modul _internal, function _log:  * Restarting with stat
+[2023-03-04 14:04:27,105] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-04 14:04:27,105] INFO. modul _internal, function _log:  * Debugger PIN: 112-170-760
+[2023-03-04 15:37:45,749] INFO. modul _internal, function _log: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2023-03-04 15:37:45,750] INFO. modul _internal, function _log: [33mPress CTRL+C to quit[0m
+[2023-03-04 15:37:45,751] INFO. modul _internal, function _log:  * Restarting with stat
+[2023-03-04 15:37:46,270] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-04 15:37:46,284] INFO. modul _internal, function _log:  * Debugger PIN: 112-170-760
+[2023-03-04 15:37:52,766] DEBUG. modul web_view, function doctors: received list of doctors, call rendering doctor_list.html
+[2023-03-04 15:37:52,777] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:37:52] "GET / HTTP/1.1" 200 -
+[2023-03-04 15:37:52,875] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:37:52] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:37:52,876] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:37:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:37:55,989] DEBUG. modul web_view, function new_doctor: method GET. rendering new_doctor.html
+[2023-03-04 15:37:55,992] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:37:55] "GET /new_doctor/ HTTP/1.1" 200 -
+[2023-03-04 15:37:56,085] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:37:56] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:37:56,087] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:37:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:38:04,827] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:38:04] "[32mPOST /new_doctor HTTP/1.1[0m" 308 -
+[2023-03-04 15:38:04,859] DEBUG. modul web_view, function new_doctor: method POST. Creating doctor record: success
+[2023-03-04 15:38:04,860] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:38:04] "[32mPOST /new_doctor/ HTTP/1.1[0m" 302 -
+[2023-03-04 15:38:04,873] DEBUG. modul web_view, function doctors: received list of doctors, call rendering doctor_list.html
+[2023-03-04 15:38:04,874] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:38:04] "GET / HTTP/1.1" 200 -
+[2023-03-04 15:38:04,938] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:38:04] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:38:04,942] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:38:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:38:06,914] DEBUG. modul web_view, function get_doctor: doctor_id = 9
+[2023-03-04 15:38:06,935] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:38:06] "GET /doctor/?id=9 HTTP/1.1" 200 -
+[2023-03-04 15:38:07,021] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:38:07] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:38:07,026] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:38:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:38:07,026] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:38:07] "[33mGET /static/photo/a_a_a.jpg HTTP/1.1[0m" 404 -
+[2023-03-04 15:38:07,041] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:38:07] "[36mGET /static/photo/face.jpg HTTP/1.1[0m" 304 -
+[2023-03-04 15:39:03,973] INFO. modul _internal, function _log:  * Detected change in '/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/views/web_view.py', reloading
+[2023-03-04 15:39:04,190] INFO. modul _internal, function _log:  * Restarting with stat
+[2023-03-04 15:39:04,719] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-04 15:39:04,720] INFO. modul _internal, function _log:  * Debugger PIN: 112-170-760
+[2023-03-04 15:39:15,987] INFO. modul _internal, function _log: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2023-03-04 15:39:15,989] INFO. modul _internal, function _log: [33mPress CTRL+C to quit[0m
+[2023-03-04 15:39:15,991] INFO. modul _internal, function _log:  * Restarting with stat
+[2023-03-04 15:39:16,457] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-04 15:39:16,458] INFO. modul _internal, function _log:  * Debugger PIN: 112-170-760
+[2023-03-04 15:39:19,597] DEBUG. modul web_view, function doctors: received list of doctors, call rendering doctor_list.html
+[2023-03-04 15:39:19,606] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:39:19] "GET /doctors/ HTTP/1.1" 200 -
+[2023-03-04 15:39:19,740] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:39:19] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:39:19,750] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:39:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:39:21,278] DEBUG. modul web_view, function get_doctor: doctor_id = 9
+[2023-03-04 15:39:21,288] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:39:21] "GET /doctor/?id=9 HTTP/1.1" 200 -
+[2023-03-04 15:39:21,373] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:39:21] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:39:21,374] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:39:21] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:39:21,375] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:39:21] "[33mGET /static/photo/a_a_a.jpg HTTP/1.1[0m" 404 -
+[2023-03-04 15:39:21,443] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:39:21] "[36mGET /static/photo/face.jpg HTTP/1.1[0m" 304 -
+[2023-03-04 15:39:29,697] DEBUG. modul web_view, function doctors: received list of doctors, call rendering doctor_list.html
+[2023-03-04 15:39:29,697] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:39:29] "GET /doctors/ HTTP/1.1" 200 -
+[2023-03-04 15:39:29,790] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:39:29] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:39:29,795] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:39:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:40:18,614] INFO. modul _internal, function _log: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2023-03-04 15:40:18,614] INFO. modul _internal, function _log: [33mPress CTRL+C to quit[0m
+[2023-03-04 15:40:18,615] INFO. modul _internal, function _log:  * Restarting with stat
+[2023-03-04 15:40:19,108] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-04 15:40:19,109] INFO. modul _internal, function _log:  * Debugger PIN: 112-170-760
+[2023-03-04 15:40:22,253] DEBUG. modul web_view, function get_doctor: doctor_id = 9
+[2023-03-04 15:40:22,294] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:40:22] "GET /doctor/?id=9 HTTP/1.1" 200 -
+[2023-03-04 15:40:22,387] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:40:22] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:40:22,388] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:40:22] "[33mGET /static/photo/a_a_a.jpg HTTP/1.1[0m" 404 -
+[2023-03-04 15:40:22,389] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:40:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:40:22,404] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:40:22] "[36mGET /static/photo/face.jpg HTTP/1.1[0m" 304 -
+[2023-03-04 15:41:05,597] INFO. modul _internal, function _log:  * Detected change in '/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/views/web_view.py', reloading
+[2023-03-04 15:41:05,823] INFO. modul _internal, function _log:  * Restarting with stat
+[2023-03-04 15:41:06,427] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-04 15:41:06,429] INFO. modul _internal, function _log:  * Debugger PIN: 112-170-760
+[2023-03-04 15:41:14,551] INFO. modul _internal, function _log: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2023-03-04 15:41:14,552] INFO. modul _internal, function _log: [33mPress CTRL+C to quit[0m
+[2023-03-04 15:41:14,553] INFO. modul _internal, function _log:  * Restarting with stat
+[2023-03-04 15:41:15,037] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-04 15:41:15,038] INFO. modul _internal, function _log:  * Debugger PIN: 112-170-760
+[2023-03-04 15:41:20,289] DEBUG. modul web_view, function doctors: received list of doctors, call rendering doctor_list.html
+[2023-03-04 15:41:20,298] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:41:20] "GET /doctors/ HTTP/1.1" 200 -
+[2023-03-04 15:41:20,365] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:41:20] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:41:20,372] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:41:20] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:41:26,272] DEBUG. modul web_view, function get_doctor: doctor_id = 9
+[2023-03-04 15:41:26,281] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:41:26] "GET /doctor/?id=9 HTTP/1.1" 200 -
+[2023-03-04 15:41:26,346] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:41:26] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:41:26,347] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:41:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:41:26,371] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:41:26] "[33mGET /static/photo/a_a_a.jpg HTTP/1.1[0m" 404 -
+[2023-03-04 15:41:26,423] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:41:26] "[36mGET /static/photo/face.jpg HTTP/1.1[0m" 304 -
+[2023-03-04 15:44:46,245] INFO. modul _internal, function _log: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2023-03-04 15:44:46,246] INFO. modul _internal, function _log: [33mPress CTRL+C to quit[0m
+[2023-03-04 15:44:46,247] INFO. modul _internal, function _log:  * Restarting with stat
+[2023-03-04 15:44:46,793] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-04 15:44:46,795] INFO. modul _internal, function _log:  * Debugger PIN: 112-170-760
+[2023-03-04 15:44:51,087] DEBUG. modul web_view, function doctors: received list of doctors, call rendering doctor_list.html
+[2023-03-04 15:44:51,102] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:44:51] "GET /doctors/ HTTP/1.1" 200 -
+[2023-03-04 15:44:51,192] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:44:51] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:44:51,203] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:44:51] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:44:52,936] DEBUG. modul web_view, function get_doctor: doctor_id = 9
+[2023-03-04 15:44:52,945] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:44:52] "GET /doctor/?id=9 HTTP/1.1" 200 -
+[2023-03-04 15:44:53,079] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:44:53] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:44:53,081] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:44:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:44:53,084] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:44:53] "[33mGET /static/photo/a_a_a.jpg HTTP/1.1[0m" 404 -
+[2023-03-04 15:44:53,120] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:44:53] "[36mGET /static/photo/face.jpg HTTP/1.1[0m" 304 -
+[2023-03-04 15:45:58,089] INFO. modul _internal, function _log: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2023-03-04 15:45:58,091] INFO. modul _internal, function _log: [33mPress CTRL+C to quit[0m
+[2023-03-04 15:45:58,092] INFO. modul _internal, function _log:  * Restarting with stat
+[2023-03-04 15:45:58,589] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-04 15:45:58,590] INFO. modul _internal, function _log:  * Debugger PIN: 112-170-760
+[2023-03-04 15:46:21,479] DEBUG. modul web_view, function doctors: received list of doctors, call rendering doctor_list.html
+[2023-03-04 15:46:21,494] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:46:21] "GET /doctors/ HTTP/1.1" 200 -
+[2023-03-04 15:46:21,593] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:46:21] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:46:21,594] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:46:21] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:46:25,450] DEBUG. modul web_view, function get_doctor: doctor_id = 9
+[2023-03-04 15:46:25,460] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:46:25] "GET /doctor/?id=9 HTTP/1.1" 200 -
+[2023-03-04 15:46:25,552] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:46:25] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:46:25,553] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:46:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:46:25,558] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:46:25] "[33mGET /static/photo/a_a_a.jpg HTTP/1.1[0m" 404 -
+[2023-03-04 15:46:25,602] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:46:25] "[36mGET /static/photo/face.jpg HTTP/1.1[0m" 304 -
+[2023-03-04 15:46:35,818] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:46:35] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-04 15:46:35,825] INFO. modul _internal, function _log: 127.0.0.1 - - [04/Mar/2023 15:46:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -

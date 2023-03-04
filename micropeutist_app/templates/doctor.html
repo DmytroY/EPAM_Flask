@@ -51,13 +51,27 @@
     <script>
         function confirmation(){
             if (confirm("Do you confirm deletion?") == true) {
-                alert("Deleted !");
-                const del_url = {{ url_for("remove_doctor", id=data['id'])|tojson }}
-                fetch(del_url).then(
-                    response => {
-                        if (response.redirected) {window.location = response.url;}
-                    });
+                const xhr = new XMLHttpRequest();
+                const url = {{ url_for("remove_doctor")}};
+                console.log("url = " + url);
+                xhr.open("POST", url, true);
+                xhr.setRequestHeader('Content-type', 'application/json');
+                xhr.send(JSON.stringify({
+                        'id': data['id']
+                        })
+                );
+
+
             };
+
+            // if (confirm("Do you confirm deletion?") == true) {
+            //     alert("Deleted !");
+            //     const del_url = {{ url_for("remove_doctor", id=data['id'])|tojson }}
+            //     fetch(del_url).then(
+            //         response => {
+            //             if (response.redirected) {window.location = response.url;}
+            //         });
+            // };
         };
     </script>
 </div>
