@@ -28,6 +28,7 @@ class TestHomeRoute():
         assert b'Editing doctor record' in responce.data
 
     def test_route_remove_doctor(self):
-        responce = app.test_client().get('/remove_doctor/?id=some_not_existed_id')
+        test_data = {'id': 'notexistedid',}
+        responce = app.test_client().post('/remove_doctor/', data=test_data)
         assert responce.status_code == 302
         assert b'redirected' in responce.data

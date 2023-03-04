@@ -62,14 +62,15 @@ def edit_doctor():
 def remove_doctor():
     ''' deleting doctor record '''
     # key = request.args.get('id') # for GET
-    key = request.form.get("id")
+    key = request.form.get('id')
+    app.logger.debug(f"deleting doctor with key = {key}")
     feedback = delete_doctor(key)
-    app.logger.debug(f"deleting doctor with key = {key} : {feedback}")
+    app.logger.debug(f"deleting feedback is {feedback}")
     if feedback == 'success':
-        app.logger.debug(f"deleting doctor. flash SUCSESS MESSAGE ")
+        app.logger.debug("deleting doctor. flash SUCSESS MESSAGE ")
         flash('Doctor record deleted!',  category='message')
     else:
-        app.logger.debug(f"deleting doctor. flash ERROR MESSAGE ")
+        app.logger.debug("deleting doctor. flash ERROR MESSAGE ")
         flash(feedback, category='error')
     return redirect("/")
 
@@ -130,10 +131,10 @@ def edit_patient():
         flash(feedback, category='error')
     return redirect("/patients")
 
-@app.route('/remove_patient/', methods=['GET'])
+@app.route('/remove_patient/', methods=['POST'])
 def remove_patient():
     ''' deleting patiend by id'''
-    key = request.args.get('id')
+    key = request.form.get('id')
     feedback = delete_patient(key)
     if feedback == "success":
         flash('Patient record deleted', category='message')

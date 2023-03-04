@@ -59,19 +59,11 @@
         <button class="button" type="submit" name="id" value={{ data["id"] }}>EDIT</button>
     </form>
 
-    <button class="button" onclick="confirmation()">DELETE</button>
-    <script>
-        function confirmation(){
-            if (confirm("Do you confirm deletion?") == true) {
-                alert("Deleted !");
-                const del_url = {{ url_for("remove_patient", id=data['id'])|tojson }}
-                fetch(del_url).then(
-                    response => {
-                        if (response.redirected) {window.location = response.url;}
-                    });
-            };
-        };
-    </script>
+    <form action="/remove_patient/" method="post">
+        <input type="hidden" name="id" value="{{ data["id"] }}">
+        <button class="button" type="submit" onclick="return confirm('Please confirm deletion');">DELETE</button>
+    </form>
+
 
 </div>
 {% endblock %}

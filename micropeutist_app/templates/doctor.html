@@ -42,38 +42,14 @@
 </div> 
 
 <div class="buttons_block">
-    <form action="/edit_doctor" method="get">
+    <form action="/edit_doctor/" method="get">
         <button class="button" type="submit" name="id" value={{ data["id"] }}>EDIT</button>
     </form>
 
-
-    <button class="button" onclick=confirmation() type="submit">DELETE</button>
-    <script>
-        function confirmation(){
-            if (confirm("Do you confirm deletion?") == true) {
-                const xhr = new XMLHttpRequest();
-                const url = {{ url_for("remove_doctor")}};
-                console.log("url = " + url);
-                xhr.open("POST", url, true);
-                xhr.setRequestHeader('Content-type', 'application/json');
-                xhr.send(JSON.stringify({
-                        'id': data['id']
-                        })
-                );
-
-
-            };
-
-            // if (confirm("Do you confirm deletion?") == true) {
-            //     alert("Deleted !");
-            //     const del_url = {{ url_for("remove_doctor", id=data['id'])|tojson }}
-            //     fetch(del_url).then(
-            //         response => {
-            //             if (response.redirected) {window.location = response.url;}
-            //         });
-            // };
-        };
-    </script>
+    <form action="/remove_doctor/" method="post">
+        <input type="hidden" name="id" value="{{ data["id"] }}">
+        <button class="button" type="submit" onclick="return confirm('Please confirm deletion');">DELETE</button>
+    </form>
 </div>
 
 

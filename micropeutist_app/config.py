@@ -11,9 +11,10 @@ dictConfig({
     "version": 1,
     "formatters": {
         "default":{
-            "format": "[%(asctime)s] %(levelname)s. modul %(module)s, function %(funcName)s: %(message)s",
+            "format":
+            "[%(asctime)s] %(levelname)s. modul %(module)s, function %(funcName)s: %(message)s",
         }
-        
+
     },
     "handlers": {
         "console": {
