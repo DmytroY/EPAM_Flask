@@ -177,9 +177,9 @@ def update_patient(data: dict) -> str:
         patient.last_name = data.get('last_name')
         patient.gender = data.get('gender')
         patient.birthday = data.get('birthday')
-        patient.health_state = data['health_state']
-        patient.email = data['email']
-        patient.doctor_id = data['doctor_id']
+        patient.health_state = data.get('health_state')
+        patient.email = data.get('email')
+        patient.doctor_id = data.get('doctor_id')
         db.session.commit()
         return 'success'
     return 'Error. No record with such key'

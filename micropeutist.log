@@ -763,3 +763,566 @@
 [2023-03-05 16:31:13,523] INFO. modul _internal, function _log:  * Restarting with stat
 [2023-03-05 16:31:14,017] WARNING. modul _internal, function _log:  * Debugger is active!
 [2023-03-05 16:31:14,017] INFO. modul _internal, function _log:  * Debugger PIN: 629-308-712
+[2023-03-05 17:34:41,188] INFO. modul _internal, function _log: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2023-03-05 17:34:41,188] INFO. modul _internal, function _log: [33mPress CTRL+C to quit[0m
+[2023-03-05 17:34:41,189] INFO. modul _internal, function _log:  * Restarting with stat
+[2023-03-05 17:34:41,659] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-05 17:34:41,659] INFO. modul _internal, function _log:  * Debugger PIN: 629-308-712
+[2023-03-05 17:34:46,792] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-05 17:34:46,810] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 17:34:46] "GET / HTTP/1.1" 200 -
+[2023-03-05 17:34:47,097] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 17:34:47] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-05 17:34:47,098] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 17:34:47] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-05 17:34:47,219] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 17:34:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2023-03-05 17:34:49,824] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 17:34:49] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-05 17:34:49,824] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 17:34:49] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-05 17:35:00,592] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-05 17:35:00,593] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 17:35:00] "GET /doctors/ HTTP/1.1" 200 -
+[2023-03-05 17:35:00,783] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 17:35:00] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-05 17:35:00,784] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 17:35:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-05 17:41:02,559] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 17:41:02,568] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 17:41:02] "GET /api/doctors/ HTTP/1.1" 200 -
+[2023-03-05 17:53:41,487] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 17:53:41] "[32mPOST /api/create_doctor HTTP/1.1[0m" 308 -
+[2023-03-05 17:53:41,500] DEBUG. modul api_view, function api_create_doctor: email = w@w.w. Error. This email already exist in Doctor records
+[2023-03-05 17:53:41,501] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 17:53:41] "[31m[1mPOST /api/create_doctor/ HTTP/1.1[0m" 409 -
+[2023-03-05 17:53:59,881] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 17:53:59] "[32mDELETE /api/delete_doctor HTTP/1.1[0m" 308 -
+[2023-03-05 17:53:59,902] DEBUG. modul api_view, function api_delete_doctor: key = w@w.w, success
+[2023-03-05 17:53:59,903] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 17:53:59] "DELETE /api/delete_doctor/ HTTP/1.1" 200 -
+[2023-03-05 18:05:25,911] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 2023-03-05, 
+        sbirthday_till = 2023-03-05,
+        doctor_id = None
+[2023-03-05 18:05:25,919] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 18:05:25] "POST /api/patients/ HTTP/1.1" 200 -
+[2023-03-05 18:09:25,627] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 18:09:25] "[32mPOST /api/create_doctor HTTP/1.1[0m" 308 -
+[2023-03-05 18:09:25,666] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 18:09:25] "[35m[1mPOST /api/create_doctor/ HTTP/1.1[0m" 500 -
+[2023-03-05 18:12:09,313] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 18:12:09] "[32mPOST /api/create_doctor HTTP/1.1[0m" 308 -
+[2023-03-05 18:12:09,354] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 18:12:09] "[35m[1mPOST /api/create_doctor/ HTTP/1.1[0m" 500 -
+[2023-03-05 18:17:37,315] INFO. modul _internal, function _log:  * Detected change in '/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/rest/api_view.py', reloading
+[2023-03-05 18:17:37,504] INFO. modul _internal, function _log:  * Restarting with stat
+[2023-03-05 18:17:38,084] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-05 18:17:38,084] INFO. modul _internal, function _log:  * Debugger PIN: 629-308-712
+[2023-03-05 18:17:53,380] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 18:17:53] "[32mPOST /api/create_doctor HTTP/1.1[0m" 308 -
+[2023-03-05 18:17:53,384] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 18:17:53] "POST /api/create_doctor/ HTTP/1.1" 200 -
+[2023-03-05 18:37:03,989] INFO. modul _internal, function _log:  * Detected change in '/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/rest/api_view.py', reloading
+[2023-03-05 18:37:04,154] INFO. modul _internal, function _log:  * Restarting with stat
+[2023-03-05 18:37:04,625] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-05 18:37:04,626] INFO. modul _internal, function _log:  * Debugger PIN: 629-308-712
+[2023-03-05 18:37:19,614] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 18:37:19] "[32mPOST /api/create_doctor HTTP/1.1[0m" 308 -
+[2023-03-05 18:37:19,651] DEBUG. modul api_view, function api_create_doctor: email = w@w.w. success
+[2023-03-05 18:37:19,652] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 18:37:19] "[35m[1mPOST /api/create_doctor/ HTTP/1.1[0m" 201 -
+[2023-03-05 18:43:57,882] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 18:43:57] "[32mPOST /api/create_doctor HTTP/1.1[0m" 308 -
+[2023-03-05 18:43:57,909] DEBUG. modul api_view, function api_create_doctor: email = wolf@email.com. success
+[2023-03-05 18:43:57,909] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 18:43:57] "[35m[1mPOST /api/create_doctor/ HTTP/1.1[0m" 201 -
+[2023-03-05 18:56:44,367] DEBUG. modul api_view, function api_receive_doctor: key = 4
+[2023-03-05 18:56:44,381] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-05 18:56:44,382] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 18:56:44] "GET /api/receive_doctor/?id=4 HTTP/1.1" 200 -
+[2023-03-05 18:57:43,817] DEBUG. modul api_view, function api_receive_doctor: key = 3
+[2023-03-05 18:57:43,818] DEBUG. modul api_view, function api_receive_doctor: absent
+[2023-03-05 18:57:43,819] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 18:57:43] "[35m[1mGET /api/receive_doctor/?id=3 HTTP/1.1[0m" 204 -
+[2023-03-05 18:58:19,465] DEBUG. modul api_view, function api_receive_doctor: key = 6
+[2023-03-05 18:58:19,468] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-05 18:58:19,468] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 18:58:19] "GET /api/receive_doctor/?id=6 HTTP/1.1" 200 -
+[2023-03-05 19:01:59,615] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 19:01:59] "[32mPUT /api/update_doctor HTTP/1.1[0m" 308 -
+[2023-03-05 19:01:59,621] DEBUG. modul api_view, function api_update_doctor: key = None, Error. No record with such key
+[2023-03-05 19:01:59,622] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 19:01:59] "[31m[1mPUT /api/update_doctor/ HTTP/1.1[0m" 409 -
+[2023-03-05 19:02:56,059] INFO. modul _internal, function _log:  * Detected change in '/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/rest/api_view.py', reloading
+[2023-03-05 19:02:56,243] INFO. modul _internal, function _log:  * Restarting with stat
+[2023-03-05 19:02:56,761] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-05 19:02:56,769] INFO. modul _internal, function _log:  * Debugger PIN: 629-308-712
+[2023-03-05 19:03:00,671] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 19:03:00] "[32mPUT /api/update_doctor HTTP/1.1[0m" 308 -
+[2023-03-05 19:03:00,712] DEBUG. modul api_view, function api_update_doctor: key = house_md@micropeutist.com, success
+[2023-03-05 19:03:00,713] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 19:03:00] "[35m[1mPUT /api/update_doctor/ HTTP/1.1[0m" 201 -
+[2023-03-05 19:06:31,465] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 19:06:31] "[32mPOST /api/create_doctor HTTP/1.1[0m" 308 -
+[2023-03-05 19:06:31,472] DEBUG. modul api_view, function api_create_doctor: email = wolf@email.com. Error. This email already exist in Doctor records
+[2023-03-05 19:06:31,473] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 19:06:31] "[31m[1mPOST /api/create_doctor/ HTTP/1.1[0m" 409 -
+[2023-03-05 19:12:40,358] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 19:12:40] "[32mPUT /api/update_doctor HTTP/1.1[0m" 308 -
+[2023-03-05 19:12:40,365] DEBUG. modul api_view, function api_update_doctor: key = notexisted@email.com, Error. No record with such key
+[2023-03-05 19:12:40,366] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 19:12:40] "[31m[1mPUT /api/update_doctor/ HTTP/1.1[0m" 409 -
+[2023-03-05 19:18:41,344] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 19:18:41] "[32mDELETE /api/delete_doctor HTTP/1.1[0m" 308 -
+[2023-03-05 19:18:41,356] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 19:18:41] "[35m[1mDELETE /api/delete_doctor/ HTTP/1.1[0m" 500 -
+[2023-03-05 19:19:41,620] INFO. modul _internal, function _log:  * Detected change in '/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/rest/api_view.py', reloading
+[2023-03-05 19:19:41,773] INFO. modul _internal, function _log:  * Restarting with stat
+[2023-03-05 19:19:42,269] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-05 19:19:42,269] INFO. modul _internal, function _log:  * Debugger PIN: 629-308-712
+[2023-03-05 19:19:46,535] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 19:19:46] "[32mDELETE /api/delete_doctor HTTP/1.1[0m" 308 -
+[2023-03-05 19:19:46,591] DEBUG. modul api_view, function api_delete_doctor: key = wolf@email.com, success
+[2023-03-05 19:19:46,592] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 19:19:46] "DELETE /api/delete_doctor/ HTTP/1.1" 200 -
+[2023-03-05 19:20:46,995] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 19:20:46] "[32mDELETE /api/delete_doctor HTTP/1.1[0m" 308 -
+[2023-03-05 19:20:47,015] DEBUG. modul api_view, function api_delete_doctor: key = notexisted@email.com, No such doctor record in the database
+[2023-03-05 19:20:47,016] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 19:20:47] "[31m[1mDELETE /api/delete_doctor/ HTTP/1.1[0m" 409 -
+[2023-03-05 20:27:58,798] DEBUG. modul api_view, function api_patients: Whole list
+[2023-03-05 20:27:58,812] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 20:27:58] "GET /api/patients/ HTTP/1.1" 200 -
+[2023-03-05 20:34:40,489] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 0001-01-01, 
+        sbirthday_till = 9999-12-31,
+        doctor_id = None
+[2023-03-05 20:34:40,505] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 20:34:40] "POST /api/patients/ HTTP/1.1" 200 -
+[2023-03-05 20:37:25,552] INFO. modul _internal, function _log:  * Detected change in '/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/rest/api_view.py', reloading
+[2023-03-05 20:37:25,722] INFO. modul _internal, function _log:  * Restarting with stat
+[2023-03-05 20:37:26,615] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-05 20:37:26,616] INFO. modul _internal, function _log:  * Debugger PIN: 629-308-712
+[2023-03-05 20:37:30,392] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 2023-03-05, 
+        sbirthday_till = 2023-03-05,
+        doctor_id = 4
+[2023-03-05 20:37:30,414] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 20:37:30] "POST /api/patients/ HTTP/1.1" 200 -
+[2023-03-05 20:38:09,339] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 2005-11-16, 
+        sbirthday_till = 2005-11-16,
+        doctor_id = 4
+[2023-03-05 20:38:09,346] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 20:38:09] "POST /api/patients/ HTTP/1.1" 200 -
+[2023-03-05 20:42:37,272] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 20:42:37] "[32mPOST /api/create_patient HTTP/1.1[0m" 308 -
+[2023-03-05 20:42:37,342] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 20:42:37] "[35m[1mPOST /api/create_patient/ HTTP/1.1[0m" 500 -
+[2023-03-05 20:43:15,384] INFO. modul _internal, function _log:  * Detected change in '/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/rest/api_view.py', reloading
+[2023-03-05 20:43:15,557] INFO. modul _internal, function _log:  * Restarting with stat
+[2023-03-05 20:43:16,072] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-05 20:43:16,073] INFO. modul _internal, function _log:  * Debugger PIN: 629-308-712
+[2023-03-05 20:43:23,146] INFO. modul _internal, function _log:  * Detected change in '/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/rest/api_view.py', reloading
+[2023-03-05 20:43:23,315] INFO. modul _internal, function _log:  * Restarting with stat
+[2023-03-05 20:43:23,823] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-05 20:43:23,823] INFO. modul _internal, function _log:  * Debugger PIN: 629-308-712
+[2023-03-05 20:43:25,338] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 20:43:25] "[32mPOST /api/create_patient HTTP/1.1[0m" 308 -
+[2023-03-05 20:43:25,371] DEBUG. modul api_view, function api_create_patient: email = hanna@lou.com. success
+[2023-03-05 20:43:25,372] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 20:43:25] "[35m[1mPOST /api/create_patient/ HTTP/1.1[0m" 201 -
+[2023-03-05 20:44:50,144] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 20:44:50] "[32mGET /api/receive_patient?id=w@w.w HTTP/1.1[0m" 308 -
+[2023-03-05 20:44:50,159] DEBUG. modul api_view, function api_receive_patient: id = w@w.w. found
+[2023-03-05 20:44:50,160] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 20:44:50] "GET /api/receive_patient/?id=w@w.w HTTP/1.1" 200 -
+[2023-03-05 20:50:19,432] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 20:50:19] "[32mGET /api/receive_patient?id=laura@email.com HTTP/1.1[0m" 308 -
+[2023-03-05 20:50:19,447] DEBUG. modul api_view, function api_receive_patient: id = laura@email.com. found
+[2023-03-05 20:50:19,448] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 20:50:19] "GET /api/receive_patient/?id=laura@email.com HTTP/1.1" 200 -
+[2023-03-05 21:01:20,466] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 21:01:20] "[32mPUT /api/update_patient HTTP/1.1[0m" 308 -
+[2023-03-05 21:01:20,496] DEBUG. modul api_view, function api_update_patient: email = None. Error. No record with such key
+[2023-03-05 21:01:20,496] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 21:01:20] "[31m[1mPUT /api/update_patient/ HTTP/1.1[0m" 409 -
+[2023-03-05 21:02:31,750] INFO. modul _internal, function _log:  * Detected change in '/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/rest/api_view.py', reloading
+[2023-03-05 21:02:31,918] INFO. modul _internal, function _log:  * Restarting with stat
+[2023-03-05 21:02:32,493] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-05 21:02:32,494] INFO. modul _internal, function _log:  * Debugger PIN: 629-308-712
+[2023-03-05 21:02:34,355] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 21:02:34] "[32mPUT /api/update_patient HTTP/1.1[0m" 308 -
+[2023-03-05 21:02:34,383] DEBUG. modul api_view, function api_update_patient: email = w@w.w. success
+[2023-03-05 21:02:34,384] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 21:02:34] "[35m[1mPUT /api/update_patient/ HTTP/1.1[0m" 201 -
+[2023-03-05 21:03:28,088] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 21:03:28] "[32mPUT /api/update_patient HTTP/1.1[0m" 308 -
+[2023-03-05 21:03:28,119] DEBUG. modul api_view, function api_update_patient: email = w@w.w. success
+[2023-03-05 21:03:28,119] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 21:03:28] "[35m[1mPUT /api/update_patient/ HTTP/1.1[0m" 201 -
+[2023-03-05 21:04:52,182] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 21:04:52] "[32mPUT /api/update_patient HTTP/1.1[0m" 308 -
+[2023-03-05 21:04:52,187] DEBUG. modul api_view, function api_update_patient: email = w222@w.w. Error. No record with such key
+[2023-03-05 21:04:52,187] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 21:04:52] "[31m[1mPUT /api/update_patient/ HTTP/1.1[0m" 409 -
+[2023-03-05 21:06:42,778] INFO. modul _internal, function _log:  * Detected change in '/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/rest/api_view.py', reloading
+[2023-03-05 21:06:42,939] INFO. modul _internal, function _log:  * Restarting with stat
+[2023-03-05 21:06:43,413] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-05 21:06:43,414] INFO. modul _internal, function _log:  * Debugger PIN: 629-308-712
+[2023-03-05 21:06:47,830] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 21:06:47] "[32mDELETE /api/delete_patient HTTP/1.1[0m" 308 -
+[2023-03-05 21:06:47,892] DEBUG. modul api_view, function api_delete_patient: key = w@w.w. success
+[2023-03-05 21:06:47,893] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 21:06:47] "DELETE /api/delete_patient/ HTTP/1.1" 200 -
+[2023-03-05 21:08:13,468] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 21:08:13] "[32mDELETE /api/delete_patient HTTP/1.1[0m" 308 -
+[2023-03-05 21:08:13,484] DEBUG. modul api_view, function api_delete_patient: key = w@w.w. No such patient record in the database
+[2023-03-05 21:08:13,485] INFO. modul _internal, function _log: 127.0.0.1 - - [05/Mar/2023 21:08:13] "[31m[1mDELETE /api/delete_patient/ HTTP/1.1[0m" 409 -
+[2023-03-05 21:48:36,490] INFO. modul _internal, function _log:  * Detected change in '/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/models/model.py', reloading
+[2023-03-05 21:48:36,725] INFO. modul _internal, function _log:  * Restarting with stat
+[2023-03-05 21:48:37,319] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-05 21:48:37,320] INFO. modul _internal, function _log:  * Debugger PIN: 629-308-712
+[2023-03-05 22:00:24,542] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-05 22:00:24,583] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-05 22:00:24,592] DEBUG. modul web_view, function new_doctor: method GET. rendering new_doctor.html
+[2023-03-05 22:00:24,597] DEBUG. modul web_view, function get_doctor: get doctor. id = 1
+[2023-03-05 22:00:24,621] DEBUG. modul web_view, function edit_doctor: GET. key = 1
+[2023-03-05 22:00:24,632] DEBUG. modul web_view, function remove_doctor: key = notexistedid
+[2023-03-05 22:00:24,635] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash ERROR MESSAGE 
+[2023-03-05 22:00:24,641] DEBUG. modul web_view, function patients: whole list
+[2023-03-05 22:00:24,698] DEBUG. modul web_view, function new_patient: GET. doctor id =4
+[2023-03-05 22:00:24,717] DEBUG. modul web_view, function patient: show patient key =1
+[2023-03-05 22:00:24,733] DEBUG. modul web_view, function edit_patient: GET. key =1
+[2023-03-05 22:00:24,753] DEBUG. modul web_view, function remove_patient: key = notexistedid
+[2023-03-05 22:00:24,759] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:00:24,767] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:00:24,827] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-05 22:00:24,828] DEBUG. modul api_view, function api_receive_doctor: absent
+[2023-03-05 22:00:24,833] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-05 22:00:24,835] DEBUG. modul api_view, function api_receive_doctor: absent
+[2023-03-05 22:00:24,887] DEBUG. modul api_view, function api_patients: Whole list
+[2023-03-05 22:00:24,920] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. absent
+[2023-03-05 22:00:24,927] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. absent
+[2023-03-05 22:03:46,550] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-05 22:03:46,571] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-05 22:03:46,575] DEBUG. modul web_view, function new_doctor: method GET. rendering new_doctor.html
+[2023-03-05 22:03:46,579] DEBUG. modul web_view, function get_doctor: get doctor. id = 1
+[2023-03-05 22:03:46,592] DEBUG. modul web_view, function edit_doctor: GET. key = 1
+[2023-03-05 22:03:46,602] DEBUG. modul web_view, function remove_doctor: key = notexistedid
+[2023-03-05 22:03:46,605] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash ERROR MESSAGE 
+[2023-03-05 22:03:46,608] DEBUG. modul web_view, function patients: whole list
+[2023-03-05 22:03:46,643] DEBUG. modul web_view, function new_patient: GET. doctor id =4
+[2023-03-05 22:03:46,658] DEBUG. modul web_view, function patient: show patient key =1
+[2023-03-05 22:03:46,669] DEBUG. modul web_view, function edit_patient: GET. key =1
+[2023-03-05 22:03:46,693] DEBUG. modul web_view, function remove_patient: key = notexistedid
+[2023-03-05 22:03:46,699] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:03:46,708] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:03:46,775] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-05 22:03:46,777] DEBUG. modul api_view, function api_receive_doctor: absent
+[2023-03-05 22:03:46,783] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-05 22:03:46,784] DEBUG. modul api_view, function api_receive_doctor: absent
+[2023-03-05 22:03:46,841] DEBUG. modul api_view, function api_patients: Whole list
+[2023-03-05 22:03:46,870] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. absent
+[2023-03-05 22:03:46,878] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. absent
+[2023-03-05 22:05:13,117] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:05:13,145] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:05:13,224] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-05 22:05:13,228] DEBUG. modul api_view, function api_receive_doctor: absent
+[2023-03-05 22:05:13,232] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-05 22:05:13,235] DEBUG. modul api_view, function api_receive_doctor: absent
+[2023-03-05 22:10:03,073] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-05 22:10:03,079] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:10:03,093] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:10:03,177] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-05 22:10:03,178] DEBUG. modul api_view, function api_receive_doctor: absent
+[2023-03-05 22:10:03,184] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-05 22:10:03,190] DEBUG. modul api_view, function api_receive_doctor: absent
+[2023-03-05 22:11:17,392] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-05 22:11:17,408] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:11:17,423] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:11:17,431] ERROR. modul app, function log_exception: Exception on /api/create_doctor/ [POST]
+Traceback (most recent call last):
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/rest/api_view.py", line 23, in api_create_doctor
+    feedback = create_doctor(data)
+  File "/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/service/crud.py", line 22, in create_doctor
+    is_exist = Doctor.query.filter_by(email=data.get('email')).first()
+AttributeError: 'str' object has no attribute 'get'
+[2023-03-05 22:17:29,500] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-05 22:17:29,506] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:17:29,519] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:17:29,538] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. success
+[2023-03-05 22:19:06,590] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, success
+[2023-03-05 22:19:06,596] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:19:06,612] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:19:06,620] ERROR. modul app, function log_exception: Exception on /api/create_doctor/ [POST]
+Traceback (most recent call last):
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/rest/api_view.py", line 23, in api_create_doctor
+    feedback = create_doctor(data)
+  File "/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/service/crud.py", line 22, in create_doctor
+    is_exist = Doctor.query.filter_by(email=data.get('email')).first()
+AttributeError: 'str' object has no attribute 'get'
+[2023-03-05 22:19:43,884] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-05 22:19:43,895] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:19:43,913] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:19:43,935] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. success
+[2023-03-05 22:21:13,783] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, success
+[2023-03-05 22:21:13,793] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:21:13,812] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:21:13,842] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. success
+[2023-03-05 22:21:13,847] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. Error. This email already exist in Doctor records
+[2023-03-05 22:21:13,849] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-05 22:21:13,854] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-05 22:21:13,858] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-05 22:21:13,862] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-05 22:21:13,864] DEBUG. modul api_view, function api_receive_doctor: key = 20
+[2023-03-05 22:21:13,869] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-05 22:21:13,881] DEBUG. modul api_view, function api_update_doctor: key = test@email.com, success
+[2023-03-05 22:21:13,889] DEBUG. modul api_view, function api_update_doctor: key = no@email.com, Error. No record with such key
+[2023-03-05 22:21:13,910] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, success
+[2023-03-05 22:21:13,914] DEBUG. modul api_view, function api_delete_doctor: key = no@email.com, No such doctor record in the database
+[2023-03-05 22:21:28,418] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-05 22:21:28,425] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:21:28,442] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:21:28,469] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. success
+[2023-03-05 22:21:28,473] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. Error. This email already exist in Doctor records
+[2023-03-05 22:21:28,475] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-05 22:21:28,480] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-05 22:21:28,484] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-05 22:21:28,487] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-05 22:21:28,489] DEBUG. modul api_view, function api_receive_doctor: key = 21
+[2023-03-05 22:21:28,493] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-05 22:21:28,507] DEBUG. modul api_view, function api_update_doctor: key = test@email.com, success
+[2023-03-05 22:21:28,511] DEBUG. modul api_view, function api_update_doctor: key = no@email.com, Error. No record with such key
+[2023-03-05 22:21:28,522] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, success
+[2023-03-05 22:21:28,526] DEBUG. modul api_view, function api_delete_doctor: key = no@email.com, No such doctor record in the database
+[2023-03-05 22:22:44,496] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-05 22:22:44,526] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. No such patient record in the database
+[2023-03-05 22:22:44,549] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-05 22:22:44,575] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-05 22:22:44,578] DEBUG. modul web_view, function new_doctor: method GET. rendering new_doctor.html
+[2023-03-05 22:22:44,582] DEBUG. modul web_view, function get_doctor: get doctor. id = 1
+[2023-03-05 22:22:44,594] DEBUG. modul web_view, function edit_doctor: GET. key = 1
+[2023-03-05 22:22:44,600] DEBUG. modul web_view, function remove_doctor: key = notexistedid
+[2023-03-05 22:22:44,602] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash ERROR MESSAGE 
+[2023-03-05 22:22:44,605] DEBUG. modul web_view, function patients: whole list
+[2023-03-05 22:22:44,638] DEBUG. modul web_view, function new_patient: GET. doctor id =4
+[2023-03-05 22:22:44,648] DEBUG. modul web_view, function patient: show patient key =1
+[2023-03-05 22:22:44,657] DEBUG. modul web_view, function edit_patient: GET. key =1
+[2023-03-05 22:22:44,671] DEBUG. modul web_view, function remove_patient: key = notexistedid
+[2023-03-05 22:22:44,680] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:22:44,691] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:22:44,713] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. success
+[2023-03-05 22:22:44,718] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. Error. This email already exist in Doctor records
+[2023-03-05 22:22:44,721] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-05 22:22:44,723] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-05 22:22:44,726] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-05 22:22:44,728] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-05 22:22:44,730] DEBUG. modul api_view, function api_receive_doctor: key = 22
+[2023-03-05 22:22:44,732] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-05 22:22:44,742] DEBUG. modul api_view, function api_update_doctor: key = test@email.com, success
+[2023-03-05 22:22:44,747] DEBUG. modul api_view, function api_update_doctor: key = no@email.com, Error. No record with such key
+[2023-03-05 22:22:44,761] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, success
+[2023-03-05 22:22:44,764] DEBUG. modul api_view, function api_delete_doctor: key = no@email.com, No such doctor record in the database
+[2023-03-05 22:22:44,767] DEBUG. modul api_view, function api_patients: Whole list
+[2023-03-05 22:22:44,786] DEBUG. modul api_view, function api_create_patient: email = test@email.com. success
+[2023-03-05 22:22:44,790] DEBUG. modul api_view, function api_create_patient: email = test@email.com. Error. This email already exist in Patient records
+[2023-03-05 22:22:44,793] ERROR. modul app, function log_exception: Exception on /api/patients/ [POST]
+Traceback (most recent call last):
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/rest/api_view.py", line 78, in api_patients
+    doctor_id = {search_criterias['doctor_id']}""")
+KeyError: 'doctor_id'
+[2023-03-05 22:22:44,834] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-05 22:22:44,839] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-05 22:22:44,842] DEBUG. modul api_view, function api_receive_patient: id = 16. found
+[2023-03-05 22:22:44,845] ERROR. modul app, function log_exception: Exception on /api/update_patient/ [PUT]
+Traceback (most recent call last):
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/rest/api_view.py", line 107, in api_update_patient
+    feedback = update_patient(data)
+  File "/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/service/crud.py", line 180, in update_patient
+    patient.health_state = data['health_state']
+KeyError: 'health_state'
+[2023-03-05 22:22:44,852] DEBUG. modul api_view, function api_update_patient: email = no@email.com. Error. No record with such key
+[2023-03-05 22:22:44,867] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. success
+[2023-03-05 22:22:44,871] DEBUG. modul api_view, function api_delete_patient: key = no@email.com. No such patient record in the database
+[2023-03-05 22:23:03,936] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. No such patient record in the database
+[2023-03-05 22:23:03,942] DEBUG. modul api_view, function api_patients: Whole list
+[2023-03-05 22:23:03,978] DEBUG. modul api_view, function api_create_patient: email = test@email.com. success
+[2023-03-05 22:23:03,981] DEBUG. modul api_view, function api_create_patient: email = test@email.com. Error. This email already exist in Patient records
+[2023-03-05 22:23:03,984] ERROR. modul app, function log_exception: Exception on /api/patients/ [POST]
+Traceback (most recent call last):
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/rest/api_view.py", line 78, in api_patients
+    doctor_id = {search_criterias['doctor_id']}""")
+KeyError: 'doctor_id'
+[2023-03-05 22:23:04,047] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-05 22:23:04,055] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-05 22:23:04,059] DEBUG. modul api_view, function api_receive_patient: id = 17. found
+[2023-03-05 22:23:04,063] ERROR. modul app, function log_exception: Exception on /api/update_patient/ [PUT]
+Traceback (most recent call last):
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/rest/api_view.py", line 107, in api_update_patient
+    feedback = update_patient(data)
+  File "/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/service/crud.py", line 180, in update_patient
+    patient.health_state = data['health_state']
+KeyError: 'health_state'
+[2023-03-05 22:23:04,069] DEBUG. modul api_view, function api_update_patient: email = no@email.com. Error. No record with such key
+[2023-03-05 22:23:04,082] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. success
+[2023-03-05 22:23:04,086] DEBUG. modul api_view, function api_delete_patient: key = no@email.com. No such patient record in the database
+[2023-03-05 22:25:48,348] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. No such patient record in the database
+[2023-03-05 22:25:48,364] DEBUG. modul api_view, function api_patients: Whole list
+[2023-03-05 22:25:48,394] DEBUG. modul api_view, function api_create_patient: email = test@email.com. success
+[2023-03-05 22:25:48,400] DEBUG. modul api_view, function api_create_patient: email = test@email.com. Error. This email already exist in Patient records
+[2023-03-05 22:25:48,405] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-05 22:25:48,414] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-05 22:25:48,420] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-05 22:25:48,423] DEBUG. modul api_view, function api_receive_patient: id = 18. found
+[2023-03-05 22:25:48,428] ERROR. modul app, function log_exception: Exception on /api/update_patient/ [PUT]
+Traceback (most recent call last):
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dima/EPAM/Flask/EPAM-Flask/.venv/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/rest/api_view.py", line 107, in api_update_patient
+    feedback = update_patient(data)
+  File "/home/dima/EPAM/Flask/EPAM-Flask/micropeutist_app/service/crud.py", line 180, in update_patient
+    patient.health_state = data['health_state']
+KeyError: 'health_state'
+[2023-03-05 22:25:48,474] DEBUG. modul api_view, function api_update_patient: email = no@email.com. Error. No record with such key
+[2023-03-05 22:25:48,488] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. success
+[2023-03-05 22:25:48,497] DEBUG. modul api_view, function api_delete_patient: key = no@email.com. No such patient record in the database
+[2023-03-05 22:27:51,363] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. No such patient record in the database
+[2023-03-05 22:27:51,371] DEBUG. modul api_view, function api_patients: Whole list
+[2023-03-05 22:27:51,395] DEBUG. modul api_view, function api_create_patient: email = test@email.com. success
+[2023-03-05 22:27:51,399] DEBUG. modul api_view, function api_create_patient: email = test@email.com. Error. This email already exist in Patient records
+[2023-03-05 22:27:51,402] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-05 22:27:51,409] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-05 22:27:51,413] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-05 22:27:51,416] DEBUG. modul api_view, function api_receive_patient: id = 19. found
+[2023-03-05 22:27:51,426] DEBUG. modul api_view, function api_update_patient: email = test@email.com. success
+[2023-03-05 22:27:51,430] DEBUG. modul api_view, function api_update_patient: email = no@email.com. Error. No record with such key
+[2023-03-05 22:27:51,440] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. success
+[2023-03-05 22:27:51,444] DEBUG. modul api_view, function api_delete_patient: key = no@email.com. No such patient record in the database
+[2023-03-05 22:27:58,593] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-05 22:27:58,602] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. No such patient record in the database
+[2023-03-05 22:27:58,616] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-05 22:27:58,629] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-05 22:27:58,631] DEBUG. modul web_view, function new_doctor: method GET. rendering new_doctor.html
+[2023-03-05 22:27:58,634] DEBUG. modul web_view, function get_doctor: get doctor. id = 1
+[2023-03-05 22:27:58,641] DEBUG. modul web_view, function edit_doctor: GET. key = 1
+[2023-03-05 22:27:58,647] DEBUG. modul web_view, function remove_doctor: key = notexistedid
+[2023-03-05 22:27:58,648] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash ERROR MESSAGE 
+[2023-03-05 22:27:58,651] DEBUG. modul web_view, function patients: whole list
+[2023-03-05 22:27:58,671] DEBUG. modul web_view, function new_patient: GET. doctor id =4
+[2023-03-05 22:27:58,680] DEBUG. modul web_view, function patient: show patient key =1
+[2023-03-05 22:27:58,687] DEBUG. modul web_view, function edit_patient: GET. key =1
+[2023-03-05 22:27:58,700] DEBUG. modul web_view, function remove_patient: key = notexistedid
+[2023-03-05 22:27:58,705] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:27:58,713] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:27:58,730] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. success
+[2023-03-05 22:27:58,734] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. Error. This email already exist in Doctor records
+[2023-03-05 22:27:58,736] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-05 22:27:58,739] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-05 22:27:58,741] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-05 22:27:58,743] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-05 22:27:58,744] DEBUG. modul api_view, function api_receive_doctor: key = 23
+[2023-03-05 22:27:58,747] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-05 22:27:58,758] DEBUG. modul api_view, function api_update_doctor: key = test@email.com, success
+[2023-03-05 22:27:58,762] DEBUG. modul api_view, function api_update_doctor: key = no@email.com, Error. No record with such key
+[2023-03-05 22:27:58,775] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, success
+[2023-03-05 22:27:58,780] DEBUG. modul api_view, function api_delete_doctor: key = no@email.com, No such doctor record in the database
+[2023-03-05 22:27:58,782] DEBUG. modul api_view, function api_patients: Whole list
+[2023-03-05 22:27:58,800] DEBUG. modul api_view, function api_create_patient: email = test@email.com. success
+[2023-03-05 22:27:58,804] DEBUG. modul api_view, function api_create_patient: email = test@email.com. Error. This email already exist in Patient records
+[2023-03-05 22:27:58,807] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-05 22:27:58,814] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-05 22:27:58,818] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-05 22:27:58,821] DEBUG. modul api_view, function api_receive_patient: id = 20. found
+[2023-03-05 22:27:58,832] DEBUG. modul api_view, function api_update_patient: email = test@email.com. success
+[2023-03-05 22:27:58,836] DEBUG. modul api_view, function api_update_patient: email = no@email.com. Error. No record with such key
+[2023-03-05 22:27:58,850] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. success
+[2023-03-05 22:27:58,854] DEBUG. modul api_view, function api_delete_patient: key = no@email.com. No such patient record in the database
+[2023-03-05 22:28:05,726] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-05 22:28:05,742] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. No such patient record in the database
+[2023-03-05 22:28:05,769] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-05 22:28:05,798] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-05 22:28:05,803] DEBUG. modul web_view, function new_doctor: method GET. rendering new_doctor.html
+[2023-03-05 22:28:05,807] DEBUG. modul web_view, function get_doctor: get doctor. id = 1
+[2023-03-05 22:28:05,826] DEBUG. modul web_view, function edit_doctor: GET. key = 1
+[2023-03-05 22:28:05,835] DEBUG. modul web_view, function remove_doctor: key = notexistedid
+[2023-03-05 22:28:05,837] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash ERROR MESSAGE 
+[2023-03-05 22:28:05,841] DEBUG. modul web_view, function patients: whole list
+[2023-03-05 22:28:05,876] DEBUG. modul web_view, function new_patient: GET. doctor id =4
+[2023-03-05 22:28:05,888] DEBUG. modul web_view, function patient: show patient key =1
+[2023-03-05 22:28:05,897] DEBUG. modul web_view, function edit_patient: GET. key =1
+[2023-03-05 22:28:05,913] DEBUG. modul web_view, function remove_patient: key = notexistedid
+[2023-03-05 22:28:05,918] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:28:05,926] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:28:05,959] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. success
+[2023-03-05 22:28:05,965] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. Error. This email already exist in Doctor records
+[2023-03-05 22:28:05,968] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-05 22:28:05,970] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-05 22:28:05,973] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-05 22:28:05,976] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-05 22:28:05,977] DEBUG. modul api_view, function api_receive_doctor: key = 24
+[2023-03-05 22:28:05,980] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-05 22:28:05,994] DEBUG. modul api_view, function api_update_doctor: key = test@email.com, success
+[2023-03-05 22:28:06,001] DEBUG. modul api_view, function api_update_doctor: key = no@email.com, Error. No record with such key
+[2023-03-05 22:28:06,015] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, success
+[2023-03-05 22:28:06,019] DEBUG. modul api_view, function api_delete_doctor: key = no@email.com, No such doctor record in the database
+[2023-03-05 22:28:06,022] DEBUG. modul api_view, function api_patients: Whole list
+[2023-03-05 22:28:06,044] DEBUG. modul api_view, function api_create_patient: email = test@email.com. success
+[2023-03-05 22:28:06,048] DEBUG. modul api_view, function api_create_patient: email = test@email.com. Error. This email already exist in Patient records
+[2023-03-05 22:28:06,051] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-05 22:28:06,061] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-05 22:28:06,066] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-05 22:28:06,070] DEBUG. modul api_view, function api_receive_patient: id = 21. found
+[2023-03-05 22:28:06,081] DEBUG. modul api_view, function api_update_patient: email = test@email.com. success
+[2023-03-05 22:28:06,086] DEBUG. modul api_view, function api_update_patient: email = no@email.com. Error. No record with such key
+[2023-03-05 22:28:06,100] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. success
+[2023-03-05 22:28:06,105] DEBUG. modul api_view, function api_delete_patient: key = no@email.com. No such patient record in the database
+[2023-03-05 22:28:34,130] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-05 22:28:34,160] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. No such patient record in the database
+[2023-03-05 22:28:34,178] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-05 22:28:34,209] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-05 22:28:34,214] DEBUG. modul web_view, function new_doctor: method GET. rendering new_doctor.html
+[2023-03-05 22:28:34,218] DEBUG. modul web_view, function get_doctor: get doctor. id = 1
+[2023-03-05 22:28:34,229] DEBUG. modul web_view, function edit_doctor: GET. key = 1
+[2023-03-05 22:28:34,239] DEBUG. modul web_view, function remove_doctor: key = notexistedid
+[2023-03-05 22:28:34,240] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash ERROR MESSAGE 
+[2023-03-05 22:28:34,244] DEBUG. modul web_view, function patients: whole list
+[2023-03-05 22:28:34,278] DEBUG. modul web_view, function new_patient: GET. doctor id =4
+[2023-03-05 22:28:34,287] DEBUG. modul web_view, function patient: show patient key =1
+[2023-03-05 22:28:34,297] DEBUG. modul web_view, function edit_patient: GET. key =1
+[2023-03-05 22:28:34,314] DEBUG. modul web_view, function remove_patient: key = notexistedid
+[2023-03-05 22:28:34,319] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:28:34,328] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-05 22:28:34,353] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. success
+[2023-03-05 22:28:34,357] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. Error. This email already exist in Doctor records
+[2023-03-05 22:28:34,362] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-05 22:28:34,365] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-05 22:28:34,367] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-05 22:28:34,370] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-05 22:28:34,371] DEBUG. modul api_view, function api_receive_doctor: key = 25
+[2023-03-05 22:28:34,374] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-05 22:28:34,388] DEBUG. modul api_view, function api_update_doctor: key = test@email.com, success
+[2023-03-05 22:28:34,392] DEBUG. modul api_view, function api_update_doctor: key = no@email.com, Error. No record with such key
+[2023-03-05 22:28:34,409] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, success
+[2023-03-05 22:28:34,415] DEBUG. modul api_view, function api_delete_doctor: key = no@email.com, No such doctor record in the database
+[2023-03-05 22:28:34,419] DEBUG. modul api_view, function api_patients: Whole list
+[2023-03-05 22:28:34,444] DEBUG. modul api_view, function api_create_patient: email = test@email.com. success
+[2023-03-05 22:28:34,450] DEBUG. modul api_view, function api_create_patient: email = test@email.com. Error. This email already exist in Patient records
+[2023-03-05 22:28:34,452] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-05 22:28:34,459] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-05 22:28:34,472] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-05 22:28:34,478] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-05 22:28:34,482] DEBUG. modul api_view, function api_receive_patient: id = 22. found
+[2023-03-05 22:28:34,494] DEBUG. modul api_view, function api_update_patient: email = test@email.com. success
+[2023-03-05 22:28:34,499] DEBUG. modul api_view, function api_update_patient: email = no@email.com. Error. No record with such key
+[2023-03-05 22:28:34,512] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. success
+[2023-03-05 22:28:34,516] DEBUG. modul api_view, function api_delete_patient: key = no@email.com. No such patient record in the database
