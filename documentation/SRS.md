@@ -326,7 +326,7 @@ On error: error description and status code 409.
 
 ## 2.2. API for Patient records
 
-### 2.2.1. Retrieving List of patients
+### 2.2.1. Retrieving whole list of patients
 
 **Route:**/api/patients/
 
@@ -344,9 +344,31 @@ On error: error description and status code 409.
 - age,
 - email,
 - related doctor id.
+- doctor:
+- - id
+- - first_name
+- - last_name
+- - grade
+- - specialization
+- - email
+
+### 2.2.2. Retrieving filtered list of patients
+
+**Route:**/api/patients/
+
+**Method:** POST
+
+**Passed parameters:**
+- birthday_since,
+- birthday_till,
+- doctor_id
+
+**Response** on success should include status code 200 and list of patients which satisfied passed parameters creterias. Responce should contain same fieds as in pargraph *2.2.1. Retrieving whole list of patients*.
+
+
   
 
-### 2.2.2. Creating patient record
+### 2.2.3. Creating patient record
 
 **Routes:** /api/create_patient
 
@@ -369,7 +391,7 @@ Record with duplicated email should not be created, system should return an erro
 
 
 
-### 2.1.3. Receiving patient record information
+### 2.2.4. Receiving patient record information
 
 **Routes:** /api/receive_patient
 
@@ -391,7 +413,7 @@ Record with duplicated email should not be created, system should return an erro
 On error: status code 204 and error message.
 
 
-### 2.2.4. Updating patient record information
+### 2.2.5. Updating patient record information
 
 **Routes:** /api/update_patient
 

@@ -8,6 +8,3 @@
 EPAM Python spring program 2022 self project.
 See documentation forder for details
 
-Remark:
-Can be problem with *pip install mysqlclient* on Ubuntu, so firstly do *sudo apt-get install python3-dev*
-

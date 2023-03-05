@@ -157,7 +157,8 @@ def receive_patient(tag: str) -> list:
 
         # add relative doctor
         doctor = Doctor.query.filter_by(id=patient_dict['doctor_id']).first()
-        patient_dict['doctor'] = doctor
+        doctor_dict = doctor_schema.dump(doctor)
+        patient_dict['doctor'] = doctor_dict
         return patient_dict
     return None
 

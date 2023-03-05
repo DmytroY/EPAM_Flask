@@ -71,3 +71,11 @@ def parse_request_patient(request) -> dict:
     data['doctor_id'] = request.form.get("doctor_id")
     data['file'] = request.files.get('file')
     return data
+
+def parse_search_criterias(request) -> dict:
+    ''' parse GET request to extract filtering criterias'''
+    search_criterias = {}
+    search_criterias['birthday_since'] = (request.form.get("birthday_since") or "0001-01-01")
+    search_criterias['birthday_till'] = (request.form.get("birthday_till") or "9999-12-31")
+    search_criterias['doctor_id'] = request.form.get("doctor_id")
+    return search_criterias

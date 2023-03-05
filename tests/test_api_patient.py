@@ -8,7 +8,8 @@ class TestApiGetPatients():
 
 class TestApiPatientCRUD():
     ''' testing CRUP operations by API'''
-    test_data = dict(first_name='Pedro', last_name='Sanches', gender='male', birthday='2000-01-01', email='test@email.com')
+    test_data = dict(first_name='Pedro', last_name='Sanches', gender='male', birthday='1333-08-15', email='test@email.com')
+    filter_date = dict(birthday_since='1333-08-15', birthday_till='1333-08-15')
     update_data = dict(first_name='Rodrigo', last_name='Sanches', gender='male', birthday='2000-01-01', email='test@email.com')
     notexist_data = dict(first_name='a', last_name='b', gender='c', birthday='2000-01-01', email='no@email.com')
     
@@ -24,6 +25,12 @@ class TestApiPatientCRUD():
         responce = app.test_client().post('/api/create_patient/',data=self.test_data)
         assert responce.status_code == 409
         assert b'Error. This email already exist in Patient records' in responce.data
+
+    def test_api_patient_filter_by_date(self):
+        responce = app.test_client().post('/api/patients/', data=self.filter_date)
+        assert responce.status_code == 200
+        assert b'Sanches' in responce.data
+        assert b'specialization' not in responce.data
 
     def test_api_receive_patient_by_email(self):
         responce = app.test_client().get('/api/receive_patient/?id=test@email.com')
