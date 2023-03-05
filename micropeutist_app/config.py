@@ -14,9 +14,15 @@ dictConfig({
             "format":
             "[%(asctime)s] %(levelname)s. modul %(module)s, function %(funcName)s: %(message)s",
         }
-
     },
     "handlers": {
+        "size-rotate": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "filename": "micropeutist.log",
+            "maxBytes": 1000000,
+            "backupCount": 5,
+            "formatter": "default",
+        },
         "console": {
             "class": "logging.StreamHandler",
             "stream": "ext://sys.stdout",
@@ -28,7 +34,7 @@ dictConfig({
             "formatter": "default",
         }
     },
-    "root": {"level": "DEBUG", "handlers": ["console", "file"]}
+    "root": {"level": "DEBUG", "handlers": ["console", "size-rotate"]}
 })
 
 app = Flask(__name__)

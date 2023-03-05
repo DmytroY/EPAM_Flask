@@ -4,7 +4,7 @@ from flask import render_template, redirect, request, flash
 from ..service.crud import get_doctors, get_patients, create_doctor, create_patient
 from ..service.crud import receive_doctor, receive_patient, update_doctor, update_patient
 from ..service.crud import delete_doctor, delete_patient
-from ..service.helper import parse_request_doctor, parse_request_patient
+from ..service.helper import parse_request_doctor, parse_request_patient, parse_search_criterias
 from ..config import app
 
 # ========= DOCTORS ==========
@@ -13,7 +13,7 @@ from ..config import app
 def doctors():
     '''list of doctors'''
     data = get_doctors()
-    app.logger.debug("received list of doctors, call rendering doctor_list.html")
+    app.logger.debug("list of doctors")
     return render_template("doctor_list.html", data=data)
 
 @app.route('/new_doctor/', methods=['GET', 'POST'])
@@ -22,7 +22,7 @@ def new_doctor():
     if request.method == "POST":
         data = parse_request_doctor(request)
         feedback = create_doctor(data)
-        app.logger.debug(f"method POST. Creating doctor record: {feedback}")
+        app.logger.debug(f'email = {data.get("email")}. {feedback}')
         if feedback == 'success':
             flash('New doctor record created!',  category='message')
         else:
@@ -35,7 +35,7 @@ def new_doctor():
 def get_doctor():
     '''Show a doctor data by id or by email '''
     doctor_id = request.args.get('id')
-    app.logger.debug(f"doctor_id = {doctor_id}")
+    app.logger.debug(f"get doctor. id = {doctor_id}")
     doctor_list = receive_doctor(doctor_id)
     return render_template("doctor.html", data=doctor_list)
 
@@ -45,13 +45,13 @@ def edit_doctor():
     # GET
     if request.method == "GET":
         key = request.args.get('id')
-        app.logger.debug(f"editing doctor with key = {key}")
+        app.logger.debug(f"GET. key = {key}")
         doctor = receive_doctor(key)
         return render_template("edit_doctor.html", data=doctor)
     # POST
     data = parse_request_doctor(request)
     feedback = update_doctor(data)
-    app.logger.debug(f"editing doctor {data.get('email')} : {feedback}")
+    app.logger.debug(f"POST. edit doctor {data.get('email')} : {feedback}")
     if feedback == 'success':
         flash('Doctor record updated!',  category='message')
     else:
@@ -63,9 +63,8 @@ def remove_doctor():
     ''' deleting doctor record '''
     # key = request.args.get('id') # for GET
     key = request.form.get('id')
-    app.logger.debug(f"deleting doctor with key = {key}")
+    app.logger.debug(f"key = {key}")
     feedback = delete_doctor(key)
-    app.logger.debug(f"deleting feedback is {feedback}")
     if feedback == 'success':
         app.logger.debug("deleting doctor. flash SUCSESS MESSAGE ")
         flash('Doctor record deleted!',  category='message')
@@ -78,13 +77,18 @@ def remove_doctor():
 @app.route('/patients/', methods=['GET', 'POST'])
 def patients():
     '''list of patients with search block'''
+    # GET. Return whole list of patients
     if request.method == "GET":
+        app.logger.debug('whole list')
         return render_template("patient_list.html", patients=get_patients(), doctors=get_doctors())
-    # POST
-    search_criterias = {}
-    search_criterias['birthday_since'] = (request.form.get("birthday_since") or "0001-01-01")
-    search_criterias['birthday_till'] = (request.form.get("birthday_till") or "9999-12-31")
-    search_criterias['doctor_id'] = request.form.get("doctor_id")
+     # POST. Return filtered list
+    search_criterias = parse_search_criterias(request)
+    app.logger.debug(
+        f"""Filtered list of Patients. :
+        birthday_since = {search_criterias.get('birthday_since')}, 
+        sbirthday_till = {search_criterias.get('birthday_till')},
+        doctor_id = {search_criterias.get('doctor_id')}""")
+
     return render_template("patient_list.html",
                            patients=get_patients(**search_criterias),
                            doctors=get_doctors())
@@ -94,6 +98,7 @@ def new_patient():
     ''' creating new patient'''
     if request.method == "GET":
         doctor_id = request.args.get('doctor_id')
+        app.logger.debug(f'GET. doctor id ={doctor_id}')
         if doctor_id:
             doctor = receive_doctor(doctor_id)
             return render_template('new_patient.html', doctor=doctor)
@@ -101,6 +106,7 @@ def new_patient():
     # POST
     data = parse_request_patient(request)
     feedback = create_patient(data)
+    app.logger.debug(f'creating patient. {feedback}')
     if feedback == 'success':
         flash('New patient created!',  category='message')
     else:
@@ -111,6 +117,7 @@ def new_patient():
 def patient():
     '''Show a patient data by id or by email'''
     key = request.args.get('id')
+    app.logger.debug(f'show patient key ={key}')
     patient_list = receive_patient(key)
     return render_template("patient.html", data=patient_list)
 
@@ -119,12 +126,14 @@ def edit_patient():
     ''' edit patient '''
     if request.method == "GET":
         key = request.args.get('id')
+        app.logger.debug(f'GET. key ={key}')
         return render_template("edit_patient.html",
                                data=receive_patient(key),
                                doctors=get_doctors())
     # POST
     data = parse_request_patient(request)
     feedback = update_patient(data)
+    app.logger.debug(feedback)
     if feedback == 'success':
         flash('Patient record updated!',  category='message')
     else:
@@ -135,6 +144,7 @@ def edit_patient():
 def remove_patient():
     ''' deleting patiend by id'''
     key = request.form.get('id')
+    app.logger.debug(f'key = {key}')
     feedback = delete_patient(key)
     if feedback == "success":
         flash('Patient record deleted', category='message')
