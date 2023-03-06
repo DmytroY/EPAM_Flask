@@ -1326,3 +1326,9 @@ KeyError: 'health_state'
 [2023-03-05 22:28:34,499] DEBUG. modul api_view, function api_update_patient: email = no@email.com. Error. No record with such key
 [2023-03-05 22:28:34,512] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. success
 [2023-03-05 22:28:34,516] DEBUG. modul api_view, function api_delete_patient: key = no@email.com. No such patient record in the database
+[2023-03-06 18:55:55,526] INFO. modul _internal, function _log: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2023-03-06 18:55:55,528] INFO. modul _internal, function _log: [33mPress CTRL+C to quit[0m
+[2023-03-06 18:55:55,531] INFO. modul _internal, function _log:  * Restarting with stat
+[2023-03-06 18:55:56,447] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-06 18:55:56,451] INFO. modul _internal, function _log:  * Debugger PIN: 137-088-653
