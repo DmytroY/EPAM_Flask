@@ -76,39 +76,39 @@ class TestPatientCRUD():
         assert responce.status_code == 200
         assert b'Creating new patient record' in responce.data
 
-#     def test_route_new_patient_post(self):
-#         responce = app.test_client().post('/new_patient/', data=self.test_data)
-#         assert responce.status_code == 302
-#         assert b'redirect' in responce.data
+    def test_route_new_patient_post(self):
+        responce = app.test_client().post('/new_patient/', data=self.test_data)
+        assert responce.status_code == 302
+        assert b'redirect' in responce.data
 
-#     def test_route_patients_filter(self):
-#         responce = app.test_client().post('/patients/', data=self.filter_date)
-#         assert responce.status_code == 200
-#         assert b'Sanches' in responce.data
+    def test_route_patients_filter(self):
+        responce = app.test_client().post('/patients/', data=self.filter_date)
+        assert responce.status_code == 200
+        assert b'Sanches' in responce.data
 
-#     def test_route_get_patient(self):
-#         responce = app.test_client().get('/patient/?id=1')
-#         assert responce.status_code == 200
-#         assert b'Patient record' in responce.data
+    def test_route_get_patient(self):
+        responce = app.test_client().get('/patient/?id=1')
+        assert responce.status_code == 200
+        assert b'Patient record' in responce.data
 
-#     def test_route_edit_patient(self):
-#         responce = app.test_client().get('/edit_patient/?id=1')
-#         assert responce.status_code == 200
-#         assert b'Editing patient record' in responce.data
+    def test_route_edit_patient(self):
+        responce = app.test_client().get('/edit_patient/?id=1')
+        assert responce.status_code == 200
+        assert b'Editing patient record' in responce.data
 
-#     def test_route_edit_patient_post(self):
-#         responce = app.test_client().post('/edit_patient/', data=self.update_data)
-#         assert responce.status_code == 302
-#         assert b'redirect' in responce.data   
+    # def test_route_edit_patient_post(self):
+    #     responce = app.test_client().post('/edit_patient/', data=self.update_data)
+    #     assert responce.status_code == 302
+    #     assert b'redirect' in responce.data   
 
-#     def test_route_remove_patient(self):
-#         key = self.update_data.get('email')
-#         responce = app.test_client().post('/remove_patient/', data={"id": key})
-#         assert responce.status_code == 302
-#         assert b'redirected' in responce.data
+    def test_route_remove_patient(self):
+        key = self.update_data.get('email')
+        responce = app.test_client().post('/remove_patient/', data={"id": key})
+        assert responce.status_code == 302
+        assert b'redirected' in responce.data
 
-#     def test_route_remove_patient_not_existed(self):
-#         test_data = {'id': 'notexistedid',}
-#         responce = app.test_client().post('/remove_patient/', data=test_data)
-#         assert responce.status_code == 302
-#         assert b'redirected' in responce.data
+    # def test_route_remove_patient_not_existed(self):
+    #     test_data = {'id': 'notexistedid',}
+    #     responce = app.test_client().post('/remove_patient/', data=test_data)
+    #     assert responce.status_code == 302
+    #     assert b'redirected' in responce.data

@@ -18,6 +18,6 @@ install:
 script:
  - python -m pylint micropeutist_app
  - flask db upgrade
- - python -m pytest --cov=. tests/
+ - python -m pytest --cov=micropeutist_app tests/
 
 after_success: coveralls

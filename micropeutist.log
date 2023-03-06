@@ -2986,3 +2986,623 @@ AttributeError: 'NoneType' object has no attribute 'isdigit'
 [2023-03-06 22:10:03,707] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash ERROR MESSAGE 
 [2023-03-06 22:10:03,713] DEBUG. modul web_view, function patients: whole list
 [2023-03-06 22:10:03,745] DEBUG. modul web_view, function new_patient: GET. doctor id =4
+[2023-03-06 22:16:27,921] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-06 22:16:27,942] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. No such patient record in the database
+[2023-03-06 22:16:27,953] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-06 22:16:27,971] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-06 22:16:27,988] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-06 22:16:28,010] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. success
+[2023-03-06 22:16:28,017] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. Error. This email already exist in Doctor records
+[2023-03-06 22:16:28,022] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-06 22:16:28,026] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:16:28,032] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-06 22:16:28,035] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:16:28,037] DEBUG. modul api_view, function api_receive_doctor: key = 157
+[2023-03-06 22:16:28,039] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:16:28,043] DEBUG. modul api_view, function api_receive_doctor: key = some_not_existed_key_m24m100sam87a
+[2023-03-06 22:16:28,046] DEBUG. modul api_view, function api_receive_doctor: absent
+[2023-03-06 22:16:28,056] DEBUG. modul api_view, function api_update_doctor: key = test@email.com, success
+[2023-03-06 22:16:28,062] DEBUG. modul api_view, function api_update_doctor: key = no@email.com, Error. No record with such key
+[2023-03-06 22:16:28,071] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, success
+[2023-03-06 22:16:28,076] DEBUG. modul api_view, function api_delete_doctor: key = no@email.com, No such doctor record in the database
+[2023-03-06 22:16:28,083] DEBUG. modul api_view, function api_patients: Whole list
+[2023-03-06 22:16:28,110] DEBUG. modul api_view, function api_create_patient: email = test@email.com. success
+[2023-03-06 22:16:28,116] DEBUG. modul api_view, function api_create_patient: email = test@email.com. Error. This email already exist in Patient records
+[2023-03-06 22:16:28,119] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:16:28,128] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:16:28,137] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-06 22:16:28,145] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-06 22:16:28,150] DEBUG. modul api_view, function api_receive_patient: id = 63. found
+[2023-03-06 22:16:28,155] DEBUG. modul api_view, function api_receive_patient: id = some_not_existed_key_4n2k2n42. absent
+[2023-03-06 22:16:28,168] DEBUG. modul api_view, function api_update_patient: email = test@email.com. success
+[2023-03-06 22:16:28,174] DEBUG. modul api_view, function api_update_patient: email = no@email.com. Error. No record with such key
+[2023-03-06 22:16:28,186] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. success
+[2023-03-06 22:16:28,190] DEBUG. modul api_view, function api_delete_patient: key = no@email.com. No such patient record in the database
+[2023-03-06 22:16:28,203] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-06 22:16:28,229] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-06 22:16:28,234] DEBUG. modul web_view, function new_doctor: method GET. rendering new_doctor.html
+[2023-03-06 22:16:28,246] DEBUG. modul web_view, function new_doctor: email = test@email.com. success
+[2023-03-06 22:16:28,250] DEBUG. modul web_view, function get_doctor: get doctor. id = 1
+[2023-03-06 22:16:28,266] DEBUG. modul web_view, function edit_doctor: GET. key = 1
+[2023-03-06 22:16:28,282] DEBUG. modul web_view, function edit_doctor: POST. edit doctor test@email.com : success
+[2023-03-06 22:16:28,286] DEBUG. modul web_view, function remove_doctor: key = test@email.com
+[2023-03-06 22:16:28,291] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash SUCSESS MESSAGE 
+[2023-03-06 22:16:28,298] DEBUG. modul web_view, function remove_doctor: key = notexistedid5j5k3j4j4k34
+[2023-03-06 22:16:28,300] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash ERROR MESSAGE 
+[2023-03-06 22:16:28,304] DEBUG. modul web_view, function patients: whole list
+[2023-03-06 22:16:28,337] DEBUG. modul web_view, function new_patient: GET. doctor id =4
+[2023-03-06 22:18:24,589] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-06 22:18:24,611] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. No such patient record in the database
+[2023-03-06 22:18:24,620] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-06 22:18:24,634] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-06 22:18:24,651] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-06 22:18:24,681] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. success
+[2023-03-06 22:18:24,689] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. Error. This email already exist in Doctor records
+[2023-03-06 22:18:24,695] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-06 22:18:24,701] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:18:24,706] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-06 22:18:24,709] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:18:24,712] DEBUG. modul api_view, function api_receive_doctor: key = 159
+[2023-03-06 22:18:24,716] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:18:24,721] DEBUG. modul api_view, function api_receive_doctor: key = some_not_existed_key_m24m100sam87a
+[2023-03-06 22:18:24,723] DEBUG. modul api_view, function api_receive_doctor: absent
+[2023-03-06 22:18:24,734] DEBUG. modul api_view, function api_update_doctor: key = test@email.com, success
+[2023-03-06 22:18:24,741] DEBUG. modul api_view, function api_update_doctor: key = no@email.com, Error. No record with such key
+[2023-03-06 22:18:24,753] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, success
+[2023-03-06 22:18:24,760] DEBUG. modul api_view, function api_delete_doctor: key = no@email.com, No such doctor record in the database
+[2023-03-06 22:18:24,765] DEBUG. modul api_view, function api_patients: Whole list
+[2023-03-06 22:18:24,793] DEBUG. modul api_view, function api_create_patient: email = test@email.com. success
+[2023-03-06 22:18:24,800] DEBUG. modul api_view, function api_create_patient: email = test@email.com. Error. This email already exist in Patient records
+[2023-03-06 22:18:24,804] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:18:24,813] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:18:24,823] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-06 22:18:24,833] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-06 22:18:24,840] DEBUG. modul api_view, function api_receive_patient: id = 64. found
+[2023-03-06 22:18:24,846] DEBUG. modul api_view, function api_receive_patient: id = some_not_existed_key_4n2k2n42. absent
+[2023-03-06 22:18:24,855] DEBUG. modul api_view, function api_update_patient: email = test@email.com. success
+[2023-03-06 22:18:24,864] DEBUG. modul api_view, function api_update_patient: email = no@email.com. Error. No record with such key
+[2023-03-06 22:18:24,877] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. success
+[2023-03-06 22:18:24,882] DEBUG. modul api_view, function api_delete_patient: key = no@email.com. No such patient record in the database
+[2023-03-06 22:18:24,896] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-06 22:18:24,924] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-06 22:18:24,930] DEBUG. modul web_view, function new_doctor: method GET. rendering new_doctor.html
+[2023-03-06 22:18:24,943] DEBUG. modul web_view, function new_doctor: email = test@email.com. success
+[2023-03-06 22:18:24,948] DEBUG. modul web_view, function get_doctor: get doctor. id = 1
+[2023-03-06 22:18:24,964] DEBUG. modul web_view, function edit_doctor: GET. key = 1
+[2023-03-06 22:18:24,978] DEBUG. modul web_view, function edit_doctor: POST. edit doctor test@email.com : success
+[2023-03-06 22:18:24,983] DEBUG. modul web_view, function remove_doctor: key = test@email.com
+[2023-03-06 22:18:24,990] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash SUCSESS MESSAGE 
+[2023-03-06 22:18:24,995] DEBUG. modul web_view, function remove_doctor: key = notexistedid5j5k3j4j4k34
+[2023-03-06 22:18:24,998] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash ERROR MESSAGE 
+[2023-03-06 22:18:25,002] DEBUG. modul web_view, function patients: whole list
+[2023-03-06 22:18:25,036] DEBUG. modul web_view, function new_patient: GET. doctor id =4
+[2023-03-06 22:18:54,143] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-06 22:18:54,162] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. No such patient record in the database
+[2023-03-06 22:18:54,173] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-06 22:18:54,192] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-06 22:18:54,215] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-06 22:18:54,240] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. success
+[2023-03-06 22:18:54,246] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. Error. This email already exist in Doctor records
+[2023-03-06 22:18:54,250] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-06 22:18:54,253] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:18:54,258] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-06 22:18:54,262] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:18:54,264] DEBUG. modul api_view, function api_receive_doctor: key = 161
+[2023-03-06 22:18:54,267] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:18:54,270] DEBUG. modul api_view, function api_receive_doctor: key = some_not_existed_key_m24m100sam87a
+[2023-03-06 22:18:54,273] DEBUG. modul api_view, function api_receive_doctor: absent
+[2023-03-06 22:18:54,282] DEBUG. modul api_view, function api_update_doctor: key = test@email.com, success
+[2023-03-06 22:18:54,287] DEBUG. modul api_view, function api_update_doctor: key = no@email.com, Error. No record with such key
+[2023-03-06 22:18:54,302] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, success
+[2023-03-06 22:18:54,308] DEBUG. modul api_view, function api_delete_doctor: key = no@email.com, No such doctor record in the database
+[2023-03-06 22:18:54,314] DEBUG. modul api_view, function api_patients: Whole list
+[2023-03-06 22:18:54,351] DEBUG. modul api_view, function api_create_patient: email = test@email.com. success
+[2023-03-06 22:18:54,359] DEBUG. modul api_view, function api_create_patient: email = test@email.com. Error. This email already exist in Patient records
+[2023-03-06 22:18:54,363] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:18:54,372] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:18:54,383] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-06 22:18:54,390] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-06 22:18:54,395] DEBUG. modul api_view, function api_receive_patient: id = 65. found
+[2023-03-06 22:18:54,401] DEBUG. modul api_view, function api_receive_patient: id = some_not_existed_key_4n2k2n42. absent
+[2023-03-06 22:18:54,409] DEBUG. modul api_view, function api_update_patient: email = test@email.com. success
+[2023-03-06 22:18:54,416] DEBUG. modul api_view, function api_update_patient: email = no@email.com. Error. No record with such key
+[2023-03-06 22:18:54,424] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. success
+[2023-03-06 22:18:54,431] DEBUG. modul api_view, function api_delete_patient: key = no@email.com. No such patient record in the database
+[2023-03-06 22:18:54,443] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-06 22:18:54,467] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-06 22:18:54,472] DEBUG. modul web_view, function new_doctor: method GET. rendering new_doctor.html
+[2023-03-06 22:18:54,484] DEBUG. modul web_view, function new_doctor: email = test@email.com. success
+[2023-03-06 22:18:54,490] DEBUG. modul web_view, function get_doctor: get doctor. id = 1
+[2023-03-06 22:18:54,504] DEBUG. modul web_view, function edit_doctor: GET. key = 1
+[2023-03-06 22:18:54,517] DEBUG. modul web_view, function edit_doctor: POST. edit doctor test@email.com : success
+[2023-03-06 22:18:54,522] DEBUG. modul web_view, function remove_doctor: key = test@email.com
+[2023-03-06 22:18:54,529] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash SUCSESS MESSAGE 
+[2023-03-06 22:18:54,532] DEBUG. modul web_view, function remove_doctor: key = notexistedid5j5k3j4j4k34
+[2023-03-06 22:18:54,534] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash ERROR MESSAGE 
+[2023-03-06 22:18:54,539] DEBUG. modul web_view, function patients: whole list
+[2023-03-06 22:18:54,573] DEBUG. modul web_view, function new_patient: GET. doctor id =4
+[2023-03-06 22:22:28,451] INFO. modul _internal, function _log: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2023-03-06 22:22:28,452] INFO. modul _internal, function _log: [33mPress CTRL+C to quit[0m
+[2023-03-06 22:22:28,454] INFO. modul _internal, function _log:  * Restarting with stat
+[2023-03-06 22:22:29,438] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-06 22:22:29,444] INFO. modul _internal, function _log:  * Debugger PIN: 137-088-653
+[2023-03-06 22:22:41,136] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-06 22:22:41,160] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. No such patient record in the database
+[2023-03-06 22:22:41,172] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-06 22:22:41,189] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-06 22:22:41,210] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-06 22:22:41,240] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. success
+[2023-03-06 22:22:41,245] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. Error. This email already exist in Doctor records
+[2023-03-06 22:22:41,251] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-06 22:22:41,255] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:22:41,259] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-06 22:22:41,263] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:22:41,265] DEBUG. modul api_view, function api_receive_doctor: key = 163
+[2023-03-06 22:22:41,269] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:22:41,274] DEBUG. modul api_view, function api_receive_doctor: key = some_not_existed_key_m24m100sam87a
+[2023-03-06 22:22:41,275] DEBUG. modul api_view, function api_receive_doctor: absent
+[2023-03-06 22:22:41,286] DEBUG. modul api_view, function api_update_doctor: key = test@email.com, success
+[2023-03-06 22:22:41,291] DEBUG. modul api_view, function api_update_doctor: key = no@email.com, Error. No record with such key
+[2023-03-06 22:22:41,305] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, success
+[2023-03-06 22:22:41,312] DEBUG. modul api_view, function api_delete_doctor: key = no@email.com, No such doctor record in the database
+[2023-03-06 22:22:41,319] DEBUG. modul api_view, function api_patients: Whole list
+[2023-03-06 22:22:41,349] DEBUG. modul api_view, function api_create_patient: email = test@email.com. success
+[2023-03-06 22:22:41,356] DEBUG. modul api_view, function api_create_patient: email = test@email.com. Error. This email already exist in Patient records
+[2023-03-06 22:22:41,361] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:22:41,369] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:22:41,378] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-06 22:22:41,386] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-06 22:22:41,391] DEBUG. modul api_view, function api_receive_patient: id = 66. found
+[2023-03-06 22:22:41,395] DEBUG. modul api_view, function api_receive_patient: id = some_not_existed_key_4n2k2n42. absent
+[2023-03-06 22:22:41,405] DEBUG. modul api_view, function api_update_patient: email = test@email.com. success
+[2023-03-06 22:22:41,410] DEBUG. modul api_view, function api_update_patient: email = no@email.com. Error. No record with such key
+[2023-03-06 22:22:41,419] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. success
+[2023-03-06 22:22:41,424] DEBUG. modul api_view, function api_delete_patient: key = no@email.com. No such patient record in the database
+[2023-03-06 22:22:41,437] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-06 22:22:41,463] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-06 22:22:41,468] DEBUG. modul web_view, function new_doctor: method GET. rendering new_doctor.html
+[2023-03-06 22:22:41,478] DEBUG. modul web_view, function new_doctor: email = test@email.com. success
+[2023-03-06 22:22:41,485] DEBUG. modul web_view, function get_doctor: get doctor. id = 1
+[2023-03-06 22:22:41,500] DEBUG. modul web_view, function edit_doctor: GET. key = 1
+[2023-03-06 22:22:41,513] DEBUG. modul web_view, function edit_doctor: POST. edit doctor test@email.com : success
+[2023-03-06 22:22:41,519] DEBUG. modul web_view, function remove_doctor: key = test@email.com
+[2023-03-06 22:22:41,524] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash SUCSESS MESSAGE 
+[2023-03-06 22:22:41,528] DEBUG. modul web_view, function remove_doctor: key = notexistedid5j5k3j4j4k34
+[2023-03-06 22:22:41,530] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash ERROR MESSAGE 
+[2023-03-06 22:22:41,537] DEBUG. modul web_view, function patients: whole list
+[2023-03-06 22:22:41,570] DEBUG. modul web_view, function new_patient: GET. doctor id =4
+[2023-03-06 22:27:06,807] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-06 22:27:06,829] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. No such patient record in the database
+[2023-03-06 22:27:06,839] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-06 22:27:06,858] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-06 22:27:06,876] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-06 22:27:06,891] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. success
+[2023-03-06 22:27:06,897] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. Error. This email already exist in Doctor records
+[2023-03-06 22:27:06,900] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-06 22:27:06,904] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:27:06,908] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-06 22:27:06,912] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:27:06,914] DEBUG. modul api_view, function api_receive_doctor: key = 165
+[2023-03-06 22:27:06,917] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:27:06,922] DEBUG. modul api_view, function api_receive_doctor: key = some_not_existed_key_m24m100sam87a
+[2023-03-06 22:27:06,924] DEBUG. modul api_view, function api_receive_doctor: absent
+[2023-03-06 22:27:06,933] DEBUG. modul api_view, function api_update_doctor: key = test@email.com, success
+[2023-03-06 22:27:06,938] DEBUG. modul api_view, function api_update_doctor: key = no@email.com, Error. No record with such key
+[2023-03-06 22:27:06,954] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, success
+[2023-03-06 22:27:06,962] DEBUG. modul api_view, function api_delete_doctor: key = no@email.com, No such doctor record in the database
+[2023-03-06 22:27:06,968] DEBUG. modul api_view, function api_patients: Whole list
+[2023-03-06 22:27:06,999] DEBUG. modul api_view, function api_create_patient: email = test@email.com. success
+[2023-03-06 22:27:07,004] DEBUG. modul api_view, function api_create_patient: email = test@email.com. Error. This email already exist in Patient records
+[2023-03-06 22:27:07,010] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:27:07,017] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:27:07,028] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-06 22:27:07,034] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-06 22:27:07,039] DEBUG. modul api_view, function api_receive_patient: id = 67. found
+[2023-03-06 22:27:07,044] DEBUG. modul api_view, function api_receive_patient: id = some_not_existed_key_4n2k2n42. absent
+[2023-03-06 22:27:07,053] DEBUG. modul api_view, function api_update_patient: email = test@email.com. success
+[2023-03-06 22:27:07,060] DEBUG. modul api_view, function api_update_patient: email = no@email.com. Error. No record with such key
+[2023-03-06 22:27:07,069] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. success
+[2023-03-06 22:27:07,077] DEBUG. modul api_view, function api_delete_patient: key = no@email.com. No such patient record in the database
+[2023-03-06 22:27:07,087] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-06 22:27:07,114] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-06 22:27:07,119] DEBUG. modul web_view, function new_doctor: method GET. rendering new_doctor.html
+[2023-03-06 22:27:07,132] DEBUG. modul web_view, function new_doctor: email = test@email.com. success
+[2023-03-06 22:27:07,136] DEBUG. modul web_view, function get_doctor: get doctor. id = 1
+[2023-03-06 22:27:07,151] DEBUG. modul web_view, function edit_doctor: GET. key = 1
+[2023-03-06 22:27:07,166] DEBUG. modul web_view, function edit_doctor: POST. edit doctor test@email.com : success
+[2023-03-06 22:27:07,170] DEBUG. modul web_view, function remove_doctor: key = test@email.com
+[2023-03-06 22:27:07,176] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash SUCSESS MESSAGE 
+[2023-03-06 22:27:07,181] DEBUG. modul web_view, function remove_doctor: key = notexistedid5j5k3j4j4k34
+[2023-03-06 22:27:07,183] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash ERROR MESSAGE 
+[2023-03-06 22:27:07,189] DEBUG. modul web_view, function patients: whole list
+[2023-03-06 22:27:07,229] DEBUG. modul web_view, function new_patient: GET. doctor id =4
+[2023-03-06 22:27:17,739] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-06 22:27:17,755] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. No such patient record in the database
+[2023-03-06 22:27:17,789] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-06 22:27:17,803] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-06 22:27:17,820] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-06 22:27:17,848] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. success
+[2023-03-06 22:27:17,854] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. Error. This email already exist in Doctor records
+[2023-03-06 22:27:17,859] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-06 22:27:17,864] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:27:17,868] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-06 22:27:17,872] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:27:17,874] DEBUG. modul api_view, function api_receive_doctor: key = 167
+[2023-03-06 22:27:17,879] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:27:17,883] DEBUG. modul api_view, function api_receive_doctor: key = some_not_existed_key_m24m100sam87a
+[2023-03-06 22:27:17,885] DEBUG. modul api_view, function api_receive_doctor: absent
+[2023-03-06 22:27:17,895] DEBUG. modul api_view, function api_update_doctor: key = test@email.com, success
+[2023-03-06 22:27:17,900] DEBUG. modul api_view, function api_update_doctor: key = no@email.com, Error. No record with such key
+[2023-03-06 22:27:17,912] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, success
+[2023-03-06 22:27:17,917] DEBUG. modul api_view, function api_delete_doctor: key = no@email.com, No such doctor record in the database
+[2023-03-06 22:27:17,922] DEBUG. modul api_view, function api_patients: Whole list
+[2023-03-06 22:27:17,952] DEBUG. modul api_view, function api_create_patient: email = test@email.com. success
+[2023-03-06 22:27:17,958] DEBUG. modul api_view, function api_create_patient: email = test@email.com. Error. This email already exist in Patient records
+[2023-03-06 22:27:17,963] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:27:17,970] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:27:17,982] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-06 22:27:17,989] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-06 22:27:17,995] DEBUG. modul api_view, function api_receive_patient: id = 68. found
+[2023-03-06 22:27:18,000] DEBUG. modul api_view, function api_receive_patient: id = some_not_existed_key_4n2k2n42. absent
+[2023-03-06 22:27:18,009] DEBUG. modul api_view, function api_update_patient: email = test@email.com. success
+[2023-03-06 22:27:18,015] DEBUG. modul api_view, function api_update_patient: email = no@email.com. Error. No record with such key
+[2023-03-06 22:27:18,024] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. success
+[2023-03-06 22:27:18,030] DEBUG. modul api_view, function api_delete_patient: key = no@email.com. No such patient record in the database
+[2023-03-06 22:27:18,042] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-06 22:27:18,066] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-06 22:27:18,072] DEBUG. modul web_view, function new_doctor: method GET. rendering new_doctor.html
+[2023-03-06 22:27:18,089] DEBUG. modul web_view, function new_doctor: email = test@email.com. success
+[2023-03-06 22:27:18,095] DEBUG. modul web_view, function get_doctor: get doctor. id = 1
+[2023-03-06 22:27:18,110] DEBUG. modul web_view, function edit_doctor: GET. key = 1
+[2023-03-06 22:27:18,124] DEBUG. modul web_view, function edit_doctor: POST. edit doctor test@email.com : success
+[2023-03-06 22:27:18,129] DEBUG. modul web_view, function remove_doctor: key = test@email.com
+[2023-03-06 22:27:18,135] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash SUCSESS MESSAGE 
+[2023-03-06 22:27:18,140] DEBUG. modul web_view, function remove_doctor: key = notexistedid5j5k3j4j4k34
+[2023-03-06 22:27:18,142] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash ERROR MESSAGE 
+[2023-03-06 22:27:18,148] DEBUG. modul web_view, function patients: whole list
+[2023-03-06 22:27:18,184] DEBUG. modul web_view, function new_patient: GET. doctor id =4
+[2023-03-06 22:27:18,203] DEBUG. modul web_view, function new_patient: creating patient. success
+[2023-03-06 22:27:18,209] DEBUG. modul web_view, function patients: Filtered list of Patients. :
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:27:35,801] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-06 22:27:35,835] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. success
+[2023-03-06 22:27:35,877] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-06 22:27:35,891] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-06 22:27:35,904] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-06 22:27:35,922] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. success
+[2023-03-06 22:27:35,929] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. Error. This email already exist in Doctor records
+[2023-03-06 22:27:35,933] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-06 22:27:35,938] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:27:35,943] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-06 22:27:35,946] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:27:35,948] DEBUG. modul api_view, function api_receive_doctor: key = 169
+[2023-03-06 22:27:35,952] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:27:35,957] DEBUG. modul api_view, function api_receive_doctor: key = some_not_existed_key_m24m100sam87a
+[2023-03-06 22:27:35,960] DEBUG. modul api_view, function api_receive_doctor: absent
+[2023-03-06 22:27:35,968] DEBUG. modul api_view, function api_update_doctor: key = test@email.com, success
+[2023-03-06 22:27:35,975] DEBUG. modul api_view, function api_update_doctor: key = no@email.com, Error. No record with such key
+[2023-03-06 22:27:35,988] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, success
+[2023-03-06 22:27:35,995] DEBUG. modul api_view, function api_delete_doctor: key = no@email.com, No such doctor record in the database
+[2023-03-06 22:27:36,001] DEBUG. modul api_view, function api_patients: Whole list
+[2023-03-06 22:27:36,037] DEBUG. modul api_view, function api_create_patient: email = test@email.com. success
+[2023-03-06 22:27:36,045] DEBUG. modul api_view, function api_create_patient: email = test@email.com. Error. This email already exist in Patient records
+[2023-03-06 22:27:36,050] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:27:36,059] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:27:36,068] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-06 22:27:36,076] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-06 22:27:36,080] DEBUG. modul api_view, function api_receive_patient: id = 70. found
+[2023-03-06 22:27:36,085] DEBUG. modul api_view, function api_receive_patient: id = some_not_existed_key_4n2k2n42. absent
+[2023-03-06 22:27:36,097] DEBUG. modul api_view, function api_update_patient: email = test@email.com. success
+[2023-03-06 22:27:36,101] DEBUG. modul api_view, function api_update_patient: email = no@email.com. Error. No record with such key
+[2023-03-06 22:27:36,110] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. success
+[2023-03-06 22:27:36,116] DEBUG. modul api_view, function api_delete_patient: key = no@email.com. No such patient record in the database
+[2023-03-06 22:27:36,128] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-06 22:27:36,156] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-06 22:27:36,162] DEBUG. modul web_view, function new_doctor: method GET. rendering new_doctor.html
+[2023-03-06 22:27:36,174] DEBUG. modul web_view, function new_doctor: email = test@email.com. success
+[2023-03-06 22:27:36,178] DEBUG. modul web_view, function get_doctor: get doctor. id = 1
+[2023-03-06 22:27:36,195] DEBUG. modul web_view, function edit_doctor: GET. key = 1
+[2023-03-06 22:27:36,209] DEBUG. modul web_view, function edit_doctor: POST. edit doctor test@email.com : success
+[2023-03-06 22:27:36,214] DEBUG. modul web_view, function remove_doctor: key = test@email.com
+[2023-03-06 22:27:36,219] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash SUCSESS MESSAGE 
+[2023-03-06 22:27:36,224] DEBUG. modul web_view, function remove_doctor: key = notexistedid5j5k3j4j4k34
+[2023-03-06 22:27:36,225] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash ERROR MESSAGE 
+[2023-03-06 22:27:36,230] DEBUG. modul web_view, function patients: whole list
+[2023-03-06 22:27:36,262] DEBUG. modul web_view, function new_patient: GET. doctor id =4
+[2023-03-06 22:27:36,279] DEBUG. modul web_view, function new_patient: creating patient. success
+[2023-03-06 22:27:36,282] DEBUG. modul web_view, function patients: Filtered list of Patients. :
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:27:36,298] DEBUG. modul web_view, function patient: show patient key =1
+[2023-03-06 22:27:36,312] DEBUG. modul web_view, function edit_patient: GET. key =1
+[2023-03-06 22:27:36,337] DEBUG. modul web_view, function edit_patient: success
+[2023-03-06 22:27:36,342] DEBUG. modul web_view, function remove_patient: key = test@email.com
+[2023-03-06 22:27:36,350] DEBUG. modul web_view, function remove_patient: key = notexistedid
+[2023-03-06 22:28:41,324] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-06 22:28:41,346] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. No such patient record in the database
+[2023-03-06 22:28:41,358] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-06 22:28:41,378] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-06 22:28:41,397] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-06 22:28:41,431] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. success
+[2023-03-06 22:28:41,440] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. Error. This email already exist in Doctor records
+[2023-03-06 22:28:41,447] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-06 22:28:41,453] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:28:41,459] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-06 22:28:41,462] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:28:41,465] DEBUG. modul api_view, function api_receive_doctor: key = 171
+[2023-03-06 22:28:41,470] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:28:41,475] DEBUG. modul api_view, function api_receive_doctor: key = some_not_existed_key_m24m100sam87a
+[2023-03-06 22:28:41,478] DEBUG. modul api_view, function api_receive_doctor: absent
+[2023-03-06 22:28:41,489] DEBUG. modul api_view, function api_update_doctor: key = test@email.com, success
+[2023-03-06 22:28:41,494] DEBUG. modul api_view, function api_update_doctor: key = no@email.com, Error. No record with such key
+[2023-03-06 22:28:41,506] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, success
+[2023-03-06 22:28:41,512] DEBUG. modul api_view, function api_delete_doctor: key = no@email.com, No such doctor record in the database
+[2023-03-06 22:28:41,517] DEBUG. modul api_view, function api_patients: Whole list
+[2023-03-06 22:28:41,550] DEBUG. modul api_view, function api_create_patient: email = test@email.com. success
+[2023-03-06 22:28:41,556] DEBUG. modul api_view, function api_create_patient: email = test@email.com. Error. This email already exist in Patient records
+[2023-03-06 22:28:41,562] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:28:41,570] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:28:41,582] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-06 22:28:41,590] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-06 22:28:41,595] DEBUG. modul api_view, function api_receive_patient: id = 72. found
+[2023-03-06 22:28:41,601] DEBUG. modul api_view, function api_receive_patient: id = some_not_existed_key_4n2k2n42. absent
+[2023-03-06 22:28:41,611] DEBUG. modul api_view, function api_update_patient: email = test@email.com. success
+[2023-03-06 22:28:41,620] DEBUG. modul api_view, function api_update_patient: email = no@email.com. Error. No record with such key
+[2023-03-06 22:28:41,632] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. success
+[2023-03-06 22:28:41,641] DEBUG. modul api_view, function api_delete_patient: key = no@email.com. No such patient record in the database
+[2023-03-06 22:28:41,659] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-06 22:28:41,693] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-06 22:28:41,699] DEBUG. modul web_view, function new_doctor: method GET. rendering new_doctor.html
+[2023-03-06 22:28:41,712] DEBUG. modul web_view, function new_doctor: email = test@email.com. success
+[2023-03-06 22:28:41,716] DEBUG. modul web_view, function get_doctor: get doctor. id = 1
+[2023-03-06 22:28:41,738] DEBUG. modul web_view, function edit_doctor: GET. key = 1
+[2023-03-06 22:28:41,752] DEBUG. modul web_view, function edit_doctor: POST. edit doctor test@email.com : success
+[2023-03-06 22:28:41,759] DEBUG. modul web_view, function remove_doctor: key = test@email.com
+[2023-03-06 22:28:41,764] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash SUCSESS MESSAGE 
+[2023-03-06 22:28:41,770] DEBUG. modul web_view, function remove_doctor: key = notexistedid5j5k3j4j4k34
+[2023-03-06 22:28:41,772] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash ERROR MESSAGE 
+[2023-03-06 22:28:41,777] DEBUG. modul web_view, function patients: whole list
+[2023-03-06 22:28:41,811] DEBUG. modul web_view, function new_patient: GET. doctor id =4
+[2023-03-06 22:28:41,830] DEBUG. modul web_view, function new_patient: creating patient. success
+[2023-03-06 22:28:41,836] DEBUG. modul web_view, function patients: Filtered list of Patients. :
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:28:41,848] DEBUG. modul web_view, function patient: show patient key =1
+[2023-03-06 22:28:41,863] DEBUG. modul web_view, function edit_patient: GET. key =1
+[2023-03-06 22:28:41,893] DEBUG. modul web_view, function edit_patient: success
+[2023-03-06 22:28:41,898] DEBUG. modul web_view, function remove_patient: key = test@email.com
+[2023-03-06 22:28:41,907] DEBUG. modul web_view, function remove_patient: key = notexistedid
+[2023-03-06 22:29:36,053] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-06 22:29:36,070] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. No such patient record in the database
+[2023-03-06 22:29:36,117] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-06 22:29:36,135] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-06 22:29:36,151] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-06 22:29:36,180] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. success
+[2023-03-06 22:29:36,186] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. Error. This email already exist in Doctor records
+[2023-03-06 22:29:36,189] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-06 22:29:36,194] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:29:36,198] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-06 22:29:36,203] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:29:36,205] DEBUG. modul api_view, function api_receive_doctor: key = 173
+[2023-03-06 22:29:36,209] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:29:36,212] DEBUG. modul api_view, function api_receive_doctor: key = some_not_existed_key_m24m100sam87a
+[2023-03-06 22:29:36,214] DEBUG. modul api_view, function api_receive_doctor: absent
+[2023-03-06 22:29:36,224] DEBUG. modul api_view, function api_update_doctor: key = test@email.com, success
+[2023-03-06 22:29:36,229] DEBUG. modul api_view, function api_update_doctor: key = no@email.com, Error. No record with such key
+[2023-03-06 22:29:36,243] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, success
+[2023-03-06 22:29:36,249] DEBUG. modul api_view, function api_delete_doctor: key = no@email.com, No such doctor record in the database
+[2023-03-06 22:29:36,257] DEBUG. modul api_view, function api_patients: Whole list
+[2023-03-06 22:29:36,285] DEBUG. modul api_view, function api_create_patient: email = test@email.com. success
+[2023-03-06 22:29:36,291] DEBUG. modul api_view, function api_create_patient: email = test@email.com. Error. This email already exist in Patient records
+[2023-03-06 22:29:36,294] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:29:36,304] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:29:36,314] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-06 22:29:36,323] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-06 22:29:36,328] DEBUG. modul api_view, function api_receive_patient: id = 74. found
+[2023-03-06 22:29:36,335] DEBUG. modul api_view, function api_receive_patient: id = some_not_existed_key_4n2k2n42. absent
+[2023-03-06 22:29:36,343] DEBUG. modul api_view, function api_update_patient: email = test@email.com. success
+[2023-03-06 22:29:36,350] DEBUG. modul api_view, function api_update_patient: email = no@email.com. Error. No record with such key
+[2023-03-06 22:29:36,358] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. success
+[2023-03-06 22:29:36,364] DEBUG. modul api_view, function api_delete_patient: key = no@email.com. No such patient record in the database
+[2023-03-06 22:29:36,377] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-06 22:29:36,409] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-06 22:29:36,414] DEBUG. modul web_view, function new_doctor: method GET. rendering new_doctor.html
+[2023-03-06 22:29:36,429] DEBUG. modul web_view, function new_doctor: email = test@email.com. success
+[2023-03-06 22:29:36,436] DEBUG. modul web_view, function get_doctor: get doctor. id = 1
+[2023-03-06 22:29:36,453] DEBUG. modul web_view, function edit_doctor: GET. key = 1
+[2023-03-06 22:29:36,468] DEBUG. modul web_view, function edit_doctor: POST. edit doctor test@email.com : success
+[2023-03-06 22:29:36,473] DEBUG. modul web_view, function remove_doctor: key = test@email.com
+[2023-03-06 22:29:36,478] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash SUCSESS MESSAGE 
+[2023-03-06 22:29:36,485] DEBUG. modul web_view, function remove_doctor: key = notexistedid5j5k3j4j4k34
+[2023-03-06 22:29:36,487] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash ERROR MESSAGE 
+[2023-03-06 22:29:36,493] DEBUG. modul web_view, function patients: whole list
+[2023-03-06 22:29:36,531] DEBUG. modul web_view, function new_patient: GET. doctor id =4
+[2023-03-06 22:29:36,549] DEBUG. modul web_view, function new_patient: creating patient. success
+[2023-03-06 22:29:36,554] DEBUG. modul web_view, function patients: Filtered list of Patients. :
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:29:36,570] DEBUG. modul web_view, function patient: show patient key =1
+[2023-03-06 22:29:36,587] DEBUG. modul web_view, function edit_patient: GET. key =1
+[2023-03-06 22:29:36,613] DEBUG. modul web_view, function edit_patient: success
+[2023-03-06 22:29:36,620] DEBUG. modul web_view, function remove_patient: key = test@email.com
+[2023-03-06 22:29:36,629] DEBUG. modul web_view, function remove_patient: key = notexistedid
+[2023-03-06 22:29:46,937] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-06 22:29:46,959] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. No such patient record in the database
+[2023-03-06 22:29:46,975] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-06 22:29:46,995] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-06 22:29:47,013] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-06 22:29:47,042] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. success
+[2023-03-06 22:29:47,049] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. Error. This email already exist in Doctor records
+[2023-03-06 22:29:47,055] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-06 22:29:47,060] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:29:47,064] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-06 22:29:47,068] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:29:47,071] DEBUG. modul api_view, function api_receive_doctor: key = 175
+[2023-03-06 22:29:47,075] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:29:47,079] DEBUG. modul api_view, function api_receive_doctor: key = some_not_existed_key_m24m100sam87a
+[2023-03-06 22:29:47,080] DEBUG. modul api_view, function api_receive_doctor: absent
+[2023-03-06 22:29:47,092] DEBUG. modul api_view, function api_update_doctor: key = test@email.com, success
+[2023-03-06 22:29:47,097] DEBUG. modul api_view, function api_update_doctor: key = no@email.com, Error. No record with such key
+[2023-03-06 22:29:47,110] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, success
+[2023-03-06 22:29:47,114] DEBUG. modul api_view, function api_delete_doctor: key = no@email.com, No such doctor record in the database
+[2023-03-06 22:29:47,121] DEBUG. modul api_view, function api_patients: Whole list
+[2023-03-06 22:29:47,154] DEBUG. modul api_view, function api_create_patient: email = test@email.com. success
+[2023-03-06 22:29:47,160] DEBUG. modul api_view, function api_create_patient: email = test@email.com. Error. This email already exist in Patient records
+[2023-03-06 22:29:47,165] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:29:47,173] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:29:47,182] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-06 22:29:47,190] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-06 22:29:47,194] DEBUG. modul api_view, function api_receive_patient: id = 76. found
+[2023-03-06 22:29:47,198] DEBUG. modul api_view, function api_receive_patient: id = some_not_existed_key_4n2k2n42. absent
+[2023-03-06 22:29:47,208] DEBUG. modul api_view, function api_update_patient: email = test@email.com. success
+[2023-03-06 22:29:47,212] DEBUG. modul api_view, function api_update_patient: email = no@email.com. Error. No record with such key
+[2023-03-06 22:29:47,220] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. success
+[2023-03-06 22:29:47,226] DEBUG. modul api_view, function api_delete_patient: key = no@email.com. No such patient record in the database
+[2023-03-06 22:29:47,240] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-06 22:29:47,263] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-06 22:29:47,270] DEBUG. modul web_view, function new_doctor: method GET. rendering new_doctor.html
+[2023-03-06 22:29:47,283] DEBUG. modul web_view, function new_doctor: email = test@email.com. success
+[2023-03-06 22:29:47,289] DEBUG. modul web_view, function get_doctor: get doctor. id = 1
+[2023-03-06 22:29:47,305] DEBUG. modul web_view, function edit_doctor: GET. key = 1
+[2023-03-06 22:29:47,320] DEBUG. modul web_view, function edit_doctor: POST. edit doctor test@email.com : success
+[2023-03-06 22:29:47,324] DEBUG. modul web_view, function remove_doctor: key = test@email.com
+[2023-03-06 22:29:47,329] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash SUCSESS MESSAGE 
+[2023-03-06 22:29:47,335] DEBUG. modul web_view, function remove_doctor: key = notexistedid5j5k3j4j4k34
+[2023-03-06 22:29:47,336] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash ERROR MESSAGE 
+[2023-03-06 22:29:47,342] DEBUG. modul web_view, function patients: whole list
+[2023-03-06 22:29:47,374] DEBUG. modul web_view, function new_patient: GET. doctor id =4
+[2023-03-06 22:29:47,391] DEBUG. modul web_view, function new_patient: creating patient. success
+[2023-03-06 22:29:47,395] DEBUG. modul web_view, function patients: Filtered list of Patients. :
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:29:47,410] DEBUG. modul web_view, function patient: show patient key =1
+[2023-03-06 22:29:47,425] DEBUG. modul web_view, function edit_patient: GET. key =1
+[2023-03-06 22:29:47,450] DEBUG. modul web_view, function edit_patient: success
+[2023-03-06 22:29:47,455] DEBUG. modul web_view, function remove_patient: key = test@email.com
+[2023-03-06 22:29:47,463] DEBUG. modul web_view, function remove_patient: key = notexistedid
+[2023-03-06 22:30:30,491] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-06 22:30:30,509] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. No such patient record in the database
+[2023-03-06 22:30:30,549] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, No such doctor record in the database
+[2023-03-06 22:30:30,565] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-06 22:30:30,582] DEBUG. modul api_view, function api_doctors: List of doctors
+[2023-03-06 22:30:30,616] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. success
+[2023-03-06 22:30:30,623] DEBUG. modul api_view, function api_create_doctor: email = test@email.com. Error. This email already exist in Doctor records
+[2023-03-06 22:30:30,627] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-06 22:30:30,632] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:30:30,638] DEBUG. modul api_view, function api_receive_doctor: key = test@email.com
+[2023-03-06 22:30:30,642] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:30:30,645] DEBUG. modul api_view, function api_receive_doctor: key = 177
+[2023-03-06 22:30:30,651] DEBUG. modul api_view, function api_receive_doctor: found
+[2023-03-06 22:30:30,656] DEBUG. modul api_view, function api_receive_doctor: key = some_not_existed_key_m24m100sam87a
+[2023-03-06 22:30:30,658] DEBUG. modul api_view, function api_receive_doctor: absent
+[2023-03-06 22:30:30,670] DEBUG. modul api_view, function api_update_doctor: key = test@email.com, success
+[2023-03-06 22:30:30,675] DEBUG. modul api_view, function api_update_doctor: key = no@email.com, Error. No record with such key
+[2023-03-06 22:30:30,691] DEBUG. modul api_view, function api_delete_doctor: key = test@email.com, success
+[2023-03-06 22:30:30,697] DEBUG. modul api_view, function api_delete_doctor: key = no@email.com, No such doctor record in the database
+[2023-03-06 22:30:30,704] DEBUG. modul api_view, function api_patients: Whole list
+[2023-03-06 22:30:30,742] DEBUG. modul api_view, function api_create_patient: email = test@email.com. success
+[2023-03-06 22:30:30,748] DEBUG. modul api_view, function api_create_patient: email = test@email.com. Error. This email already exist in Patient records
+[2023-03-06 22:30:30,754] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:30:30,762] DEBUG. modul api_view, function api_patients: List of Patients. Filters:
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:30:30,775] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-06 22:30:30,782] DEBUG. modul api_view, function api_receive_patient: id = test@email.com. found
+[2023-03-06 22:30:30,789] DEBUG. modul api_view, function api_receive_patient: id = 78. found
+[2023-03-06 22:30:30,795] DEBUG. modul api_view, function api_receive_patient: id = some_not_existed_key_4n2k2n42. absent
+[2023-03-06 22:30:30,808] DEBUG. modul api_view, function api_update_patient: email = test@email.com. success
+[2023-03-06 22:30:30,815] DEBUG. modul api_view, function api_update_patient: email = no@email.com. Error. No record with such key
+[2023-03-06 22:30:30,825] DEBUG. modul api_view, function api_delete_patient: key = test@email.com. success
+[2023-03-06 22:30:30,832] DEBUG. modul api_view, function api_delete_patient: key = no@email.com. No such patient record in the database
+[2023-03-06 22:30:30,847] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-06 22:30:30,878] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-06 22:30:30,883] DEBUG. modul web_view, function new_doctor: method GET. rendering new_doctor.html
+[2023-03-06 22:30:30,897] DEBUG. modul web_view, function new_doctor: email = test@email.com. success
+[2023-03-06 22:30:30,904] DEBUG. modul web_view, function get_doctor: get doctor. id = 1
+[2023-03-06 22:30:30,920] DEBUG. modul web_view, function edit_doctor: GET. key = 1
+[2023-03-06 22:30:30,934] DEBUG. modul web_view, function edit_doctor: POST. edit doctor test@email.com : success
+[2023-03-06 22:30:30,940] DEBUG. modul web_view, function remove_doctor: key = test@email.com
+[2023-03-06 22:30:30,946] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash SUCSESS MESSAGE 
+[2023-03-06 22:30:30,953] DEBUG. modul web_view, function remove_doctor: key = notexistedid5j5k3j4j4k34
+[2023-03-06 22:30:30,956] DEBUG. modul web_view, function remove_doctor: deleting doctor. flash ERROR MESSAGE 
+[2023-03-06 22:30:30,960] DEBUG. modul web_view, function patients: whole list
+[2023-03-06 22:30:31,004] DEBUG. modul web_view, function new_patient: GET. doctor id =4
+[2023-03-06 22:30:31,022] DEBUG. modul web_view, function new_patient: creating patient. success
+[2023-03-06 22:30:31,027] DEBUG. modul web_view, function patients: Filtered list of Patients. :
+        birthday_since = 1333-08-15, 
+        sbirthday_till = 1333-08-15,
+        doctor_id = None
+[2023-03-06 22:30:31,044] DEBUG. modul web_view, function patient: show patient key =1
+[2023-03-06 22:30:31,061] DEBUG. modul web_view, function edit_patient: GET. key =1
+[2023-03-06 22:30:31,089] DEBUG. modul web_view, function remove_patient: key = test@email.com
