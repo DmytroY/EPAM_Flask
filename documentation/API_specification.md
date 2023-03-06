@@ -191,6 +191,13 @@ Connection: close
 "specialization": "Nephrologist"
 }
 ```
+**Response in case of trying get not existed record**
+```
+HTTP/1.1 204 NO CONTENT
+Content-Type: text/html; charset=utf-8
+Connection: close
+```
+
 
 ### 2.4. Updating doctor record information
 
@@ -573,6 +580,12 @@ Connection: close
 "image_url": "/static/photo/laura_email_com.jpg",
 "last_name": "Capway"
 }
+```
+**Response in case of trying get not existed record**
+```
+HTTP/1.1 204 NO CONTENT
+Content-Type: text/html; charset=utf-8
+Connection: close
 ```
 
 ### 3.5. Updating patient record information

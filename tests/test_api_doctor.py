@@ -1,4 +1,4 @@
-from micropeutist_app.rest.api_view import app
+from micropeutist_app.application import app
 
 
 class TestApiHome():
@@ -33,15 +33,19 @@ class TestApiDoctorCRUD():
 
     def test_api_receive_doctor_by_email(self):
         response = app.test_client().get('/api/receive_doctor/?id=test@email.com')
-        assert response.status_code == 200  
+        assert response.status_code == 200
         assert b'Sanches' in response.data
 
     def test_api_receive_doctor_by_id(self):
         response = app.test_client().get('/api/receive_doctor/?id=test@email.com')
         id = response.get_json().get('id')
         response = app.test_client().get('/api/receive_doctor/?id=' + str(id))
-        assert response.status_code == 200  
+        assert response.status_code == 200
         assert b'Sanches' in response.data
+
+    def test_api_receive_not_existed_doctor(self):
+        response = app.test_client().get('/api/receive_doctor/?id=some_not_existed_key_m24m100sam87a')
+        assert response.status_code == 204
 
     def test_api_update_doctor(self):
         response = app.test_client().put('/api/update_doctor/', json=self.update_data)

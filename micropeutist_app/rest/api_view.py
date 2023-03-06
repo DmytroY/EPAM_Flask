@@ -37,7 +37,7 @@ def api_receive_doctor():
         app.logger.debug('found')
         return jsonify(feedback), 200
     app.logger.debug('absent')
-    return jsonify(message='There is no such doctor in database'), 204
+    return '', 204
 
 @app.route("/api/update_doctor/", methods=['PUT'])
 def api_update_doctor():
@@ -98,7 +98,7 @@ def api_receive_patient():
         app.logger.debug(f'id = {key}. found')
         return jsonify(feedback), 200
     app.logger.debug(f'id = {key}. absent')
-    return jsonify(message='There is no such patient in database'), 204
+    return '', 204
 
 @app.route('/api/update_patient/', methods=['PUT'])
 def api_update_patient():

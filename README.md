@@ -17,14 +17,14 @@ It supposed to demonstrate skills and knowleges acquired by the student. Mainly 
 - Alembic migration tool
 
 ## Project folders structure:
-- **Documentation** folder which includes:
+- **documentation** folder which includes:
   - SRS, 
   - API specification,
   - html_prototypes.
 - **micropeutist_app** folder which includes flask application and all required modules
 - **tests** folder which includes unit-tests
 
-## Install
+## Install and run
 
 0. Prerequisites. You should have MySQL, git, python3 and pip installed. By default to access MySQL database application use user *root* and blank password.
 
@@ -75,7 +75,7 @@ When you are in folder EPAM_Flask, apply migrations to create tables which corre
 (.venv)mydir/EPAM_Flask> flask db upgrade
 ```
 
-8. When you are in folder EPAM_Flask,start application with "flask run" command or gunicorn(if gunicorn installed):
+8. When you are in folder EPAM_Flask,start application with "flask run" command or Gunicorn(if gunicorn installed):
 ```
 (.venv)mydir/EPAM_Flask> flask run                      
  * Serving Flask app 'main.py'
@@ -84,3 +84,8 @@ When you are in folder EPAM_Flask, apply migrations to create tables which corre
  * Running on http://127.0.0.1:5000
 [2023-03-06 19:40:30,883] INFO. modul _internal, function _log: Press CTRL+C to quit
 ```
+Web application will be available at address http://127.0.0.1:5000/
+
+API will be available at address http://127.0.0.1:5000/API/
+
+Please see detailed API specification in **documentation** folder.

@@ -1,4 +1,5 @@
-from micropeutist_app.rest.api_view import app
+from micropeutist_app.application import app
+
 
 class TestApiGetPatients():
     ''' Testing route /api/patients/'''
@@ -44,6 +45,10 @@ class TestApiPatientCRUD():
         response = app.test_client().get('/api/receive_patient/?id=' + str(id))
         assert response.status_code == 200  
         assert b'Sanches' in response.data
+
+    def test_api_receive_not_existed_patient(self):
+        response = app.test_client().get('/api/receive_patient/?id=some_not_existed_key_4n2k2n42')
+        assert response.status_code == 204 
 
     def test_api_update_patient(self):
         response = app.test_client().put('/api/update_patient/', json=self.update_data)
