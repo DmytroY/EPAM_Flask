@@ -82,7 +82,7 @@ micropeutist      1.0.1
 ```
 
 ### 5. Configure database.
-Either in MySQL workbench or by CLI create database with name **micropeutist**
+Either in MySQL workbench or by CLI create database with name **micropeutist**. It you want do it via Bash use next command:
 ```
 > mysql -u root -p -e 'CREATE DATABASE micropeutist'
 ```
