@@ -16,8 +16,8 @@ install:
  - pip install coveralls
 
 script:
- - python -m pylint micropeutist_app
+ - python -m pylint micropeutist
  - flask db upgrade
- - python -m pytest --cov=micropeutist_app tests/
+ - python -m pytest --cov=micropeutist tests/
 
 after_success: coveralls

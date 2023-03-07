@@ -1,4 +1,4 @@
 recursive-include documentation *
-recursive-include micropeutist_app/static *
-recursive-include micropeutist_app/templates *
-recursive-include micropeutist_app/migrations *
+recursive-include micropeutist/static *
+recursive-include micropeutist/templates *
+recursive-include micropeutist/migrations *

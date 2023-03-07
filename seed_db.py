@@ -1,12 +1,11 @@
 ''' Seed some data to database'''
-from datetime import date
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from micropeutist_app.models.model import Doctor, Patient
+from micropeutist.models.model import Doctor, Patient
 
 engine = create_engine('mysql://root:@localhost/micropeutist', echo=True)
 Session = sessionmaker(bind=engine)
-session =Session()
+session = Session()
 
 # === Doctors instanses ====
 john = Doctor(**{'first_name': 'Jonh',

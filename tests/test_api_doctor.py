@@ -1,4 +1,4 @@
-from micropeutist_app.application import app
+from micropeutist.application import app
 
 
 class TestApiHome():

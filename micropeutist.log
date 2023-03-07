@@ -3612,3 +3612,33 @@ AttributeError: 'NoneType' object has no attribute 'isdigit'
 [2023-03-07 14:29:46,541] INFO. modul _internal, function _log:  * Restarting with stat
 [2023-03-07 14:29:47,431] WARNING. modul _internal, function _log:  * Debugger is active!
 [2023-03-07 14:29:47,435] INFO. modul _internal, function _log:  * Debugger PIN: 137-088-653
+[2023-03-07 19:25:18,727] INFO. modul _internal, function _log: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2023-03-07 19:25:18,729] INFO. modul _internal, function _log: [33mPress CTRL+C to quit[0m
+[2023-03-07 19:25:18,733] INFO. modul _internal, function _log:  * Restarting with stat
+[2023-03-07 19:25:19,789] WARNING. modul _internal, function _log:  * Debugger is active!
+[2023-03-07 19:25:19,794] INFO. modul _internal, function _log:  * Debugger PIN: 137-088-653
+[2023-03-07 19:25:23,891] DEBUG. modul web_view, function doctors: list of doctors
+[2023-03-07 19:25:23,917] INFO. modul _internal, function _log: 127.0.0.1 - - [07/Mar/2023 19:25:23] "GET / HTTP/1.1" 200 -
+[2023-03-07 19:25:24,078] INFO. modul _internal, function _log: 127.0.0.1 - - [07/Mar/2023 19:25:24] "GET /static/reset.css HTTP/1.1" 200 -
+[2023-03-07 19:25:24,134] INFO. modul _internal, function _log: 127.0.0.1 - - [07/Mar/2023 19:25:24] "GET /static/styles.css HTTP/1.1" 200 -
+[2023-03-07 19:25:24,206] INFO. modul _internal, function _log: 127.0.0.1 - - [07/Mar/2023 19:25:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2023-03-07 19:25:29,503] DEBUG. modul web_view, function get_doctor: get doctor. id = 2
+[2023-03-07 19:25:29,529] INFO. modul _internal, function _log: 127.0.0.1 - - [07/Mar/2023 19:25:29] "GET /doctor/?id=2 HTTP/1.1" 200 -
+[2023-03-07 19:25:29,624] INFO. modul _internal, function _log: 127.0.0.1 - - [07/Mar/2023 19:25:29] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-07 19:25:29,624] INFO. modul _internal, function _log: 127.0.0.1 - - [07/Mar/2023 19:25:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-07 19:25:29,626] INFO. modul _internal, function _log: 127.0.0.1 - - [07/Mar/2023 19:25:29] "GET /static/photo/jh_watson_micropeutist_com.jpg HTTP/1.1" 200 -
+[2023-03-07 19:25:31,373] DEBUG. modul web_view, function patients: whole list
+[2023-03-07 19:25:31,416] INFO. modul _internal, function _log: 127.0.0.1 - - [07/Mar/2023 19:25:31] "GET /patients/ HTTP/1.1" 200 -
+[2023-03-07 19:25:31,516] INFO. modul _internal, function _log: 127.0.0.1 - - [07/Mar/2023 19:25:31] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-07 19:25:31,520] INFO. modul _internal, function _log: 127.0.0.1 - - [07/Mar/2023 19:25:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-07 19:25:32,772] DEBUG. modul web_view, function patient: show patient key =18
+[2023-03-07 19:25:32,784] INFO. modul _internal, function _log: 127.0.0.1 - - [07/Mar/2023 19:25:32] "GET /patient/?id=18 HTTP/1.1" 200 -
+[2023-03-07 19:25:32,869] INFO. modul _internal, function _log: 127.0.0.1 - - [07/Mar/2023 19:25:32] "GET /static/photo/rat_steve_mc.jpg HTTP/1.1" 200 -
+[2023-03-07 19:25:32,871] INFO. modul _internal, function _log: 127.0.0.1 - - [07/Mar/2023 19:25:32] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-07 19:25:32,872] INFO. modul _internal, function _log: 127.0.0.1 - - [07/Mar/2023 19:25:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-07 19:25:35,096] DEBUG. modul web_view, function get_doctor: get doctor. id = 4
+[2023-03-07 19:25:35,104] INFO. modul _internal, function _log: 127.0.0.1 - - [07/Mar/2023 19:25:35] "GET /doctor/?id=4 HTTP/1.1" 200 -
+[2023-03-07 19:25:35,199] INFO. modul _internal, function _log: 127.0.0.1 - - [07/Mar/2023 19:25:35] "[36mGET /static/reset.css HTTP/1.1[0m" 304 -
+[2023-03-07 19:25:35,199] INFO. modul _internal, function _log: 127.0.0.1 - - [07/Mar/2023 19:25:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+[2023-03-07 19:25:35,201] INFO. modul _internal, function _log: 127.0.0.1 - - [07/Mar/2023 19:25:35] "GET /static/photo/house_md_micropeutist_com.jpg HTTP/1.1" 200 -
