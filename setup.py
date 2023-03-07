@@ -1,6 +1,14 @@
 # python setup.py sdist
 # tar --list -f dist/micropeutist-1.0.tar.gz
 
+def parse_reqs(filename: str) -> list:
+    ''' parse requirements file to list'''
+    result = []
+    with filename.open() as file:
+        for line in file:
+            result.append(line[:-1:])
+    return result
+
 import setuptools
 setuptools.setup(
     name='micropeutist',
@@ -9,54 +17,5 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     include_package_data=True,
     zip_safe=False,
-    install_requires=['alembic==1.9.4',
-                    'argcomplete==2.0.0',
-                    'asgiref==3.6.0',
-                    'blinker==1.5',
-                    'brotli==1.0.9',
-                    'brotlicffi==1.0.9.2',
-                    'cchardet==2.1.7',
-                    'ConfigParser==5.3.0',
-                    'cryptography==39.0.1',
-                    'Cython==0.29.33',
-                    'dl==0.1.0',
-                    'dnspython==2.3.0',
-                    'docutils==0.19',
-                    'flask_marshmallow==0.14.0',
-                    'flask_migrate==4.0.4',
-                    'flask_sqlalchemy==3.0.3',
-                    'gssapi==1.8.2',
-                    'HTMLParser==0.0.2',
-                    'importlib_metadata==6.0.0',
-                    'ipython==8.11.0',
-                    'ipywidgets==8.0.4',
-                    'jnius==1.1.0',
-                    'keyring==23.13.1',
-                    'lockfile==0.12.2',
-                    'lxml==4.9.2',
-                    'lz4==4.3.2',
-                    'mock==5.0.1',
-                    'mysql_connector_python==8.0.32',
-                    'nacl==0.0.0',
-                    'numpy==1.24.2',
-                    'oci==2.93.1',
-                    'ordereddict==1.1',
-                    'pexpect==4.8.0',
-                    'Pillow==9.4.0',
-                    'pyOpenSSL==23.0.0',
-                    'railroad==0.5.0',
-                    'simplejson==3.18.3',
-                    'Sphinx==6.1.3',
-                    'SQLAlchemy==2.0.4',
-                    'sqlparse==0.4.3',
-                    'toml==0.10.2',
-                    'tornado==6.2',
-                    'Twisted==22.10.0',
-                    'urllib3_secure_extra==0.1.0',
-                    'watchdog==2.3.1',
-                    'xmlrpclib==1.0.1',
-                    'zipp==3.15.0',
-                    'zope==5.8',
-                    'zstandard==0.20.0'
-                    ]
+    install_requires=parse_reqs("requirements.txt")
     )
