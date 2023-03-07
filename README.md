@@ -34,6 +34,7 @@ Instalation process describeb for Ubuntu linux, for other operational system com
  * pip
  * setuptools
  * bild
+ * gunicorn
  
  By default to access MySQL database application use user *root* and blank password.
 
@@ -44,69 +45,81 @@ Instalation process describeb for Ubuntu linux, for other operational system com
 ```
 
 ### 2. Install virtual environment
+for linux:
 ```
 mydir> python3 -m venv venv
 ```
+for Windows:
+```
+mydir> py -m venv venv
+```
 
 ### 3. Activate virtual environment.
-The **venv/bin/** folder contains several script for different shells and OS. Actual script depend on which shell you use. In case of you use bash do:
+The **venv/bin/** folder contains several script for different shells and OS. Actual script depend on which shell you use. 
+
+For Linux Bash do:
 ```
 mydir> source venv/bin/activate
-(venv)>
+(venv)mydir>
 ```
+fo Windows PowerShell:
+```
+mydir> .venv/bin/activate.ps1
+(.venv)mydir>
+```
+
 (venv) prefix indicates that virtual environment activated. You can always leave virtual environment with comand "deactivate".
 
-### 4. Clone github repository
+### 4. Install from github
 ```
-(venv)mydir> git clone https://github.com/DmytroY/EPAM_Flask.git
+(venv)mydir> pip install git+https://github.com/DmytroY/EPAM_Flask.git
 ```
-
-### 5. Go to the cloned folder EPAM_Flask
+now micropeutist module is available in pip installed modules, you can check it with **pip list**:
 ```
-(.venv)mydir> cd EPAM_Flask
-``` 
- 
-### 6. Install dependensies
-```
-(.venv)mydir/EPAM_Flask> pip install -r requirements.txt
-```
-REMARK: This step can be interrupted with Deprecate setup.py install fallback, see details here https://github.com/pypa/pip/issues/8559. --use-pep517 flag can help in this case:
-```
-(.venv)mydir/EPAM_Flask> pip install -r requirements.txt --use-pep517
+(venv)mydir> pip list | grep "micropeutist"
+micropeutist      1.0.1
+(venv)mydir>
 ```
 
-### 7. Configure database.
-Either in MySQL workbench or by CLI create database with name micropeutist
+### 5. Configure database.
+Either in MySQL workbench or by CLI create database with name **micropeutist**
 ```
 > mysql -u root -p -e 'CREATE DATABASE micropeutist'
 ```
-When you are in folder EPAM_Flask, apply migrations to create tables which correspond python ORM objects
+Initiate, create and apply migrations to create tables which correspond python ORM objects
 ```
-(venv)mydir/EPAM_Flask> flask db upgrade
+(venv)mydir> flask micropeutist.application db init
+(venv)mydir> flask micropeutist.application db migrate
+(venv)mydir> flask micropeutist.application db upgrade
+(venv)mydir>
 ```
-
-### 8. Runing.
-8.1. Runing development server
+check that tables are created in database:
 ```
-(venv)mydir/EPAM_Flask> flask run                      
- * Serving Flask app 'main.py'
- * Debug mode: on
-[2023-03-06 19:40:30,882] INFO. modul _internal, function _log: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
- * Running on http://127.0.0.1:5000
-[2023-03-06 19:40:30,883] INFO. modul _internal, function _log: Press CTRL+C to quit
+> mysql -u root -p -e 'USE micropeutist; SHOW TABLES;'
+Enter password:
++------------------------+
+| Tables_in_micropeutist |
++------------------------+
+| alembic_version        |
+| doctors                |
+| patients               |
++------------------------+
 ```
-
-Web application will be available at address http://127.0.0.1:5000/
-
-API will be available at address http://127.0.0.1:5000/API/
-
-
-8.2. Runing production server:
+Congratulations! 
+Installation finished.
+### 6. Runing production server:
 ```
-(venv)mydir/EPAM_Flask> gunicorn main:app
+(venv)mydir> gunicorn micropeutist.application:app
 ```
 By default web application will be available at address http://127.0.0.1:8000/
 API will be available at address http://127.0.0.1:8000/API/
+
+Also you can run the appliation with Flask development server:
+```
+(venv)mydir>flask --app micropeutist.application run
+```
+In this case web application will be available at address http://127.0.0.1:5000/
+API will be available at address http://127.0.0.1:5000/API/
 
 ---------------------------
 Please see detailed API specification in **documentation** folder.
