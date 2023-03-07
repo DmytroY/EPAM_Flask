@@ -338,7 +338,7 @@ Connection: close
 - age,
 - email,
 - related doctor id.
-- doctor:
+- related doctor datails:
   - id
   - first_name
   - last_name
