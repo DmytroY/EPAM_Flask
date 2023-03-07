@@ -1,4 +1,4 @@
-from micropeutist_app.application import app
+from micropeutist.application import app
 
 
 class TestHomeRoute():
@@ -107,8 +107,8 @@ class TestPatientCRUD():
         assert responce.status_code == 302
         assert b'redirected' in responce.data
 
-    # def test_route_remove_patient_not_existed(self):
-    #     test_data = {'id': 'notexistedid',}
-    #     responce = app.test_client().post('/remove_patient/', data=test_data)
-    #     assert responce.status_code == 302
-    #     assert b'redirected' in responce.data
+    def test_route_remove_patient_not_existed(self):
+        test_data = {'id': 'notexistedid',}
+        responce = app.test_client().post('/remove_patient/', data=test_data)
+        assert responce.status_code == 302
+        assert b'redirected' in responce.data
