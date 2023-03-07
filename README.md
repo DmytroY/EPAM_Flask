@@ -111,15 +111,15 @@ Installation finished.
 ```
 (venv)mydir> gunicorn micropeutist.application:app
 ```
-By default web application will be available at address http://127.0.0.1:8000/
+By default web application will be available at address http://127.0.0.1:8000/ .
 API will be available at address http://127.0.0.1:8000/API/
 
 Also you can run the appliation with Flask development server:
 ```
 (venv)mydir>flask --app micropeutist.application run
 ```
-In this case web application will be available at address http://127.0.0.1:5000/
+In this case web application will be available at address http://127.0.0.1:5000/ .
 API will be available at address http://127.0.0.1:5000/API/
 
 ---------------------------
-Please see detailed API specification in **documentation** folder.
+Detailed API specification you can find in **documentation** folder.
