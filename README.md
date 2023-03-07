@@ -26,37 +26,47 @@ It supposed to demonstrate skills and knowleges acquired by the student. Mainly 
 
 ## Install and run
 
-0. Prerequisites. Instalation process describeb for Ubuntu linux, for other operational system comands may vary but steps and idea are the same. You should have MySQL, git, python3 and pip installed. By default to access MySQL database application use user *root* and blank password.
+### 0. Prerequisites.
+Instalation process describeb for Ubuntu linux, for other operational system comands may vary but steps and idea are the same. You should have already been installed:
+ * MySQL,
+ * git,
+ * python3
+ * pip
+ * setuptools
+ * bild
+ 
+ By default to access MySQL database application use user *root* and blank password.
 
-1. Create folder where you wish to install application and go to this folder
+### 1. Create folder where you wish to install application and go to this folder
 ```
 > mkdir mydir
 > cd mydir
 ```
 
-2. Install virtual environment
+### 2. Install virtual environment
 ```
 mydir> python3 -m venv venv
 ```
 
-3. Activate virtual environment. The **venv/bin/** folder contains several script for different shells and OS. Actual script depend on which shell you use. In case of bash do:
+### 3. Activate virtual environment.
+The **venv/bin/** folder contains several script for different shells and OS. Actual script depend on which shell you use. In case of you use bash do:
 ```
 mydir> source venv/bin/activate
 (venv)>
 ```
 (venv) prefix indicates that virtual environment activated. You can always leave virtual environment with comand "deactivate".
 
-4. Clone github repository
+### 4. Clone github repository
 ```
 (venv)mydir> git clone https://github.com/DmytroY/EPAM_Flask.git
 ```
 
-5. Go to the cloned folder EPAM_Flask
+### 5. Go to the cloned folder EPAM_Flask
 ```
 (.venv)mydir> cd EPAM_Flask
 ``` 
  
-6. Install dependensies
+### 6. Install dependensies
 ```
 (.venv)mydir/EPAM_Flask> pip install -r requirements.txt
 ```
@@ -65,7 +75,7 @@ REMARK: This step can be interrupted with Deprecate setup.py install fallback, s
 (.venv)mydir/EPAM_Flask> pip install -r requirements.txt --use-pep517
 ```
 
-7. Configure database.
+### 7. Configure database.
 Either in MySQL workbench or by CLI create database with name micropeutist
 ```
 > mysql -u root -p -e 'CREATE DATABASE micropeutist'
@@ -75,9 +85,8 @@ When you are in folder EPAM_Flask, apply migrations to create tables which corre
 (venv)mydir/EPAM_Flask> flask db upgrade
 ```
 
-8. Runing.
-
-When you are in folder EPAM_Flask, you can start flask development server with "flask run" command :
+### 8. Runing.
+8.1. Runing development server
 ```
 (venv)mydir/EPAM_Flask> flask run                      
  * Serving Flask app 'main.py'
@@ -92,13 +101,12 @@ Web application will be available at address http://127.0.0.1:5000/
 API will be available at address http://127.0.0.1:5000/API/
 
 
-
-Alternatively you can launch production gunicorn server:
+8.2. Runing production server:
 ```
 (venv)mydir/EPAM_Flask> gunicorn main:app
 ```
 By default web application will be available at address http://127.0.0.1:8000/
 API will be available at address http://127.0.0.1:8000/API/
 
-
+---------------------------
 Please see detailed API specification in **documentation** folder.

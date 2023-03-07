@@ -1,5 +1,4 @@
-include README.md
-recursive-include documentation/ *
-recursive-include micropeutist_app/static/ *
-recursive-include micropeutist_app/templates/ *
-
+recursive-include documentation *
+recursive-include micropeutist_app/static *
+recursive-include micropeutist_app/templates *
+recursive-include micropeutist_app/migrations *
