@@ -30,11 +30,11 @@ It supposed to demonstrate skills and knowleges acquired by the student. Mainly 
 Instalation process describeb for Ubuntu linux, for other operational system comands may vary but steps and idea are the same. You should have already been installed:
  * MySQL,
  * git,
- * python3
- * pip
- * setuptools
- * bild
- * gunicorn
+ * python3,
+ * pip,
+ * setuptools,
+ * bild,
+ * gunicorn.
  
  By default to access MySQL database application use user *root* and blank password.
 
