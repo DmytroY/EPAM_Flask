@@ -144,14 +144,14 @@ Connection: close
 - specialization,
 - email,
 - related patients info:
-- - id, 
-- - first_name,
-- - last_name,
-- - gender,
-- - health_state,
-- - birthday date,
-- - age,
-- - email.
+  - id, 
+  - first_name,
+  - last_name,
+  - gender,
+  - health_state,
+  - birthday date,
+  - age,
+  - email.
 
 On error: status code 204 and error message
 
@@ -339,12 +339,12 @@ Connection: close
 - email,
 - related doctor id.
 - doctor:
-- - id
-- - first_name
-- - last_name
-- - grade
-- - specialization
-- - email
+  - id
+  - first_name
+  - last_name
+  - grade
+  - specialization
+  - email
 
 **Request example**
 ```
