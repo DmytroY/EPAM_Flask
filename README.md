@@ -21,7 +21,7 @@ It supposed to demonstrate skills and knowleges acquired by the student. Mainly 
   - SRS, 
   - API specification,
   - html_prototypes.
-- **micropeutist_app** folder which includes flask application and all required modules
+- **micropeutist** folder which includes flask application and all required modules
 - **tests** folder which includes unit-tests
 
 ## Install and run
