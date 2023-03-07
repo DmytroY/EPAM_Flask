@@ -121,5 +121,6 @@ Also you can run the appliation with Flask development server:
 In this case web application will be available at address http://127.0.0.1:5000/ .
 API will be available at address http://127.0.0.1:5000/API/
 
+
 ---------------------------
 Detailed API specification you can find in **documentation** folder.
