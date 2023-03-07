@@ -1,4 +1,4 @@
-# EPAM-Flask
+# EPAM-Flask micropeutist application
 
 [![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/PyCQA/pylint)
 [![Build Status](https://app.travis-ci.com/DmytroY/EPAM_Flask.svg?branch=main)](https://app.travis-ci.com/DmytroY/EPAM_Flask)
