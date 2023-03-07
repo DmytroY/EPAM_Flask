@@ -48,5 +48,5 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/micropeutist'
 db = SQLAlchemy(app)
 
-MIGRATION_DIR = os.path.join('micropeutist_app', 'migrations')
+MIGRATION_DIR = os.path.join('micropeutist', 'migrations')
 migrate = Migrate(app, db, directory=MIGRATION_DIR)
