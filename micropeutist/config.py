@@ -50,7 +50,6 @@ if not DB_PASS:
     DB_PASS = ''
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql://{DB_USER}:{DB_PASS}@localhost/micropeutist'
-print("===", app.config['SQLALCHEMY_DATABASE_URI'])
 db = SQLAlchemy(app)
 
 MIGRATION_DIR = os.path.join('micropeutist', 'migrations')
