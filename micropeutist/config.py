@@ -41,11 +41,16 @@ app = Flask(__name__)
 ma = Marshmallow(app)
 
 # app.config['SECRET_KEY'] = os.environ.get(SECRET_KEY)
-app.config['SECRET_KEY'] = 'secret_string_bla-bla-bla'
+app.config['SECRET_KEY'] ="SoMe very unique and very secret key"
 
 #configure DB
+DB_USER = os.environ.get('DB_USER')
+DB_PASS = os.environ.get('DB_PASS')
+if not DB_PASS:
+    DB_PASS = ''
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/micropeutist'
+app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql://{DB_USER}:{DB_PASS}@localhost/micropeutist'
+print("===", app.config['SQLALCHEMY_DATABASE_URI'])
 db = SQLAlchemy(app)
 
 MIGRATION_DIR = os.path.join('micropeutist', 'migrations')

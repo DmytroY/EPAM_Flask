@@ -1,15 +1,15 @@
 # Micropeutist API documentation
 
 ## 1. Overview
-Micropeutist API is RESTful JSON-based API. All requests are made to endpoint begining   **.../api/**.
-All request must be secure, i.e. **https**, not **http**.
+Micropeutist API is RESTful JSON-based API. All requests are made to the endpoint beginning   **.../api/**.
+All requests must be secure, i.e. **https**, not **http**.
 
-In the examples below all requests has *Host: 127.0.0.1:5000* which is related to the test development server. Note that in live version proper host shoud be used.
+In the examples below all requests have *Host: 127.0.0.1:5000* which is related to the test development server. Note that in the production proper host shoud be used.
 
 
 ## 2. API for Doctor records
 
-### 2.1. Retrieving List of doctors
+### 2.1. Retrieving a List of doctors
 
 **Routes:** /api/ ,  /api/doctors/
 
@@ -17,7 +17,7 @@ In the examples below all requests has *Host: 127.0.0.1:5000* which is related t
 
 **Passed parameters:** None
 
-**Response** on success should include status code 200 and list of doctors with next field for each of doctor:
+**Response** on success should include status code 200 and a list of doctors with the next field for each doctor:
 - id,
 - first_name,
 - last_name,
@@ -79,12 +79,12 @@ Connection: close
 |last_name     |string|required|   |
 |grade         |string|optional|doctors educational grade: MD, MS, BM, other...  |
 |specialization|string|optional|Doctor specialization, for example "Terapeutist" |
-|email         |string|required|Unique. Can be used as key in CRUD operations if **id** field does not provided    |
+|email         |string|required|Unique. Can be used as key in CRUD operations if **id** field does not been provided |
 
 
 **Response**: 
-On success: Sucsess message and status code 201. 
-On error: Error description adnd status code 409.
+On success: Success message and status code 201. 
+On error: Error description and status code 409.
 
 Record with duplicated email should not be created, system should return an error.
 
@@ -191,7 +191,7 @@ Connection: close
 "specialization": "Nephrologist"
 }
 ```
-**Response in case of trying get not existed record**
+**Response in case of trying to get not existing record**
 ```
 HTTP/1.1 204 NO CONTENT
 Content-Type: text/html; charset=utf-8
@@ -249,7 +249,7 @@ Connection: close
 "message": "Doctor House have been updated"
 }
 ```
-**Response in case of trying update not existed record**
+**Response in case of trying to update not existing record**
 ``` 
 HTTP/1.1 409 CONFLICT
 Content-Type: application/json
@@ -303,7 +303,7 @@ Connection: close
 }
 ```
 
-**Response if we try delete not existed record**
+**Response if we try to delete not existed record**
 ```
 HTTP/1.1 409 CONFLICT
 Content-Type: application/json
@@ -320,7 +320,7 @@ Connection: close
 
 ## 3. API for Patient records
 
-### 3.1. Retrieving whole list of patients
+### 3.1. Retrieving the whole list of patients
 
 **Route:**/api/patients/
 
@@ -328,7 +328,7 @@ Connection: close
 
 **Passed parameters:** None
 
-**Response** on success should include status code 200 and list of patients with next field for each of patient:
+**Response** on success should include status code 200 and a list of patients with the next field for each patient:
 - id,
 - first_name,
 - last_name,
@@ -338,7 +338,7 @@ Connection: close
 - age,
 - email,
 - related doctor id.
-- related doctor datails:
+- related doctor details:
   - id
   - first_name
   - last_name
@@ -402,7 +402,7 @@ Connection: close
 
 ```
 
-### 3.2. Retrieving filtered list of patients
+### 3.2. Retrieving a filtered list of patients
 
 **Route:**/api/patients/
 
@@ -415,9 +415,9 @@ Connection: close
 |birthday_till |date|optional*|last date for filter. Format "YYYY-MM-DD"|
 |doctor_id     |int |optional*|id of doctor record|
 
-*-In case of no paramenters provided response will contain whole list of patients
+*-In case of no parameters are provided, response will contain a whole list of patients
 
-**Response** on success should include status code 200 and list of patients which satisfied passed parameters creterias. Response should contain same fieds as in pargraph *2.2.1. Retrieving whole list of patients*.
+**Response** on success should include status code 200 and a list of patients who satisfied passed parameters criteria. The response should contain the same fields as in case retrieving the whole list of patients (see previous paragraph).
 
 **Request example**
 ```
@@ -485,10 +485,10 @@ Connection: close
 |doctor_id   |int   |optional|id of related doctor|
 
 **Response**: 
-On success: Sucsess message and status code 201. 
-On error: Error description adnd status code 409.
+On success: Success message and status code 201. 
+On error: Error description and status code 409.
 
-Record with duplicated email should not be created, system should return an error.
+Record with duplicated email should not be created, the application should return an error.
 
 **Request example**
 ```
@@ -643,7 +643,7 @@ Connection: close
 "message": "Patient Bang have been updated"
 }
 ```
-**Response example in case of trying update not existing record**
+**Response example in case of trying to update not existed record**
 ```
 TTP/1.1 409 CONFLICT
 Content-Type: application/json
@@ -668,7 +668,7 @@ Connection: close
 |id |int/string|required|Both **id** or **email** can be used here
 
 **Response**. 
-On success: sucsess message and status code 200. 
+On success: success message and status code 200. 
 On error: error description and status code 409.
 
 **Request example**
