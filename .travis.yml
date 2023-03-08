@@ -6,6 +6,9 @@ services:
 python:
  - "3.9"
 
+env:
+ - DB_USER=root
+
 before_install:
  - mysql -e 'CREATE DATABASE micropeutist;'
 
