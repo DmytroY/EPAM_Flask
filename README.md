@@ -85,13 +85,13 @@ For access to MySQL database micropeutist application will use password and logi
 
 Linux Bash:
 ```
-(venv)mydir> $env:DB_USER = "<put your MySQL user here>"
-(venv)mydir> $env:DB_PASS = "<put your MySQL password here>"
+(venv)mydir> export DB_USER="<put your MySQL user here>"
+(venv)mydir> export DB_PASS="<put your MySQL password here>"
 ```
 Windows Powershell:
 ```
-(venv)mydir> export DB_USER="<put your MySQL user here>"
-(venv)mydir> export DB_PASS="<put your MySQL password here>"
+(venv)mydir> $env:DB_USER = "<put your MySQL user here>"
+(venv)mydir> $env:DB_PASS = "<put your MySQL password here>"
 ```
 If for some reason you use access to the database without a password (empty password) just omit to create DB_PASS environment variable.
 
