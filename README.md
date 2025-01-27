@@ -6,9 +6,8 @@
 
 
 ## What is it? 
-It is a final project of EPAM Python spring program 2022 course.
-
-It is supposed to demonstrate skills and knowledge acquired by the student. Mainly focused on back-end development process.
+It is simple cusomer management database with simple 2 level "one to many" structure (doctor - patients).
+Whole spector of CRUD operations covered by WEB and API interfaces.
 
 ## Main technologies used in the project:
 - Flask framework
