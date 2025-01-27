@@ -6,7 +6,7 @@
 
 
 ## What is it? 
-It is simple cusomer management database with simple 2 level "one to many" structure (doctor - patients).
+It is cusomer management database with simple 2 level "one to many" structure (doctor - patients).
 Whole spector of CRUD operations covered by WEB and API interfaces.
 
 ## Main technologies used in the project:
